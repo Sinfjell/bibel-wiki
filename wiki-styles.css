@@ -530,6 +530,10 @@ h1 em { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100; col
 }
 .tag.book { background: #f4e8c4; color: #6b4f1c; border-color: var(--gold-soft); }
 .tag.prophet { background: #e7ecd1; color: #3f4a1c; border-color: var(--olive-soft); font-style: italic; }
+.tag.place { background: #ecdfd1; color: #6b3f3f; border-color: var(--claret-soft); font-style: italic; }
+.tag.place::before { content: "⌖ "; font-style: normal; opacity: .55; font-size: .85em; }
+a.tag.place:hover { border-color: var(--claret); color: var(--claret); background: #fff; }
+a.tag.place::after { content: "→"; color: var(--claret); opacity: .7; }
 
 a.tag {
   text-decoration: none; cursor: pointer; position: relative;

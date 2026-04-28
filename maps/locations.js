@@ -11,6 +11,7 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-mos-tidslinje.html",
       "2-mos-tidslinje.html",
+      "abraham-tidslinje.html",
       "moses-tidslinje.html"
     ],
     "altNames": [
@@ -137,6 +138,7 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": -10,
     "pages": [
       "2-samuel-tidslinje.html",
+      "abraham-tidslinje.html",
       "david-tidslinje.html"
     ],
     "altNames": [
@@ -266,7 +268,8 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": -10,
     "pages": [
-      "1-mos-tidslinje.html"
+      "1-mos-tidslinje.html",
+      "abraham-tidslinje.html"
     ],
     "description": "Hvor Jakob så himmelstigen.",
     "scriptures": [
@@ -308,6 +311,7 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": 16,
     "pages": [
       "1-samuel-tidslinje.html",
+      "david-tidslinje.html",
       "saul-tidslinje.html"
     ],
     "description": "Sauls hjemby; Israels første kongsete."
@@ -318,7 +322,10 @@ window.__BIBEL_LOCATIONS = {
     "y": 282,
     "region": "kanaan",
     "labelDy": 12,
-    "description": "Sørgrensen av Israel; Abraham og Isak gravde brønner her."
+    "description": "Sørgrensen av Israel; Abraham og Isak gravde brønner her.",
+    "pages": [
+      "abraham-tidslinje.html"
+    ]
   },
   "gaza": {
     "name": "Gaza",
@@ -385,6 +392,7 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": 14,
     "pages": [
       "1-samuel-tidslinje.html",
+      "david-tidslinje.html",
       "saul-tidslinje.html"
     ],
     "description": "Hvor Sauls lik ble hengt opp av filisterne."
@@ -449,7 +457,10 @@ window.__BIBEL_LOCATIONS = {
     "y": 206,
     "region": "fenikia",
     "labelDy": -10,
-    "description": "Fønikisk handelsby; leverte sedertre til Salomos tempel."
+    "description": "Fønikisk handelsby; leverte sedertre til Salomos tempel.",
+    "pages": [
+      "david-tidslinje.html"
+    ]
   },
   "sidon": {
     "name": "Sidon",
@@ -468,6 +479,7 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "4-mos-tidslinje.html",
       "5-mos-tidslinje.html",
+      "david-tidslinje.html",
       "moses-tidslinje.html"
     ],
     "description": "Slettelandet øst for Jordan og Dødehavet hvor Moses holdt sine avskjedstaler.",
@@ -508,7 +520,10 @@ window.__BIBEL_LOCATIONS = {
     "y": 256,
     "region": "moab",
     "labelDy": -10,
-    "description": "Ammonittenes hovedstad."
+    "description": "Ammonittenes hovedstad.",
+    "pages": [
+      "david-tidslinje.html"
+    ]
   },
   "penuel": {
     "name": "Penuel",
@@ -545,6 +560,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "En av de eldste byene i verden; Pauli omvendelse skjedde på veien hit.",
     "scriptures": [
       "Apg 9,1-19"
+    ],
+    "pages": [
+      "abraham-tidslinje.html"
     ]
   },
   "aram": {

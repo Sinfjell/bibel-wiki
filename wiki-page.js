@@ -394,6 +394,24 @@
       renderTagGroup(sectionsEl, "Bøker",   item.books,    "book");
       renderTagGroup(sectionsEl, "Profeter", item.prophets, "prophet");
       renderTagGroup(sectionsEl, "Personer", item.people,   null);
+
+      // Auto-render "Steder" group from item.locations as links to sted.html?id=X
+      if (item.locations && item.locations.length > 0 && mapLocations) {
+        const sec = el("div", "section");
+        sec.appendChild(el("h3", null, "Steder"));
+        const tags = el("div", "tags");
+        item.locations.forEach(id => {
+          const loc = mapLocations[id];
+          if (!loc) return;
+          const a = el("a", "tag place", loc.name);
+          a.href = "sted.html?id=" + encodeURIComponent(id);
+          a.title = "Åpne sted-side for " + loc.name;
+          tags.appendChild(a);
+        });
+        sec.appendChild(tags);
+        sectionsEl.appendChild(sec);
+      }
+
       if (sectionsEl.children.length > 0) detailEl.appendChild(sectionsEl);
     }
 

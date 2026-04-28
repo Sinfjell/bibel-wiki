@@ -53,6 +53,20 @@
   <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
 </section>
 
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Reisen — <em>Ur til Hebron</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abrahams reise — Ur, Haran, Kanaan, Egypt">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
 <div id="detail" class="detail"></div>
 
 <footer>
@@ -64,6 +78,8 @@
 
 </div>
 
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
 <script src="wiki-page.js"></script>
 <script>
 // Tradisjonell tidlig kronologi: Abraham f. ~2166, kallet ved 75 (~2091), død ved 175 (~1991).
@@ -84,6 +100,10 @@ WikiPage.init({
   notionUrls: {
     "1. Mosebok": "https://www.notion.so/475338a6ac6a46c5b5ee6dd2a84cb8ca"
   },
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "300 60 600 290"
+  },
   data: [
     {
       id: "kallet",
@@ -95,7 +115,8 @@ WikiPage.init({
       lede: "Tarah tar med seg sønnen Abram, kona Sarai og barnebarnet Lot fra Ur i Kaldea. De stopper i Haran, og Tarah dør der. Når Abram er 75, kommer Herrens kall: Gå ut. Et land jeg vil vise deg. Jeg vil gjøre deg til et stort folk. I deg skal alle slekter på jorden velsignes. Abram drar — uten å vite hvor han er på vei.",
       keyEvent: "Kallet til Abram, 75 år gammel (1. Mosebok 12,1–4)",
       books: ["1. Mosebok"],
-      people: ["Tarah", "Abram", "Sarai", "Lot"]
+      people: ["Tarah", "Abram", "Sarai", "Lot"],
+      locations: ["ur", "haran"]
     },
     {
       id: "kanaan",
@@ -107,7 +128,8 @@ WikiPage.init({
       lede: "Abram bygger alter i Sikem og ved Betel — første tegn på Herrens nærvær i landet. Når hungersnøden kommer, drar han ned til Egypt og lyver om Sarai (\"hun er min søster\"). Farao tar henne, plagene rammer huset, og Abram sendes ut igjen — rikere, men avslørt. Tilbake i Kanaan vender han tilbake til alteret ved Betel og påkaller Herren.",
       keyEvent: "Sarai i Faraos hus; Herrens inngrep (1. Mosebok 12,17)",
       books: ["1. Mosebok"],
-      people: ["Sarai", "Farao", "Lot"]
+      people: ["Sarai", "Farao", "Lot"],
+      locations: ["haran", "shechem", "bethel", "goshen"]
     },
     {
       id: "lot-melkisedek",
@@ -120,6 +142,7 @@ WikiPage.init({
       keyEvent: "\"Han trodde Herren, og Han regnet det som rettferdighet\" (1. Mosebok 15,6)",
       books: ["1. Mosebok"],
       people: ["Lot", "Melkisedek", "Sarai"],
+      locations: ["bethel", "jerusalem", "damascus"],
       variant: "in-chronicles"
     },
     {
@@ -132,7 +155,8 @@ WikiPage.init({
       lede: "Sara er fortsatt barnløs etter ti år i Kanaan. Hun gir Abram sin egyptiske slavinne Hagar. Hagar blir gravid og forakter sin frue. Sara plager henne; Hagar flykter. Herrens engel finner henne i ørkenen og gir henne et løfte for sønnen — Ismael, \"Gud hører.\" Hagar vender tilbake. Når Abram er 86, fødes Ismael. Tretten år går.",
       keyEvent: "Ismael fødes — Abram er 86 (1. Mosebok 16,16)",
       books: ["1. Mosebok"],
-      people: ["Sara", "Hagar", "Ismael"]
+      people: ["Sara", "Hagar", "Ismael"],
+      locations: ["hebron"]
     },
     {
       id: "omskjaerelsen",
@@ -145,6 +169,7 @@ WikiPage.init({
       keyEvent: "Omskjærelsens pakt — Abram blir Abraham (1. Mosebok 17)",
       books: ["1. Mosebok"],
       people: ["Sara", "De tre mennene", "Lot", "Lots kone"],
+      locations: ["hebron"],
       variant: "in-chronicles"
     },
     {
@@ -157,7 +182,8 @@ WikiPage.init({
       lede: "Når Abraham er 100 år og Sara 90, fødes Isak — \"latter.\" Sara ler nå av glede. Ved avvenningsfesten ser hun Ismael spotte. Hun krever at Abraham sender Hagar og Ismael bort. Det smerter Abraham, men Herren bekrefter: \"Gjennom Isak skal din ætt regnes.\" Hagar sendes ut i ørkenen med litt brød og vann; Herrens engel redder dem og lover at også Ismael skal bli et stort folk.",
       keyEvent: "Isak fødes — Abraham 100, Sara 90 (1. Mosebok 21,1–7)",
       books: ["1. Mosebok"],
-      people: ["Isak", "Sara", "Hagar", "Ismael", "Abimelek"]
+      people: ["Isak", "Sara", "Hagar", "Ismael", "Abimelek"],
+      locations: ["hebron", "beersheba"]
     },
     {
       id: "moria",
@@ -170,6 +196,7 @@ WikiPage.init({
       keyEvent: "Isak på Moria — \"Herren ser\" (1. Mosebok 22,14)",
       books: ["1. Mosebok"],
       people: ["Isak"],
+      locations: ["hebron", "jerusalem"],
       variant: "in-chronicles"
     },
     {
@@ -182,7 +209,8 @@ WikiPage.init({
       lede: "Sara dør i Hebron, 127 år gammel; Abraham kjøper Makpela-hulen som familiegrav for 400 sekel sølv — første eiendom han eier i løftelandet. Han sender tjeneren Eliesar tilbake til Mesopotamia; Eliesar finner Rebekka ved brønnen. Abraham gifter seg med Keturah, får seks nye sønner som blir stamfedre for arabiske folkeslag. Han dør 175 år gammel, \"mett av dage,\" og blir gravlagt av Isak og Ismael i Makpela-hulen ved siden av Sara.",
       keyEvent: "Abraham dør 175 år gammel (1. Mosebok 25,7–10)",
       books: ["1. Mosebok"],
-      people: ["Sara (dør)", "Eliesar", "Rebekka", "Keturah", "Isak", "Ismael"]
+      people: ["Sara (dør)", "Eliesar", "Rebekka", "Keturah", "Isak", "Ismael"],
+      locations: ["hebron", "haran"]
     }
   ]
 });
