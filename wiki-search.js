@@ -43,6 +43,18 @@ const WIKI_INDEX = [
   { type: "page", icon: "📕", title: "2. Samuel", subtitle: "Bok · Davids regjering",
     url: "2-samuel-tidslinje.html", keywords: ["2 samuel", "david", "kongerike", "jerusalem", "absalom"] },
 
+  // Bøker — Kongebøker
+  { type: "page", icon: "👑", title: "1. Kongebok", subtitle: "Bok · Salomo, splittelsen, Elia mot Akab",
+    url: "1-kong-tidslinje.html", keywords: ["1 kongebok", "1 kong", "kings", "salomo", "tempel", "rikets deling", "elia", "akab", "jezabel", "karmel"] },
+  { type: "page", icon: "👑", title: "2. Kongebok", subtitle: "Bok · Elisja, eksilet — Israel og Juda faller",
+    url: "2-kong-tidslinje.html", keywords: ["2 kongebok", "2 kong", "kings", "elisja", "jehu", "hiskia", "josja", "sankerib", "nebukadnesar", "eksilet"] },
+
+  // Bøker — Krønikene
+  { type: "page", icon: "📜", title: "1. Krønikebok", subtitle: "Bok · Adam til David — slektslister + tempelforberedelse",
+    url: "1-kron-tidslinje.html", keywords: ["1 krønikebok", "1 kron", "chronicles", "krønikene", "slektslister", "david", "tempel", "adam"] },
+  { type: "page", icon: "📜", title: "2. Krønikebok", subtitle: "Bok · Salomo til Kyros' dekret",
+    url: "2-kron-tidslinje.html", keywords: ["2 krønikebok", "2 kron", "chronicles", "krønikene", "salomo", "juda-konger", "tempel", "eksil", "kyros"] },
+
   // ============ Phases on David's page ============
   { type: "phase", icon: "🌾", title: "Gjetergutten i Betlehem", subtitle: "David · Fase I · ~1040–1025 f.Kr.",
     url: "david-tidslinje.html#gjeter", keywords: ["betlehem", "samuel salver", "gjeter"] },

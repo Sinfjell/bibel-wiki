@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. Kongebok — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>1. Kongebok — <em>splittelsen</em></h1>
+  <p class="subtitle">Tjueto kapitler fra Salomos kroning til Akabs død — gullalderen, tempelet, splittelsen, og profeten Elia mot Baals prester.</p>
+  <a class="notion-pill" href="https://www.notion.so/0d5ff552e2f14d7f8e6807eec11efc19" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne 1. Kongebok i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Hvor lenge vil dere halte til begge sider? <em>Er Herren Gud, så følg ham; er Baal, så følg ham!</em></blockquote>
+    <div class="ref">Elia på Karmel-fjellet · 1. Kongebok 18,21</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>1. Kongebok — <em>kapittel 1 til 22</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Fortelling</span>
+      <span><i class="swatch sw-chron"></i>Tempel og pakt</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>1. Kongebok — <em>Jerusalem og Nordriket</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i 1. Kongebok">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="2-samuel-tidslinje.html">← 2. Samuel</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="2-kong-tidslinje.html">2. Kongebok →</a></p>
+  <p>Boken slutter med Akabs død i strid og hans sønn Akasja på tronen</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 22, isChapters: true, tickStep: 1, majorStep: 5 },
+  defaultId: "salomo-tempel",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 195 110 100"
+  },
+  pageUrls: {
+    "David":         "david-tidslinje.html",
+    "2. Samuel":     "2-samuel-tidslinje.html",
+    "2. Kongebok":   "2-kong-tidslinje.html",
+    "1. Krønikebok": "1-kron-tidslinje.html",
+    "2. Krønikebok": "2-kron-tidslinje.html"
+  },
+  notionUrls: {
+    "1. Kongebok":   "https://www.notion.so/0d5ff552e2f14d7f8e6807eec11efc19",
+    "2. Samuel":     "https://www.notion.so/70dcb524c02d4935ae631e4b0c94980d",
+    "1. Krønikebok": "https://www.notion.so/c11a015cad0a44c0b6c06a0b883cd940"
+  },
+  data: [
+    {
+      id: "kroningen", num: "I",
+      title: "Salomos kroning", tagline: "Adonja prøver — Salomo salves.",
+      start: 1, end: 2, label: "Kap 1–2",
+      lede: "Adonja, Davids eldste gjenværende sønn, prøver å gripe tronen mens David ligger gammel og kald. Profeten Natan og Batseba sikrer at Salomo blir salvet ved Gihon-kilden. David gir Salomo siste råd — om Joab, om Sjimei, om å holde Herrens lov. Etter Davids død gjør Salomo opp regningen: Adonja, Joab, Sjimei henrettes. Tronen er sikret.",
+      keyEvent: "Salomo salves ved Gihon (1. Kongebok 1,39)",
+      books: ["1. Kongebok"],
+      people: ["David (dør)", "Salomo", "Adonja", "Batseba", "Natan", "Sadok", "Benaja", "Joab"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "visdomsbon", num: "II",
+      title: "Visdomsbønnen og dommen", tagline: "Be om hva du vil — han ba om visdom.",
+      start: 3, end: 4, label: "Kap 3–4",
+      lede: "Salomo gifter seg med Faraos datter, ofrer ved Gibeon, og Herren viser seg i en drøm: \"Be om hva du vil.\" Salomo ber om et lyttende hjerte til å skille mellom godt og ondt. Herren gir ham visdom, rikdom og ære. Den berømte dommen mellom de to mødrene viser hva visdommen kan. Riket organiseres i tolv distrikter; hoffholdet er enormt.",
+      keyEvent: "\"Gi din tjener et lyttende hjerte\" (1. Kongebok 3,9)",
+      books: ["1. Kongebok"],
+      people: ["Salomo", "Faraos datter", "Mor 1", "Mor 2"],
+      locations: ["jerusalem", "goshen"]
+    },
+    {
+      id: "salomo-tempel", num: "III",
+      title: "Tempelet bygges", tagline: "Sju år, syv hundre år for å forberede.",
+      start: 5, end: 8, label: "Kap 5–8",
+      lede: "Hiram av Tyrus leverer sedertre fra Libanon. Sytti tusen bærere, åtti tusen steinhoggere. Tempelet reises på Moriafjellet — der Abraham ofret Isak — uten lyd av hammer eller meisel. Sju år tar det. Når arken bæres inn, fyller skyen huset; Herrens herlighet er så tett at prestene ikke kan stå. Salomos lange tempel-bønn: må din øye være åpne over dette stedet — også når synd kommer, også når eksil.",
+      keyEvent: "Herrens herlighet fyller tempelet (1. Kongebok 8,11)",
+      books: ["1. Kongebok"],
+      people: ["Salomo", "Hiram av Tyrus", "Bezalels arvinger"],
+      locations: ["jerusalem", "tyre"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "salomo-storhet", num: "IV",
+      title: "Salomos storhet — og fall", tagline: "Sjebas dronning, og syv hundre koner.",
+      start: 9, end: 11, label: "Kap 9–11",
+      lede: "Sjebas dronning kommer for å prøve Salomo med gåter; hun går hjem målløs av pragt. Salomos rike strekker seg fra Eufrat til Egypt-elven. Han bygger byer og en handelsflåte ved Esjon-Geber. Men: 700 koner og 300 medhustruer fra fremmede folk fører hjertet hans bort. På sine eldre dager bygger han offerhauger til Kemos og Astarte på Oljeberget. Herrens dom: riket skal rives fra hans sønn — bare én stamme blir igjen.",
+      keyEvent: "Salomo dyrker fremmede guder; riket skal rives (1. Kongebok 11)",
+      books: ["1. Kongebok"],
+      people: ["Salomo", "Sjebas dronning", "Hiram av Tyrus", "Jeroboam"],
+      locations: ["jerusalem", "esjongeber", "tyre"]
+    },
+    {
+      id: "rikets-deling", num: "V",
+      title: "Rikets deling", tagline: "Rehabeam mot Jeroboam.",
+      start: 12, end: 14, label: "Kap 12–14",
+      lede: "Salomo dør. Sønnen Rehabeam møter folket i Sikem og lytter til de unge mennene: \"Min far slo dere med pisker; jeg vil slå dere med skorpioner.\" Ti stammer bryter løs under Jeroboam. Han reiser to gullkalver — én i Dan, én i Betel — så folket ikke skal reise opp til Jerusalem. Profet fra Juda taler dom over alteret i Betel; Jeroboams hånd visner og helbredes. Splittelsen er endelig.",
+      keyEvent: "Riket deles i Sikem (1. Kongebok 12)",
+      books: ["1. Kongebok"],
+      people: ["Rehabeam", "Jeroboam", "Profet fra Juda"],
+      locations: ["jerusalem", "shechem", "bethel", "dan"]
+    },
+    {
+      id: "tidlige-konger", num: "VI",
+      title: "Tidlige konger — synd følger synd", tagline: "Fra Asa til Akab.",
+      start: 15, end: 16, label: "Kap 15–16",
+      lede: "Juda får Asa, en god konge som rydder ut avgudene. Men i nord skifter dynastiet stadig: Nadab drepes, Bashas hus utryddes av Simri, Simri dør i flammer etter sju dager, Omri kommer fram. Han bygger Samaria som hovedstad og er strategisk dyktig. Men sønnen — Akab — gifter seg med Jezabel av Tyrus og innfører Baal-tilbedelsen. \"Akab gjorde mer ondt enn alle som var før ham.\"",
+      keyEvent: "Akab gifter seg med Jezabel og innfører Baal (1. Kongebok 16,31)",
+      books: ["1. Kongebok"],
+      people: ["Asa", "Nadab", "Basha", "Simri", "Omri", "Akab", "Jezabel"],
+      locations: ["jerusalem", "samaria"]
+    },
+    {
+      id: "elia-karmel", num: "VII",
+      title: "Elia og Karmel", tagline: "Er Herren Gud, så følg ham.",
+      start: 17, end: 19, label: "Kap 17–19",
+      lede: "Elia tisbitten trer fram med ord om tørke. Han mates av ravner ved Krit, av enken i Sarepta. Etter tre års tørke møter han Akab og kaller alle til Karmel-fjellet. Fire hundre og femti Baals profeter mot én. Ilden faller fra himmelen, fortærer offer og vann. Folket roper: \"Herren — han er Gud!\" Baals profeter slaktes ved bekken Kison. Men Jezabel sverger død; Elia flykter til Horeb og hører den stille, lave røsten.",
+      keyEvent: "Ilden fra himmelen på Karmel (1. Kongebok 18,38)",
+      books: ["1. Kongebok"],
+      prophets: ["Elia"],
+      people: ["Akab", "Jezabel", "Obadja", "Elisja (kalles)"],
+      locations: ["mtkarmel", "samaria", "jisreel", "horeb"]
+    },
+    {
+      id: "akab-doer", num: "VIII",
+      title: "Naboths vingård og Akabs død", tagline: "Du har solgt deg til å gjøre ondt.",
+      start: 20, end: 22, label: "Kap 20–22",
+      lede: "Akab beseirer arameerne to ganger, men sparer kong Ben-Hadad mot Herrens vilje. Han begjærer Naboths vingård i Jisreel; Jezabel arrangerer falskt vitnesbyrd og Naboth steines. Elia kommer: \"Hundene skal slikke ditt blod på samme sted.\" Akab ydmyker seg, og dommen utsettes. Ved siste slag mot Aram ved Ramot-Gilead blir Akab dødelig såret av en pil; vognen vaskes i Samaria — og hundene slikker hans blod, akkurat som Elia sa. Akasja, hans sønn, tar over.",
+      keyEvent: "Naboths vingård og Elias dom (1. Kongebok 21)",
+      books: ["1. Kongebok"],
+      prophets: ["Elia", "Mika ben-Jimla"],
+      people: ["Akab", "Jezabel", "Naboth", "Josafat av Juda", "Akasja"],
+      locations: ["jisreel", "samaria", "ramot"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

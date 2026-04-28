@@ -725,5 +725,51 @@
     "y": 137,
     "region": "oyer",
     "labelDy": -10
+  },
+  "jisreel": {
+    "name": "Jisreel",
+    "x": 478,
+    "y": 226,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Akabs vinterresidens; Nabots vingård; Jehu's blodbad mot Akabs hus.",
+    "scriptures": [
+      "1. Kong 21",
+      "2. Kong 9–10"
+    ]
+  },
+  "dan": {
+    "name": "Dan",
+    "x": 488,
+    "y": 207,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Nordligste byen i Israel; Jeroboam reiste en av sine to gullkalver her.",
+    "scriptures": [
+      "1. Kong 12,29-30"
+    ]
+  },
+  "ramot": {
+    "name": "Ramot-Gilead",
+    "x": 502,
+    "y": 232,
+    "region": "moab",
+    "labelDy": 14,
+    "description": "Stridig grenseby; her ble Akab dødelig såret og Joram senere felt.",
+    "scriptures": [
+      "1. Kong 22",
+      "2. Kong 9"
+    ]
+  },
+  "esjongeber": {
+    "name": "Esjon-Geber",
+    "x": 446,
+    "y": 380,
+    "region": "edom",
+    "labelDy": -10,
+    "description": "Salomos havneby ved Aqaba-bukta; herfra seilte handelsflåten til Ofir.",
+    "scriptures": [
+      "1. Kong 9,26-28"
+    ]
   }
 }

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. Kongebok — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>2. Kongebok — <em>nedgangen</em></h1>
+  <p class="subtitle">Tjuefem kapitler fra Elias himmelfart til Jerusalems brann — Elisja, Jehu, Hiskia, Josja, og det dobbelte fallet: først Israel til Assyria, så Juda til Babylon.</p>
+  <a class="notion-pill" href="https://www.notion.so/03ddebec3d4942cba6e0bbf18cd44d0e" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne 2. Kongebok i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Det skjedde fordi Israels barn syndet mot Herren sin Gud. <em>De fryktet andre guder.</em></blockquote>
+    <div class="ref">Ettermæle ved Israels fall · 2. Kongebok 17,7–8</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>2. Kongebok — <em>kapittel 1 til 25</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Fortelling</span>
+      <span><i class="swatch sw-chron"></i>Reform</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>2. Kongebok — <em>fra Samaria til Babylon</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i 2. Kongebok">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="1-kong-tidslinje.html">← 1. Kongebok</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="1-kron-tidslinje.html">1. Krønikebok →</a></p>
+  <p>Boken slutter med Jojakin løslatt fra fengsel i Babylon — et glimt av håp i mørket</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 25, isChapters: true, tickStep: 1, majorStep: 5 },
+  defaultId: "fall-israel",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 95 380 220"
+  },
+  pageUrls: {
+    "1. Kongebok":   "1-kong-tidslinje.html",
+    "1. Krønikebok": "1-kron-tidslinje.html",
+    "2. Krønikebok": "2-kron-tidslinje.html"
+  },
+  notionUrls: {
+    "2. Kongebok":   "https://www.notion.so/03ddebec3d4942cba6e0bbf18cd44d0e",
+    "1. Kongebok":   "https://www.notion.so/0d5ff552e2f14d7f8e6807eec11efc19",
+    "2. Krønikebok": "https://www.notion.so/d51a7e84e08c4d27a6c00b6c2f9b69cf"
+  },
+  data: [
+    {
+      id: "elia-himmelfart", num: "I",
+      title: "Elias himmelfart", tagline: "Ildvogn og en kappe.",
+      start: 1, end: 2, label: "Kap 1–2",
+      lede: "Akasja faller gjennom et gitter og dør etter Elias dom. Elia og Elisja går sammen fra Gilgal til Betel til Jeriko og over Jordan. Elisja ber om en dobbelt del av ånden. En ildvogn skiller dem; Elia farer opp i en stormvind. Elisja tar opp kappen, deler Jordan, og fyrti og to gutter blir revet av bjørner etter å ha hånet ham. Elisja-tjenesten begynner.",
+      keyEvent: "Elia tas opp i en stormvind (2. Kongebok 2,11)",
+      books: ["2. Kongebok"],
+      prophets: ["Elia (tas opp)", "Elisja"],
+      people: ["Akasja"],
+      locations: ["jericho", "jisreel"]
+    },
+    {
+      id: "elisja", num: "II",
+      title: "Elisja-tjenesten", tagline: "Dobbel ånd — dobbelt mirakel.",
+      start: 3, end: 9, label: "Kap 3–9",
+      lede: "Vannet i Jeriko helbredes; en enkes olje øker; en sønn vekkes opp i Sjunem; pottens gift fjernes; tjue brød metter hundre. Naaman, arameerkommandant, helbredes for spedalskhet etter sju dypp i Jordan. Akabs hus dømmes; Elisja salver Jehu i hemmelighet til konge over Israel.",
+      keyEvent: "Naaman dypper sju ganger i Jordan og helbredes (2. Kongebok 5,14)",
+      books: ["2. Kongebok"],
+      prophets: ["Elisja"],
+      people: ["Joram", "Naaman", "Sjunemittinnen", "Gehasi", "Hasael"],
+      locations: ["jericho", "samaria", "jisreel", "damascus"]
+    },
+    {
+      id: "jehu", num: "III",
+      title: "Jehus revolusjon", tagline: "Han kjører som en gal.",
+      start: 9, end: 10, label: "Kap 9–10",
+      lede: "Jehu salves ved Ramot-Gilead, kjører rasende mot Jisreel og skyter Joram med pil. Akasja av Juda flykter og felles. Jezabel kastes ut av vinduet — hundene eter henne, akkurat som Elia sa. Jehu samler alle Baals profeter under påskudd av en fest og slakter dem alle. Akabs hus utryddes. Men gullkalvene i Dan og Betel består — Jehu fjerner ikke alt.",
+      keyEvent: "Akabs hus utryddes (2. Kongebok 10,17)",
+      books: ["2. Kongebok"],
+      prophets: ["Elisja"],
+      people: ["Jehu", "Joram", "Akasja", "Jezabel"],
+      locations: ["ramot", "jisreel", "samaria", "dan", "bethel"]
+    },
+    {
+      id: "joas-juda", num: "IV",
+      title: "Joas i Juda", tagline: "Skjult i tempelet i sju år.",
+      start: 11, end: 12, label: "Kap 11–12",
+      lede: "Atalja, Akasjas mor (datter av Akab og Jezabel), griper tronen i Juda og slakter alle kongelige etterkommere. Men presten Jojada redder spedbarnet Joas og skjuler ham i tempelet i sju år. Atalja styrtes; Joas krones. Han reparerer tempelet, men etter Jojadas død faller han for slett rådgivning og myrder Jojadas sønn. Han drepes av sine tjenere.",
+      keyEvent: "Joas skjules i tempelet og krones syv år gammel (2. Kongebok 11)",
+      books: ["2. Kongebok"],
+      people: ["Atalja", "Jojada", "Joas", "Sakarja"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "jeroboam-2", num: "V",
+      title: "Jeroboam II og profetene", tagline: "Velstand på overflaten — råte under.",
+      start: 13, end: 15, label: "Kap 13–15",
+      lede: "Elisja dør; en død mann livner til når liket berører hans grav. Jeroboam II bygger riket større enn det har vært siden Salomo. Men under overflaten preker Hosea og Amos om sosial urett, vold mot fattige, religiøs fasade. Etter Jeroboam II følger seks konger på tjue år — flere myrdes. Tiglat-Pileser av Assyria begynner å deportere stammer.",
+      keyEvent: "Elisja dør og hans grav helbreder en død (2. Kongebok 13,21)",
+      books: ["2. Kongebok"],
+      prophets: ["Elisja (dør)", "Jonas", "Hosea", "Amos"],
+      people: ["Joahas", "Joas av Israel", "Jeroboam II", "Sakarja", "Sallum", "Menahem"],
+      locations: ["samaria", "nineveh"]
+    },
+    {
+      id: "fall-israel", num: "VI",
+      title: "Nordriket faller", tagline: "Ti stammer borte.",
+      start: 17, end: 17, label: "Kap 17",
+      lede: "Hosea, siste konge i Israel, gjør opprør mot Assyria. Salmaneser V og senere Sargon II beleirer Samaria i tre år. I 722 f.Kr. faller byen. Israels folk deporteres til Assyria; fremmede folk plantes i landet. Disse utvikler den samaritanske blandingsreligionen. Ettermælet i kap 17 er det skarpeste i hele Bibelen: \"Det skjedde fordi de fryktet andre guder.\"",
+      keyEvent: "Samaria faller — Israel går i eksil (2. Kongebok 17,6)",
+      books: ["2. Kongebok"],
+      people: ["Hosea (kongen)", "Salmaneser V", "Sargon II"],
+      locations: ["samaria", "nineveh"]
+    },
+    {
+      id: "hiskia", num: "VII",
+      title: "Hiskia og Sankerib", tagline: "Englen som drepte 185 000.",
+      start: 18, end: 20, label: "Kap 18–20",
+      lede: "Hiskia av Juda renser tempelet, knuser kobberslangen Moses laget (folket hadde begynt å tilbe den), og gjør opprør mot Assyria. Sankerib invaderer i 701, raser sør gjennom Juda og beleirer Jerusalem. Sankeribs spotter mot Herren ved muren. Profeten Jesaja: \"Herren skal forsvare denne byen.\" Herrens engel slår 185 000 i Assyrerleiren én natt. Sankerib trekker seg tilbake; drepes senere i sitt eget tempel. Hiskia får 15 ekstra år etter bønn.",
+      keyEvent: "Herrens engel slår assyrer-hæren (2. Kongebok 19,35)",
+      books: ["2. Kongebok"],
+      prophets: ["Jesaja"],
+      people: ["Hiskia", "Sankerib", "Rabsjake", "Eljakim"],
+      locations: ["jerusalem", "lakish", "nineveh"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "josja-fall", num: "VIII",
+      title: "Josjas reform — og Jerusalems fall", tagline: "Den siste store kongen.",
+      start: 21, end: 25, label: "Kap 21–25",
+      lede: "Manasse av Juda er den verste — femtifem år med Baal-altere i selve tempelet. Josja, åtte år gammel, krones etter at far Amon myrdes. Han renser landet for avguder. Lovboken finnes i tempelet; Josja river kappen sin og inngår pakt på nytt. Men Herrens vrede er allerede tent. Josja faller mot Egypt ved Megiddo. Hans sønner regjerer som vasaller. I 587/586 f.Kr. brenner Nebukadnesar Jerusalem. Tempelet ødelegges. Folket går i eksil til Babylon. Boken slutter med Jojakin løslatt fra fengsel — et lite håp i mørket.",
+      keyEvent: "Jerusalem brenner; Juda går i eksil (2. Kongebok 25,9)",
+      books: ["2. Kongebok"],
+      prophets: ["Hulda", "Jeremia (samtidig)"],
+      people: ["Manasse", "Josja", "Jojakim", "Sedekia", "Nebukadnesar", "Jojakin"],
+      locations: ["jerusalem", "megiddo", "babylon"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

@@ -9,6 +9,7 @@ window.__BIBEL_LOCATIONS = {
     "region": "egypt",
     "labelDy": -10,
     "pages": [
+      "1-kong-tidslinje.html",
       "1-mos-tidslinje.html",
       "2-mos-tidslinje.html",
       "abraham-tidslinje.html",
@@ -35,7 +36,8 @@ window.__BIBEL_LOCATIONS = {
     ],
     "description": "Egypts gamle hovedstad og religiøse senter. Profetene varslet dom over Memphis.",
     "pages": [
-      "1-mos-tidslinje.html"
+      "1-mos-tidslinje.html",
+      "2-kron-tidslinje.html"
     ]
   },
   "thebes": {
@@ -84,6 +86,7 @@ window.__BIBEL_LOCATIONS = {
     "region": "sinai",
     "labelDy": 12,
     "pages": [
+      "1-kong-tidslinje.html",
       "2-mos-tidslinje.html",
       "3-mos-tidslinje.html",
       "4-mos-tidslinje.html",
@@ -141,7 +144,11 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": -10,
     "pages": [
+      "1-kong-tidslinje.html",
+      "1-kron-tidslinje.html",
       "1-mos-tidslinje.html",
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html",
       "2-samuel-tidslinje.html",
       "abraham-tidslinje.html",
       "david-tidslinje.html"
@@ -165,6 +172,7 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": 12,
     "pages": [
+      "1-kron-tidslinje.html",
       "1-mos-tidslinje.html",
       "2-samuel-tidslinje.html",
       "abraham-tidslinje.html",
@@ -210,6 +218,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "Den første byen Israel erobret i Kanaan; murene falt etter 7 dagers marsj.",
     "scriptures": [
       "Jos 6"
+    ],
+    "pages": [
+      "2-kong-tidslinje.html"
     ]
   },
   "shechem": {
@@ -219,7 +230,9 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": -10,
     "pages": [
+      "1-kong-tidslinje.html",
       "1-mos-tidslinje.html",
+      "2-kron-tidslinje.html",
       "abraham-tidslinje.html"
     ],
     "description": "Hvor Abraham bygde sitt første alter i Kanaan; senere et viktig religiøst senter.",
@@ -250,7 +263,11 @@ window.__BIBEL_LOCATIONS = {
     "altNames": [
       "Harmageddon"
     ],
-    "description": "Strategisk festning ved Jisreel-dalen. Jesus' siste slag (åpenbaringsboken)."
+    "description": "Strategisk festning ved Jisreel-dalen. Jesus' siste slag (åpenbaringsboken).",
+    "pages": [
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html"
+    ]
   },
   "samaria": {
     "name": "Samaria",
@@ -258,7 +275,12 @@ window.__BIBEL_LOCATIONS = {
     "y": 244,
     "region": "kanaan",
     "labelDy": 14,
-    "description": "Hovedstad i Nordriket, grunnlagt av Omri."
+    "description": "Hovedstad i Nordriket, grunnlagt av Omri.",
+    "pages": [
+      "1-kong-tidslinje.html",
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html"
+    ]
   },
   "nazareth": {
     "name": "Nasaret",
@@ -275,7 +297,9 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": -10,
     "pages": [
+      "1-kong-tidslinje.html",
       "1-mos-tidslinje.html",
+      "2-kong-tidslinje.html",
       "abraham-tidslinje.html"
     ],
     "description": "Hvor Jakob så himmelstigen.",
@@ -381,7 +405,11 @@ window.__BIBEL_LOCATIONS = {
     "y": 267,
     "region": "kanaan",
     "labelDy": 14,
-    "description": "Festningsby i Juda; falt for Sankerib."
+    "description": "Festningsby i Juda; falt for Sankerib.",
+    "pages": [
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html"
+    ]
   },
   "hasor": {
     "name": "Hasor",
@@ -401,6 +429,7 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": 14,
     "pages": [
+      "1-kron-tidslinje.html",
       "1-samuel-tidslinje.html",
       "david-tidslinje.html",
       "saul-tidslinje.html"
@@ -441,6 +470,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "Hvor Elia konfronterte Baals profeter.",
     "scriptures": [
       "1. Kong 18"
+    ],
+    "pages": [
+      "1-kong-tidslinje.html"
     ]
   },
   "mthermon": {
@@ -470,6 +502,8 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": -10,
     "description": "Fønikisk handelsby; leverte sedertre til Salomos tempel.",
     "pages": [
+      "1-kong-tidslinje.html",
+      "2-kron-tidslinje.html",
       "david-tidslinje.html"
     ]
   },
@@ -488,6 +522,7 @@ window.__BIBEL_LOCATIONS = {
     "region": "moab",
     "labelDy": 12,
     "pages": [
+      "2-kron-tidslinje.html",
       "4-mos-tidslinje.html",
       "5-mos-tidslinje.html",
       "david-tidslinje.html",
@@ -533,6 +568,7 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": -10,
     "description": "Ammonittenes hovedstad.",
     "pages": [
+      "1-kron-tidslinje.html",
       "david-tidslinje.html"
     ]
   },
@@ -560,7 +596,10 @@ window.__BIBEL_LOCATIONS = {
     "y": 295,
     "region": "edom",
     "labelDy": 12,
-    "description": "Esau's etterkommere; lå sør for Dødehavet."
+    "description": "Esau's etterkommere; lå sør for Dødehavet.",
+    "pages": [
+      "2-kron-tidslinje.html"
+    ]
   },
   "damascus": {
     "name": "Damaskus",
@@ -573,6 +612,9 @@ window.__BIBEL_LOCATIONS = {
       "Apg 9,1-19"
     ],
     "pages": [
+      "1-kron-tidslinje.html",
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html",
       "abraham-tidslinje.html"
     ]
   },
@@ -607,7 +649,9 @@ window.__BIBEL_LOCATIONS = {
     "region": "babylonia",
     "labelDy": -10,
     "pages": [
-      "1-mos-tidslinje.html"
+      "1-mos-tidslinje.html",
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html"
     ],
     "description": "Den store byen ved Eufrat; senter for det babylonske eksilet (586–538 f.Kr.). Babels tårn, Daniel, Nebukadnesar.",
     "scriptures": [
@@ -645,6 +689,10 @@ window.__BIBEL_LOCATIONS = {
     "scriptures": [
       "Jonas 1–4",
       "Nahum"
+    ],
+    "pages": [
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html"
     ]
   },
   "assur": {
@@ -670,6 +718,9 @@ window.__BIBEL_LOCATIONS = {
       "Ester 1–10",
       "Dan 8,2",
       "Neh 1,1"
+    ],
+    "pages": [
+      "2-kron-tidslinje.html"
     ]
   },
   "tarsus": {
@@ -757,5 +808,68 @@ window.__BIBEL_LOCATIONS = {
     "y": 137,
     "region": "oyer",
     "labelDy": -10
+  },
+  "jisreel": {
+    "name": "Jisreel",
+    "x": 478,
+    "y": 226,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Akabs vinterresidens; Nabots vingård; Jehu's blodbad mot Akabs hus.",
+    "scriptures": [
+      "1. Kong 21",
+      "2. Kong 9–10"
+    ],
+    "pages": [
+      "1-kong-tidslinje.html",
+      "2-kong-tidslinje.html"
+    ]
+  },
+  "dan": {
+    "name": "Dan",
+    "x": 488,
+    "y": 207,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Nordligste byen i Israel; Jeroboam reiste en av sine to gullkalver her.",
+    "scriptures": [
+      "1. Kong 12,29-30"
+    ],
+    "pages": [
+      "1-kong-tidslinje.html",
+      "2-kong-tidslinje.html"
+    ]
+  },
+  "ramot": {
+    "name": "Ramot-Gilead",
+    "x": 502,
+    "y": 232,
+    "region": "moab",
+    "labelDy": 14,
+    "description": "Stridig grenseby; her ble Akab dødelig såret og Joram senere felt.",
+    "scriptures": [
+      "1. Kong 22",
+      "2. Kong 9"
+    ],
+    "pages": [
+      "1-kong-tidslinje.html",
+      "2-kong-tidslinje.html",
+      "2-kron-tidslinje.html"
+    ]
+  },
+  "esjongeber": {
+    "name": "Esjon-Geber",
+    "x": 446,
+    "y": 380,
+    "region": "edom",
+    "labelDy": -10,
+    "description": "Salomos havneby ved Aqaba-bukta; herfra seilte handelsflåten til Ofir.",
+    "scriptures": [
+      "1. Kong 9,26-28"
+    ],
+    "pages": [
+      "1-kong-tidslinje.html",
+      "2-kron-tidslinje.html"
+    ]
   }
 };
