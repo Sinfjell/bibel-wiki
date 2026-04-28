@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeremia — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Jeremia — <em>den gråtende profeten</em></h1>
+  <p class="subtitle">Femtito kapitler om førti års varsler ingen ville høre — fra Josjas reform til Jerusalems fall til Jeremia bortført til Egypt mot sin vilje.</p>
+  <a class="notion-pill" href="https://www.notion.so/2c9e6d5f4e814f3b8a5b3f6e7b2c1d0a" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Jeremia i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Mitt folk har gjort to onde ting: De har <em>forlatt meg, kilden med levende vann</em>, og hugget seg brønner — sprukne brønner som ikke holder vann.</blockquote>
+    <div class="ref">Jeremia 2,13</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Jeremia — <em>kapittel 1 til 52</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Domsord</span>
+      <span><i class="swatch sw-chron"></i>Ny pakt</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Jeremia — <em>Anatot til Egypt</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Jeremia">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="jesaja-tidslinje.html">← Jesaja</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="klagesangene-tidslinje.html">Klagesangene →</a></p>
+  <p>Jeremia virket 627–582 f.Kr. — fra Josjas trettende år til etter Jerusalems fall</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 7,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 52, isChapters: true, tickStep: 2, majorStep: 10 },
+  defaultId: "ny-pakt",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "300 200 540 200"
+  },
+  pageUrls: {
+    "Jesaja":         "jesaja-tidslinje.html",
+    "Klagesangene":   "klagesangene-tidslinje.html",
+    "2. Kongebok":    "2-kong-tidslinje.html"
+  },
+  notionUrls: {
+    "Jeremia":        "https://www.notion.so/2c9e6d5f4e814f3b8a5b3f6e7b2c1d0a",
+    "Klagesangene":   "https://www.notion.so/4b8a3c2d1e5f4e6b9a7c8d2e3f5a6b9c"
+  },
+  data: [
+    {
+      id: "kallet", num: "I",
+      title: "Kallet — barnet som protesterer", tagline: "Før jeg formet deg i mors liv.",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "Jeremia er fra Anatot, et lite levitt-by nord for Jerusalem. Herren: \"Før jeg formet deg i mors liv, kjente jeg deg.\" Jeremia: \"Akk, Herre — jeg kan jo ikke tale, jeg er bare et barn.\" Herren rører ved hans munn, gir ham ord, gjør ham til en \"festningsby, en jernsøyle.\" To syner: en mandelgren (Herren \"våker\" over sitt ord), og en kokende gryte vendt fra nord (en fiende fra nord skal komme). Han kalles 627 f.Kr., samme år som Josjas reform begynner.",
+      keyEvent: "\"Før jeg formet deg i mors liv, kjente jeg deg\" (Jeremia 1,5)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia"],
+      people: ["Josja"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "tempel-tale", num: "II",
+      title: "Tempel-talen", tagline: "Stoler ikke på løgnaktige ord — \"Herrens tempel!\"",
+      start: 7, end: 10, label: "Kap 7–10",
+      lede: "Jeremia stiller seg i tempelporten og sier: \"Stol ikke på løgnaktige ord: 'Herrens tempel, Herrens tempel, Herrens tempel'.\" Folket tror Jerusalem er trygt fordi tempelet er der. Jeremia: \"Gå til Sjilo og se hva jeg gjorde med min bolig der.\" Som Sjilo blei brent, kan Jerusalem brennes. Han sammenligner avgudsdyrkelsen med utroskap. Profeten gråter konstant — derfor \"den gråtende profet.\" Han preker mot 50 år av falske profeter som lover fred når det ikke er fred.",
+      keyEvent: "Tempelet er ingen garanti (Jeremia 7,4)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia"],
+      people: ["Folket"],
+      locations: ["jerusalem", "shilo"]
+    },
+    {
+      id: "tegn-handlinger", num: "III",
+      title: "Tegn-handlingene", tagline: "En linbelte, leirkar, åk.",
+      start: 13, end: 20, label: "Kap 13–20",
+      lede: "Jeremia gjøre dramatiske demonstrasjoner: et linbelte gjemmes ved Eufrat til det er ødelagt — slik som folket. En pottemaker omformer leiren; like så Herren med Israel. Jeremia kjøper en leirkrukke og knuser den foran de eldste — slik skal byen knuses. Pasjur, presten, slår Jeremia og setter ham i stokken. Jeremias rystende klage: \"Forbannet være den dag jeg ble født!\" Men også: \"Hans ord er som en brennende ild i mitt hjerte; jeg kan ikke holde det inne.\"",
+      keyEvent: "Pottemakerens hus (Jeremia 18,4–6)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia"],
+      people: ["Pasjur"],
+      locations: ["jerusalem", "babylon"]
+    },
+    {
+      id: "konfliktene", num: "IV",
+      title: "Konflikter med konger og falske profeter", tagline: "Hananja møter Jeremia.",
+      start: 21, end: 29, label: "Kap 21–29",
+      lede: "Jeremia preker submisjon for Babel — det er Herrens dom. Profeten Hananja svarer med å brekke åket Jeremia bærer: innen to år skal alle vendes hjem! Jeremia: \"Du har brukket et tre-åk, men Herren skal lage et jern-åk.\" Hananja dør samme år. Jeremia skriver brev til de allerede bortførte: bygg hus, plant hager, søk byens beste — sytti år skal eksilet vare. Jeremia rister mot lederne som har feilledet folket.",
+      keyEvent: "Brevet til de bortførte: \"Søk byens beste\" (Jeremia 29,7)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia", "Hananja (falsk)"],
+      people: ["Sedekia", "Bortførte"],
+      locations: ["jerusalem", "babylon"]
+    },
+    {
+      id: "ny-pakt", num: "V",
+      title: "Trøstebok — den nye pakten", tagline: "Jeg vil skrive min lov i deres hjerter.",
+      start: 30, end: 33, label: "Kap 30–33",
+      lede: "Midt i dom-utbruddene fire kapitler med trøst. Israel skal vende tilbake. Mest dramatisk: \"Se, dager kommer, sier Herren, da jeg skal slutte en ny pakt med Israels hus og Judas hus. Ikke som den pakten jeg sluttet med deres fedre den dagen jeg tok dem ved hånden for å føre dem ut av Egypt — den pakten brøt de.\" Den nye pakten er innvendig: \"Jeg vil legge min lov i deres indre og skrive den i deres hjerter.\" Sitert av Jesus ved nattverden og av Hebreerbrevet.",
+      keyEvent: "\"En ny pakt — skrevet i hjertet\" (Jeremia 31,31–34)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia"],
+      people: ["Israel"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "fengsel-fall", num: "VI",
+      title: "Fengsel og Jerusalems fall", tagline: "Jeremia i bunnløs cisterne.",
+      start: 37, end: 39, label: "Kap 37–39",
+      lede: "Sedekia, siste konge, er svak. Jeremia anklages for å være forræder; sengelegges i en gjørmecisterne. Den etiopiske evnukken Ebed-Melek redder ham med tau og lanaer. Sedekia konsulterer Jeremia i hemmelighet: \"Overgi deg, så skal du leve.\" Sedekia velger å gjøre opprør. Nebukadnesar belyrer Jerusalem i 18 måneder; byen faller 587 f.Kr.; Sedekia ser sine sønner drept før øynene blindes; tempelet brennes. Jeremia overlates til selv å velge Babel eller Jerusalem; han velger å bli.",
+      keyEvent: "Jerusalem brenner (Jeremia 39,8)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia"],
+      people: ["Sedekia", "Ebed-Melek", "Nebukadnesar"],
+      locations: ["jerusalem", "babylon"]
+    },
+    {
+      id: "egypt", num: "VII",
+      title: "Tvunget til Egypt", tagline: "De ville ikke høre i Jerusalem; de hører ikke i Egypt heller.",
+      start: 40, end: 45, label: "Kap 40–45",
+      lede: "Etter fallet utnevnes Gedalja til guvernør. Han myrdes av Ismael; det skaper panikk. Resten av folket vil flykte til Egypt — de spør Jeremia, men har bestemt seg på forhånd. Jeremia: \"Herren har sagt: Bli i landet.\" De drar likevel og tvinger Jeremia og Baruk med seg. I Egypt fortsetter Jeremia å preke. Hans skriver Baruk får sin egen liten kapittel: \"Søk ikke store ting for deg selv ... men jeg skal gi deg ditt liv som krigsbytte.\"",
+      keyEvent: "Folket flykter til Egypt mot Herrens ord (Jeremia 43,7)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia", "Baruk"],
+      people: ["Gedalja", "Ismael", "Baruk"],
+      locations: ["jerusalem", "memphis", "thebes"]
+    },
+    {
+      id: "dom-folkene", num: "VIII",
+      title: "Dom over folkene + appendiks", tagline: "Også Babel skal falle.",
+      start: 46, end: 52, label: "Kap 46–52",
+      lede: "Boken slutter med dom over de samme nabofolkene Jesaja dømte: Egypt, filisterne, Moab, Ammon, Edom, Damaskus, Kedar, Elam — og Babel selv. To kapitler om Babels fall: \"Hellsom løse seg og hver mann fly til sitt eget land.\" Et siste kapittel — kapittel 52 — er en historisk gjentakelse av byens fall, hentet fra 2. Kongebok. Boken slutter, som 2. Kongebok, med Jojakins løslatelse fra fengsel — et lite glimt av håp i mørket.",
+      keyEvent: "Babel skal falle (Jeremia 50–51)",
+      books: ["Jeremia"],
+      prophets: ["Jeremia"],
+      people: ["Babel", "Folkene"],
+      locations: ["babylon", "memphis", "moab", "damascus"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

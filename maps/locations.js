@@ -37,7 +37,10 @@ window.__BIBEL_LOCATIONS = {
     "description": "Egypts gamle hovedstad og religiøse senter. Profetene varslet dom over Memphis.",
     "pages": [
       "1-mos-tidslinje.html",
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "esekiel-tidslinje.html",
+      "jeremia-tidslinje.html",
+      "jesaja-tidslinje.html"
     ]
   },
   "thebes": {
@@ -50,7 +53,10 @@ window.__BIBEL_LOCATIONS = {
       "No-Amon",
       "Luxor"
     ],
-    "description": "Den øvre Egypts hovedstad, kjent for Karnak-templene."
+    "description": "Den øvre Egypts hovedstad, kjent for Karnak-templene.",
+    "pages": [
+      "jeremia-tidslinje.html"
+    ]
   },
   "alexandria": {
     "name": "Alexandria",
@@ -151,8 +157,13 @@ window.__BIBEL_LOCATIONS = {
       "2-kron-tidslinje.html",
       "2-samuel-tidslinje.html",
       "abraham-tidslinje.html",
+      "daniel-tidslinje.html",
       "david-tidslinje.html",
+      "esekiel-tidslinje.html",
       "esra-tidslinje.html",
+      "jeremia-tidslinje.html",
+      "jesaja-tidslinje.html",
+      "klagesangene-tidslinje.html",
       "nehemja-tidslinje.html"
     ],
     "altNames": [
@@ -290,6 +301,7 @@ window.__BIBEL_LOCATIONS = {
       "2-kong-tidslinje.html",
       "2-kron-tidslinje.html",
       "esra-tidslinje.html",
+      "jesaja-tidslinje.html",
       "nehemja-tidslinje.html"
     ]
   },
@@ -328,6 +340,7 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-samuel-tidslinje.html",
       "dommerne-tidslinje.html",
+      "jeremia-tidslinje.html",
       "josva-tidslinje.html",
       "saul-tidslinje.html"
     ],
@@ -433,6 +446,7 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "2-kong-tidslinje.html",
       "2-kron-tidslinje.html",
+      "jesaja-tidslinje.html",
       "josva-tidslinje.html"
     ]
   },
@@ -536,7 +550,9 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-kong-tidslinje.html",
       "2-kron-tidslinje.html",
-      "david-tidslinje.html"
+      "david-tidslinje.html",
+      "esekiel-tidslinje.html",
+      "jesaja-tidslinje.html"
     ]
   },
   "sidon": {
@@ -545,7 +561,10 @@ window.__BIBEL_LOCATIONS = {
     "y": 196,
     "region": "fenikia",
     "labelDy": -10,
-    "description": "Eldste fønikiske byen."
+    "description": "Eldste fønikiske byen.",
+    "pages": [
+      "esekiel-tidslinje.html"
+    ]
   },
   "moab": {
     "name": "Moab-sletten",
@@ -559,6 +578,8 @@ window.__BIBEL_LOCATIONS = {
       "5-mos-tidslinje.html",
       "david-tidslinje.html",
       "dommerne-tidslinje.html",
+      "jeremia-tidslinje.html",
+      "jesaja-tidslinje.html",
       "josva-tidslinje.html",
       "moses-tidslinje.html",
       "rut-tidslinje.html"
@@ -633,7 +654,8 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": 12,
     "description": "Esau's etterkommere; lå sør for Dødehavet.",
     "pages": [
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "klagesangene-tidslinje.html"
     ]
   },
   "damascus": {
@@ -650,7 +672,9 @@ window.__BIBEL_LOCATIONS = {
       "1-kron-tidslinje.html",
       "2-kong-tidslinje.html",
       "2-kron-tidslinje.html",
-      "abraham-tidslinje.html"
+      "abraham-tidslinje.html",
+      "jeremia-tidslinje.html",
+      "jesaja-tidslinje.html"
     ]
   },
   "aram": {
@@ -687,7 +711,11 @@ window.__BIBEL_LOCATIONS = {
       "1-mos-tidslinje.html",
       "2-kong-tidslinje.html",
       "2-kron-tidslinje.html",
-      "esra-tidslinje.html"
+      "daniel-tidslinje.html",
+      "esekiel-tidslinje.html",
+      "esra-tidslinje.html",
+      "jeremia-tidslinje.html",
+      "jesaja-tidslinje.html"
     ],
     "description": "Den store byen ved Eufrat; senter for det babylonske eksilet (586–538 f.Kr.). Babels tårn, Daniel, Nebukadnesar.",
     "scriptures": [
@@ -728,7 +756,8 @@ window.__BIBEL_LOCATIONS = {
     ],
     "pages": [
       "2-kong-tidslinje.html",
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "jesaja-tidslinje.html"
     ]
   },
   "assur": {
@@ -757,6 +786,7 @@ window.__BIBEL_LOCATIONS = {
     ],
     "pages": [
       "2-kron-tidslinje.html",
+      "daniel-tidslinje.html",
       "esra-tidslinje.html",
       "ester-tidslinje.html",
       "nehemja-tidslinje.html"
@@ -965,6 +995,56 @@ window.__BIBEL_LOCATIONS = {
     "description": "Hvor Naomis familie søkte tilflukt i hungersnød; Rut møter Boas etter retur til Betlehem.",
     "scriptures": [
       "Rut 1"
+    ]
+  },
+  "kebar": {
+    "name": "Kebar-elven",
+    "x": 815,
+    "y": 250,
+    "region": "babylonia",
+    "labelDy": -10,
+    "description": "Hvor Esekiel hadde sine syner blant de bortførte i Babylon.",
+    "scriptures": [
+      "Esek 1,1"
+    ],
+    "pages": [
+      "esekiel-tidslinje.html"
+    ]
+  },
+  "tarsjisj": {
+    "name": "Tarsjisj",
+    "x": 50,
+    "y": 200,
+    "region": "hellas",
+    "labelDy": -10,
+    "description": "Fjerneste vestlige havn (Spania); Jonas seilte hit for aa flykte fra Herren.",
+    "scriptures": [
+      "Jona 1,3"
+    ]
+  },
+  "joppe": {
+    "name": "Joppe",
+    "x": 455,
+    "y": 252,
+    "region": "kanaan",
+    "labelDy": -10,
+    "altNames": [
+      "Jaffa"
+    ],
+    "description": "Havneby; Jonas gikk om bord her.",
+    "scriptures": [
+      "Jona 1,3"
+    ]
+  },
+  "tekoa": {
+    "name": "Tekoa",
+    "x": 471,
+    "y": 268,
+    "region": "kanaan",
+    "labelDy": 14,
+    "description": "Hjemby for profeten Amos; en saueoppdretter sør for Betlehem.",
+    "scriptures": [
+      "Amos 1,1"
     ]
   }
 };

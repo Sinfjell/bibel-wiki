@@ -816,5 +816,52 @@
     "scriptures": [
       "Rut 1"
     ]
+  },
+  "kebar": {
+    "name": "Kebar-elven",
+    "x": 815,
+    "y": 250,
+    "region": "babylonia",
+    "labelDy": -10,
+    "description": "Hvor Esekiel hadde sine syner blant de bortførte i Babylon.",
+    "scriptures": [
+      "Esek 1,1"
+    ]
+  },
+  "tarsjisj": {
+    "name": "Tarsjisj",
+    "x": 50,
+    "y": 200,
+    "region": "hellas",
+    "labelDy": -10,
+    "description": "Fjerneste vestlige havn (Spania); Jonas seilte hit for aa flykte fra Herren.",
+    "scriptures": [
+      "Jona 1,3"
+    ]
+  },
+  "joppe": {
+    "name": "Joppe",
+    "x": 455,
+    "y": 252,
+    "region": "kanaan",
+    "labelDy": -10,
+    "altNames": [
+      "Jaffa"
+    ],
+    "description": "Havneby; Jonas gikk om bord her.",
+    "scriptures": [
+      "Jona 1,3"
+    ]
+  },
+  "tekoa": {
+    "name": "Tekoa",
+    "x": 471,
+    "y": 268,
+    "region": "kanaan",
+    "labelDy": 14,
+    "description": "Hjemby for profeten Amos; en saueoppdretter sør for Betlehem.",
+    "scriptures": [
+      "Amos 1,1"
+    ]
   }
 }

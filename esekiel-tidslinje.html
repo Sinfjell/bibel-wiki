@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esekiel — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Esekiel — <em>profet i eksil</em></h1>
+  <p class="subtitle">Førtiåtte kapitler skrevet ved Kebar-elven i Babylon — den mest dramatiske av profetene, med syner, tegnhandlinger, og forutsigelse av en framtidig ny tempel.</p>
+  <a class="notion-pill" href="https://www.notion.so/5e7d8a9b6c4f4d8e9b5a3c2d1e6f7a8b" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Esekiel i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Jeg vil gi dere et nytt hjerte og en ny ånd i deres indre. Jeg vil ta steinhjertet ut av deres kropp og gi dere et <em>hjerte av kjøtt</em>.</blockquote>
+    <div class="ref">Esekiel 36,26</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Esekiel — <em>kapittel 1 til 48</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Syner og dom</span>
+      <span><i class="swatch sw-chron"></i>Det nye tempelet</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Esekiel — <em>ved Kebar-elven</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Esekiel">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="klagesangene-tidslinje.html">← Klagesangene</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="daniel-tidslinje.html">Daniel →</a></p>
+  <p>Esekiel virket fra 593 f.Kr. (5. året i eksilet) til ca 571 f.Kr.</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 48, isChapters: true, tickStep: 2, majorStep: 10 },
+  defaultId: "doedebenene",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 180 460 180"
+  },
+  pageUrls: {
+    "Klagesangene": "klagesangene-tidslinje.html",
+    "Daniel":       "daniel-tidslinje.html"
+  },
+  notionUrls: {
+    "Esekiel":      "https://www.notion.so/5e7d8a9b6c4f4d8e9b5a3c2d1e6f7a8b",
+    "Daniel":       "https://www.notion.so/6c8d9e0a7b5f4e9c0a6b4d3e2f7a8b9c"
+  },
+  data: [
+    {
+      id: "syn-tronen", num: "I",
+      title: "Synet ved Kebar-elven", tagline: "Fire ansikter, hjul i hjul, tronen.",
+      start: 1, end: 3, label: "Kap 1–3",
+      lede: "Esekiel — prest av familien, allerede bortført med Jojakin i 597 — sitter blant de bortførte ved Kebar-elven. Himlene åpnes. En storm fra nord, ild som flammer, fire vesener med fire ansikter (menneske, løve, okse, ørn) og fire vinger. Hjul i hjul, fulle av øyne. Over dem en hvelving og over hvelvingen en trone — \"og på tronen en skikkelse som lignet et menneske.\" Esekiel faller ned. En stemme: \"Menneskesønn, stå opp.\" Han spiser en bokrull — \"og den var søt som honning i min munn.\"",
+      keyEvent: "Synet av Herrens tronvogn (Esekiel 1)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      people: ["De bortførte"],
+      locations: ["kebar", "babylon"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "tegnhandlinger", num: "II",
+      title: "Tegnhandlingene", tagline: "390 dager på venstre side, 40 på høyre.",
+      start: 4, end: 5, label: "Kap 4–5",
+      lede: "Esekiel får en serie ekstreme tegnhandlinger som dramatiserer Jerusalems beleiring. Han ligger på venstre side i 390 dager (bære Israels skyld) og 40 på høyre (Juda). Han spiser kornkaker bakt på kumøkk. Han raker av seg hår og skjegg, deler i tre — én del brent, én hugget, én kastet for vinden. Volkets reaksjon? Ingen. Profeten blir et symbol — kroppen selv preker.",
+      keyEvent: "Esekiel ligger på siden i 430 dager (Esekiel 4,4–6)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      locations: ["kebar"]
+    },
+    {
+      id: "herrens-utgang", num: "III",
+      title: "Herren forlater tempelet", tagline: "Skjekinaen flytter — først til døren, så bort.",
+      start: 8, end: 11, label: "Kap 8–11",
+      lede: "I et syn fraktes Esekiel til Jerusalem — han ser inn i tempelet det folk gjør i hemmelighet: 70 eldste tilber bilder; kvinner gråter for Tammuz; menn vender ryggen mot Herren og bøyer seg mot solen. Engler får befaling om å slå alle som ikke har et tau på pannen. Herrens herlighet, skjekinaen, flytter seg gradvis — først fra det aller helligste til dørstolpen, så til Olajberget østenfor byen. Tempelet er forlatt før det blir brent. Det mest spøkelsesaktige bildet i hele GT.",
+      keyEvent: "Herrens herlighet forlater tempelet (Esekiel 11,23)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      locations: ["jerusalem", "kebar"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "personlig-ansvar", num: "IV",
+      title: "Personlig ansvar", tagline: "Sønnen skal ikke bære farens skyld.",
+      start: 18, end: 18, label: "Kap 18",
+      lede: "Folket sier: \"Fedrene har spist sure druer, men det er barnas tenner som blir såre.\" Esekiel: \"Den sjel som synder, den skal dø.\" Hver mann står for seg. En rettferdig far redder ikke en ond sønn; en ond far ødelegger ikke en rettferdig sønn. Og: en ond mann som vender om fra sin synd, skal leve. Herren vil ikke den ondes død. Det viktigste personlige etikkkapittel i hele GT — sentral for jødedom og kristendom siden.",
+      keyEvent: "\"Den sjel som synder, den skal dø\" (Esekiel 18,4)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      locations: ["kebar"]
+    },
+    {
+      id: "babels-fall", num: "V",
+      title: "Dom over folkene", tagline: "Tyrus, Sidon, Egypt — og særlig Tyrus.",
+      start: 25, end: 32, label: "Kap 25–32",
+      lede: "Som de andre profetene har Esekiel en \"dom over folkene\"-seksjon. Ammon, Moab, Edom, filisterne, Tyrus, Sidon, Egypt. Det berømte avsnittet om Tyrus i kap 27 er en sørgesang over byens prakt — en sørgesang som klinger lenge før den faller. \"Du var fullkommen i skjønnhet ... din handel fylte dine forrådshus ... men ditt hjerte ble hovmodig.\" Og over Egypt: \"Stor krokodille som ligger midt i sine elver.\"",
+      keyEvent: "Sørgesangen over Tyrus (Esekiel 27)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      locations: ["tyre", "sidon", "memphis"]
+    },
+    {
+      id: "doedebenene", num: "VI",
+      title: "Dødebeinsdalen", tagline: "Kan disse beina bli levende?",
+      start: 37, end: 37, label: "Kap 37",
+      lede: "Det mest berømte synet. Ånden fører Esekiel til en dal full av tørre bein. Herren: \"Menneskesønn, kan disse beina bli levende?\" Esekiel: \"Herre, du vet det.\" Han profeterer over beina; de raller, kommer sammen, sener og kjøtt vokser, hud kommer over — men det er ingen ånd i dem. Han profeterer til ånden; den kommer fra fire vinder. De reiser seg, en hærskare meget stor. Tolkningen: hele Israels hus, som tror seg fortapt, skal Herren reise opp og føre tilbake. Også: de to staver som blir én — Israel og Juda gjenforent.",
+      keyEvent: "De døde beins dal (Esekiel 37,1–14)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      locations: ["kebar"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "gog-magog", num: "VII",
+      title: "Gog fra Magog", tagline: "Det siste store angrepet.",
+      start: 38, end: 39, label: "Kap 38–39",
+      lede: "To kapitler om \"Gog fra Magog\" — en mystisk fiende fra det fjerne nord som skal angripe Israel \"i de siste dager\" når folket bor trygt. Herren: \"Jeg vil føre deg fram, så jeg kan helliggjøre meg på deg foran folkenes øyne.\" Det blir en kosmisk kamp; Herren slår fienden uten Israels sverd. Forskere er usikre på om dette er en historisk profeti eller eskatologisk; Åpenbaringsboken siterer det.",
+      keyEvent: "Gog fra Magog (Esekiel 38–39)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "nytt-tempel", num: "VIII",
+      title: "Det nye tempelet", tagline: "En arkitektonisk syn — og elven som gir liv.",
+      start: 40, end: 48, label: "Kap 40–48",
+      lede: "Boken slutter med ni kapitler om et fremtidig tempel — beskrevet i detalj av en mann med målerør. Esekiel ser dimensjoner, porter, kamre. Herrens herlighet vender tilbake gjennom østporten — den samme veien skjekinaen forlot byen. Levitter og prester er skilt etter trofasthet. Den vakreste detaljen: en elv strømmer ut fra under tempelet, blir dypere og dypere, helbreder Dødehavet, gjør trærne langs bredden bærer frukt hver måned. Kapittel 47 går rett inn i Åpenbaringen 22 og elven som gjør jorden ny.",
+      keyEvent: "Elven fra tempelet (Esekiel 47,1–12)",
+      books: ["Esekiel"],
+      prophets: ["Esekiel"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

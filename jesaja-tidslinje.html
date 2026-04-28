@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jesaja — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Jesaja — <em>evangelisten i GT</em></h1>
+  <p class="subtitle">Sekstiseks kapitler — som GT i miniatyr, fra dom til lidende tjener til ny himmel og jord. Mer sitert i NT enn nesten noen annen bok.</p>
+  <a class="notion-pill" href="https://www.notion.so/db21d75f8fde4d7eb2e83cf7a6c0a8c6" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Jesaja i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>For et barn er oss født, en sønn er oss gitt — og <em>herredømmet er på hans skulder</em>. Han skal kalles Underfull rådgiver, Veldig Gud, Evig Far, Fredsfyrste.</blockquote>
+    <div class="ref">Jesaja 9,6</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Jesaja — <em>kapittel 1 til 66</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Domsord og syner</span>
+      <span><i class="swatch sw-chron"></i>Trøst og messias-løfter</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Jesaja — <em>Jerusalem og verdens trygd</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Jesaja">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="2-kong-tidslinje.html">← 2. Kongebok</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="jeremia-tidslinje.html">Jeremia →</a></p>
+  <p>Jesaja virket under Ussias, Jotam, Akas og Hiskia — fire judiske konger over ~60 år</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 66, isChapters: true, tickStep: 5, majorStep: 10 },
+  defaultId: "lidende-tjener",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 95 380 220"
+  },
+  pageUrls: {
+    "2. Kongebok": "2-kong-tidslinje.html",
+    "Jeremia":     "jeremia-tidslinje.html"
+  },
+  notionUrls: {
+    "Jesaja": "https://www.notion.so/db21d75f8fde4d7eb2e83cf7a6c0a8c6"
+  },
+  data: [
+    {
+      id: "kallet", num: "I",
+      title: "Kallet i tempelet", tagline: "Hellig, hellig, hellig — og: send meg.",
+      start: 6, end: 6, label: "Kap 6",
+      lede: "I det året kong Ussias døde, ser Jesaja Herren på en høy og opphøyd trone. Serafer roper: \"Hellig, hellig, hellig er Herren Sebaot.\" Jesaja: \"Ve meg — jeg er fortapt, for jeg er en mann med urene lepper.\" En seraf tar en glødende kullbit fra alteret, berører hans munn — \"Din skyld er tatt bort, din synd er sonet.\" Herren: \"Hvem skal jeg sende?\" Jesaja: \"Her er jeg, send meg.\"",
+      keyEvent: "\"Hellig, hellig, hellig\" — og \"send meg\" (Jesaja 6,3.8)",
+      books: ["Jesaja"],
+      prophets: ["Jesaja"],
+      people: ["Ussias (dør)", "Serafer"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "ve-juda", num: "II",
+      title: "Ve over Juda — domskall", tagline: "Hør, himler — Herren har talt.",
+      start: 1, end: 5, label: "Kap 1–5",
+      lede: "Boken åpner med dom over Juda: \"Et folk som er tynget av synd ... de har forlatt Herren.\" Sodom og Gomorras karakter er over Jerusalem. Tempelet ofrer mens hender er fulle av blod. Jesaja roper seks ganger: \"Ve!\" — over de som drikker, de som driver gjøn med Herren, de som kaller ondt godt. Vinmarksangen i kap 5: Herren har plantet en vingård som bare bærer sure druer. Hva mer kunne jeg gjort?",
+      keyEvent: "Vinmarken som bare bærer sure druer (Jesaja 5,1–7)",
+      books: ["Jesaja"],
+      prophets: ["Jesaja"],
+      people: ["Juda"],
+      locations: ["jerusalem", "samaria"]
+    },
+    {
+      id: "immanuel", num: "III",
+      title: "Immanuel-boken", tagline: "En jomfru skal bli med barn.",
+      start: 7, end: 12, label: "Kap 7–12",
+      lede: "Akas, kongen, frykter koalisjonen Aram-Israel. Jesaja kommer med sønnen Sjear-Jasjub (\"en rest skal vende om\") og lover et tegn: en jomfru skal bli med barn og føde en sønn — Immanuel, \"Gud med oss.\" Mer storartete løfter følger: \"Et barn er oss født ... Underfull rådgiver, Veldig Gud.\" Stubben av Isai skal skyte ny grein — Davidsætt vekker. \"Ulven skal bo sammen med lammet ... jorden skal være full av kunnskap om Herren.\"",
+      keyEvent: "\"En jomfru skal bli med barn\" (Jesaja 7,14)",
+      books: ["Jesaja"],
+      prophets: ["Jesaja"],
+      people: ["Akas", "Hiskia"],
+      locations: ["jerusalem", "samaria", "damascus"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "verden-domt", num: "IV",
+      title: "Dom over folkene — og over jorden", tagline: "Babel, Assyria, Moab, Egypt — alle.",
+      start: 13, end: 27, label: "Kap 13–27",
+      lede: "Femten kapitler med dom over nabofolk: Babel (selv om de fortsatt er små i Jesajas tid), Assyria, filisterne, Moab, Damaskus, Etiopia, Egypt, Edom, Arabia. Også Jerusalem (\"Vise-syn\") og Tyrus. Til slutt en kosmisk apokalypse: Herren skal ødelegge jorden, slipe den. Men på den dagen: en stor sang. \"Du skal sette dø denpå sjokk gulv. Han har slukt døden for evig.\"",
+      keyEvent: "\"Han skal slukke døden for evig\" (Jesaja 25,8)",
+      books: ["Jesaja"],
+      prophets: ["Jesaja"],
+      people: ["Folkene"],
+      locations: ["babylon", "nineveh", "moab", "damascus", "tyre", "memphis"]
+    },
+    {
+      id: "hiskia-fortelling", num: "V",
+      title: "Hiskia-fortellingen", tagline: "Sankerib spotter — og Herren slår.",
+      start: 36, end: 39, label: "Kap 36–39",
+      lede: "De fire historiske kapitlene midt i boken — også gjengitt i 2. Kongebok 18–20. Sankerib-invasjon, Rabsjake spotter ved muren, Hiskia ber, Jesaja: \"Han skal ikke skyte en pil mot denne by.\" Herrens engel slår 185 000 i Assyrer-leiren. Hiskia syk; ber; får 15 ekstra år; viser babylonske gesandter alle skattekamrene. Jesaja: \"Alt skal føres til Babel. Av dine egne sønner skal noen gjøres til hoffmenn.\"",
+      keyEvent: "Herrens engel redder Jerusalem (Jesaja 37,36)",
+      books: ["Jesaja", "2. Kongebok"],
+      prophets: ["Jesaja"],
+      people: ["Hiskia", "Sankerib", "Rabsjake"],
+      locations: ["jerusalem", "lakish", "nineveh", "babylon"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "trost", num: "VI",
+      title: "Trøst, trøst mitt folk", tagline: "Veien for Herren beredes.",
+      start: 40, end: 48, label: "Kap 40–48",
+      lede: "\"Trøst, trøst mitt folk, sier deres Gud.\" Boken skifter dramatisk — som om profeten taler over hodene på Hiskias generasjon, ned til de som skal være i eksil. \"En røst roper i ørkenen: Bered Herrens vei.\" Herren er den eneste Gud, ikke Babels avguder. \"Frykt ikke, jeg er med deg.\" Kyros nevnes ved navn — 150 år før han ble født — som Herrens salvede som skal sette folket fri. Avgudsfabrikkene i Babel hånes: en mann faller den samme veden til både mat og guder.",
+      keyEvent: "\"Bered Herrens vei i ørkenen\" (Jesaja 40,3)",
+      books: ["Jesaja"],
+      prophets: ["Jesaja"],
+      people: ["Kyros (kommende)"],
+      locations: ["babylon", "jerusalem"]
+    },
+    {
+      id: "lidende-tjener", num: "VII",
+      title: "Den lidende tjeneren", tagline: "Han ble såret for våre lovbrudd.",
+      start: 49, end: 57, label: "Kap 49–57",
+      lede: "Fire \"tjenersanger\" tegner en mystisk skikkelse — kalt, foraktet, lidende, til slutt opphøyd. Klimaks i kapittel 53: \"Han ble såret for våre lovbrudd, knust for våre misgjerninger ... vi gikk alle vill som sauer ... Herren lot vår skyld ramme ham.\" Innholdet er så åpenbart kristologisk at jødiske tradisjoner senere unngikk å lese det offentlig. \"Av sitt slit skal han se og bli mettet ... Han skal bære deres synd.\" NT siterer Jesaja 53 mer enn ti ganger.",
+      keyEvent: "\"Han ble såret for våre lovbrudd\" (Jesaja 53,5)",
+      books: ["Jesaja"],
+      prophets: ["Jesaja"],
+      people: ["Lidende tjeneren"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "ny-himmel", num: "VIII",
+      title: "Ny himmel og ny jord", tagline: "Og det første skal aldri minnes mer.",
+      start: 58, end: 66, label: "Kap 58–66",
+      lede: "Den siste delen av boken vender seg mot framtiden. Det rette fastet er ikke ritualer men å gi mat til den sultne. Den salvede leser fra Jesaja 61 ved sin første preken i Nasaret: \"Herrens Ånd er over meg ... å forkynne et nådens år.\" Ny himmel og ny jord — \"ulven og lammet skal beite sammen.\" Boken slutter med to bilder: ilden mot opprørerne, og Herrens herlighet over et samlet folk fra alle nasjoner — \"så skal alt kjød komme og tilbe foran meg.\"",
+      keyEvent: "\"Se, jeg skaper en ny himmel og en ny jord\" (Jesaja 65,17)",
+      books: ["Jesaja"],
+      prophets: ["Jesaja"],
+      people: ["Den salvede"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

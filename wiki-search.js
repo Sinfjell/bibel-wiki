@@ -63,6 +63,18 @@ const WIKI_INDEX = [
   { type: "page", icon: "🌾", title: "Rut", subtitle: "Bok · En perle i kaoset — moabittisk oldemor til David",
     url: "rut-tidslinje.html", keywords: ["rut", "ruth", "naomi", "boas", "obed", "moabitt", "betlehem"] },
 
+  // Bøker — Store profeter
+  { type: "page", icon: "🔥", title: "Jesaja", subtitle: "Bok · Den evangeliske profeten — Immanuel, lidende tjener",
+    url: "jesaja-tidslinje.html", keywords: ["jesaja", "isaiah", "immanuel", "lidende tjener", "hellig hellig hellig", "messias", "ny himmel"] },
+  { type: "page", icon: "💧", title: "Jeremia", subtitle: "Bok · Den gråtende profeten — Jerusalems fall",
+    url: "jeremia-tidslinje.html", keywords: ["jeremia", "jeremiah", "ny pakt", "jerusalem fall", "anatot", "baruk", "sedekia"] },
+  { type: "page", icon: "🥀", title: "Klagesangene", subtitle: "Bok · Fem dikt over en brent by",
+    url: "klagesangene-tidslinje.html", keywords: ["klagesangene", "lamentations", "akrostisk", "miskunn", "ny hver morgen", "jerusalem"] },
+  { type: "page", icon: "👁️", title: "Esekiel", subtitle: "Bok · Profet i eksil — syner ved Kebar-elven",
+    url: "esekiel-tidslinje.html", keywords: ["esekiel", "ezekiel", "kebar", "hjul i hjul", "tronvogn", "dødebein", "nytt tempel", "gog magog"] },
+  { type: "page", icon: "🦁", title: "Daniel", subtitle: "Bok · Tro under fremmed makt — løvegropen, syner",
+    url: "daniel-tidslinje.html", keywords: ["daniel", "babylon", "nebukadnesar", "belsasar", "loevegropen", "ildovnen", "menneskesonnen", "70 uker"] },
+
   // Bøker — Esra-Nehemja-Ester (etter eksilet)
   { type: "page", icon: "🏗️", title: "Esra", subtitle: "Bok · Hjemkomsten — tempelet bygges (538-458 f.Kr.)",
     url: "esra-tidslinje.html", keywords: ["esra", "ezra", "kyros", "serubabel", "tempelet", "hjemkomst", "eksilet"] },

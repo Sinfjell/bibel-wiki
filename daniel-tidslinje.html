@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Daniel — <em>tro under fremmed makt</em></h1>
+  <p class="subtitle">Tolv kapitler delt i to: seks fortellinger om jødiske eksilianter ved hoffene i Babel og Persia, og seks apokalyptiske syner om kongerikenes gang fram til evig fred.</p>
+  <a class="notion-pill" href="https://www.notion.so/6c8d9e0a7b5f4e9c0a6b4d3e2f7a8b9c" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Daniel i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Den Høyeste hersker over <em>menneskenes kongerike</em>. Han gir det til hvem han vil — også til den ringeste blant menneskene.</blockquote>
+    <div class="ref">Daniel til Nebukadnesar · Daniel 4,17</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Daniel — <em>kapittel 1 til 12</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Fortellinger</span>
+      <span><i class="swatch sw-chron"></i>Apokalyptiske syner</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Daniel — <em>Babel og Susa</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Daniel">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="esekiel-tidslinje.html">← Esekiel</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="ester-tidslinje.html">Ester →</a></p>
+  <p>Daniel ble bortført med første gruppe i 605 f.Kr.; siste syn er fra Kyros' tredje år (~536)</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 12, isChapters: true, tickStep: 1, majorStep: 2 },
+  defaultId: "loevegropen",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "750 200 220 130"
+  },
+  pageUrls: {
+    "Esekiel":      "esekiel-tidslinje.html",
+    "Ester":        "ester-tidslinje.html"
+  },
+  notionUrls: {
+    "Daniel":       "https://www.notion.so/6c8d9e0a7b5f4e9c0a6b4d3e2f7a8b9c"
+  },
+  data: [
+    {
+      id: "hoffet", num: "I",
+      title: "Hoffet i Babel", tagline: "Fire jødiske gutter — vegrer mat, får visdom.",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "I 605 f.Kr. tar Nebukadnesar med seg unge adelige fra Juda til Babel for å trenes til kongelig tjeneste. Daniel og hans tre venner Hananja, Misjael og Asarja får babylonske navn (Beltsasar, Sjadrak, Mesjak, Abed-Nego). De vil ikke spise kongens mat (sannsynligvis fordi den er ofret avgudene). Etter ti dagers grønnsaker og vann er de friskere enn alle andre. Etter tre års opplæring er de ti ganger visere enn alle hoffrådgivere.",
+      keyEvent: "Daniel og vennene tar avstand fra kongens mat (Daniel 1,8)",
+      books: ["Daniel"],
+      people: ["Daniel", "Hananja", "Misjael", "Asarja", "Aspenas"],
+      locations: ["jerusalem", "babylon"]
+    },
+    {
+      id: "billedet", num: "II",
+      title: "Nebukadnesars drøm — bildet", tagline: "Gull, sølv, kobber, jern, jern + leire.",
+      start: 2, end: 2, label: "Kap 2",
+      lede: "Kongen har en urolig drøm; krever at vismennene skal både fortelle drømmen og tyde den. De kan ikke. Drapsdom over alle. Daniel ber om tid; Gud åpenbarer drømmen i et nattsyn. Daniel: \"Det er en Gud i himmelen som åpenbarer hemmeligheter.\" Et stort bilde — gull (Babel), sølv (Medo-Persia), kobber (Hellas), jern (Roma), jern blandet med leire (delt rike). En stein, hugget uten menneskehånd, slår bildet sønder, blir et fjell som fyller jorden — Guds rike som aldri skal forgå.",
+      keyEvent: "\"Den Gud som er i himmelen, har åpenbart hemmeligheten\" (Daniel 2,28)",
+      books: ["Daniel"],
+      people: ["Nebukadnesar", "Daniel"],
+      locations: ["babylon"]
+    },
+    {
+      id: "ovnen", num: "III",
+      title: "De tre i ildovnen", tagline: "Vi skal ikke tjene dine guder.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "Nebukadnesar reiser et gullstatue 30 meter høyt på Dura-sletten. Alle skal bøye seg ved musikkens lyd. Daniels tre venner nekter. Kongen rasende: \"Hvilken gud kan redde dere fra mine hender?\" De svarer: \"Vår Gud kan redde oss. Men selv om han ikke gjør det — vit at vi ikke vil tjene dine guder.\" Ovnen varmes opp sju ganger; soldatene som kaster dem inn dør av varmen. Kongen ser fire menn — \"den fjerde ligner en gude­sønn.\" De kommer ut uten brent en hårsekk. Kongen utsteder dekret: \"Ingen skal tale mot deres Gud.\"",
+      keyEvent: "Sjadrak, Mesjak og Abed-Nego i ovnen (Daniel 3,25)",
+      books: ["Daniel"],
+      people: ["Nebukadnesar", "Sjadrak", "Mesjak", "Abed-Nego"],
+      locations: ["babylon"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "treet", num: "IV",
+      title: "Nebukadnesars ydmykelse", tagline: "Sju år som dyr.",
+      start: 4, end: 4, label: "Kap 4",
+      lede: "Et brev fra Nebukadnesar selv åpner dette kapittelet. Han forteller om enda en drøm — et stort tre som hugges ned, men stubben blir igjen, bundet med jernlenker. Daniel tyder: kongen, hovmodig, skal bli som et dyr i sju år til han erkjenner at \"den Høyeste rår over menneskenes kongerike.\" Tolv måneder senere, mens kongen ser ut over Babel — \"Er ikke dette det store Babel jeg har bygd?\" — faller dommen. Sju år ute på markene, eter gress som okser. Når forstanden vender tilbake, lover han Den Høyeste.",
+      keyEvent: "Nebukadnesar lever som dyr i sju år (Daniel 4,33)",
+      books: ["Daniel"],
+      people: ["Nebukadnesar", "Daniel"],
+      locations: ["babylon"]
+    },
+    {
+      id: "skriften", num: "V",
+      title: "Skriften på veggen", tagline: "Tellet, veiet, delt.",
+      start: 5, end: 5, label: "Kap 5",
+      lede: "Belsasar, sønn (eller etterfølger) av Nebukadnesar, holder en stor fest mens persiske og mediske hærer omringer Babel. Han henter tempelkarene fra Jerusalem — de drikker av dem og priser sine guder. Da viser en hånd seg på veggen og skriver: MENE MENE TEKEL UFARSIN. Ingen kan tyde. Daniel hentes — nå over åtti år gammel. \"Tellet — Gud har talt ditt rike og gjort ende på det. Veiet — du er funnet for lett. Delt — ditt rike er delt og gitt til mederne og perserne.\" Samme natt erobrer Darius Mederen byen. Belsasar drepes.",
+      keyEvent: "MENE TEKEL UFARSIN (Daniel 5,25)",
+      books: ["Daniel"],
+      people: ["Belsasar", "Daniel", "Darius Mederen"],
+      locations: ["babylon"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "loevegropen", num: "VI",
+      title: "Daniel i løvegropen", tagline: "Han ba med åpne vinduer mot Jerusalem.",
+      start: 6, end: 6, label: "Kap 6",
+      lede: "Under Darius blir Daniel forfremmet over alle. Misunnelige hofflorder kan ikke finne noe galt med ham — så de lager en lov: i 30 dager skal ingen bønne til andre enn kongen, eller bli kastet i løvegropen. Daniel går hjem, åpner vinduene mot Jerusalem som vanlig, og ber tre ganger daglig. Kongen blir tvunget til å håndheve loven, til hans store sorg. Daniel kastes i gropen. Om natten kan ikke Darius sove. Om morgenen roper han: \"Daniel, har din Gud kunnet redde deg?\" Daniel: \"Min Gud har sendt sin engel og lukket løvenes munn.\" Daniel hentes opp; anklageapparatet og familiene kastes inn — løvene knuser dem før de når bunnen.",
+      keyEvent: "Daniel i løvegropen — \"Min Gud sendte sin engel\" (Daniel 6,22)",
+      books: ["Daniel"],
+      people: ["Daniel", "Darius Mederen"],
+      locations: ["babylon", "jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "fire-dyr", num: "VII",
+      title: "De fire dyrene og menneskesønnen", tagline: "Fra havet — løve, bjørn, leopard, et fjerde dyr.",
+      start: 7, end: 8, label: "Kap 7–8",
+      lede: "Bokens andre halvdel er apokalyptisk. Daniel ser fire dyr stige opp av havet — løve med ørnevinger (Babel), bjørn (Medo-Persia), leopard (Hellas), og et fjerde dyr så grusomt at det knapt kan beskrives. Tronen reises; Den Gamle av Dage setter seg. \"Så jeg en som lignet en menneskesønn, og han kom med himmelens skyer. Han ble ført fram for Den Gamle av Dage.\" Han fikk evig herredømme. Jesus bruker tittelen \"Menneskesønn\" 80 ganger om seg selv — direkte sitat fra Daniel 7. Visjonen om vær og bukk i kap 8 forutsier Aleksander den store og hans firdelte rike.",
+      keyEvent: "\"En som ligner en menneskesønn\" (Daniel 7,13)",
+      books: ["Daniel"],
+      prophets: ["Daniel"],
+      people: ["Den Gamle av Dage", "Menneskesønnen"],
+      locations: ["babylon", "susa"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "70-uker", num: "VIII",
+      title: "De sytti uker — den salvedes pakt", tagline: "Sytti uker er fastsatt for ditt folk.",
+      start: 9, end: 12, label: "Kap 9–12",
+      lede: "Daniel leser i Jeremia at eksilet skal vare 70 år. Han ber en lang syndsbekjennelse for hele folket. Engelen Gabriel kommer og åpenbarer: \"Sytti uker er fastsatt over ditt folk.\" Tolkninger varierer, men løpene gir en kronologi som fører fram til \"Messias den salvede.\" De siste tre kapitlene gir et detaljert syn over fremtiden — fra Persia, gjennom Hellas, til \"forferdelsens vederstyggelighet\" og oppstandelsen: \"Mange av dem som sover i jordens muld, skal våkne — noen til evig liv, andre til evig avsky.\" Boken slutter: \"Du, Daniel, skal hvile, men stå opp til din lodd ved dagenes ende.\"",
+      keyEvent: "Daniel ber for folket — Gabriel kommer (Daniel 9,21)",
+      books: ["Daniel"],
+      prophets: ["Daniel"],
+      people: ["Gabriel", "Den salvede"],
+      locations: ["babylon", "susa"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>
