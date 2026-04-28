@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habakkuk — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Habakkuk — <em>spør og svar med Gud</em></h1>
+  <p class="subtitle">Tre kapitler som veksler mellom profetens spørsmål og Herrens svar — ender i en av Bibelens største trostsanger.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Den <em>rettferdige skal leve ved tro</em>.</blockquote>
+    <div class="ref">Habakkuk 2,4 — sitert tre ganger i NT</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Habakkuk — <em>kapittel 1 til 3</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Habakkuk — <em>Juda mot Babel</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Habakkuk">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="nahum-tidslinje.html">← Nahum</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="sefanja-tidslinje.html">Sefanja →</a></p>
+  <p>Habakkuk virket ca 605 f.Kr. — like før Babel begynte å invadere Juda</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 3,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 3, isChapters: true, tickStep: 1, majorStep: 1 },
+  defaultId: "tro",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 195 380 200"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "klage", num: "I",
+      title: "Habakkuks klage — hvorfor lidelse", tagline: "Hvor lenge, Herre?",
+      start: 1, end: 1, label: "Kap 1 (1–11)",
+      lede: "Habakkuk er forvirret. Hvor lenge skal Juda fortsette i ondskap uten dom? \"Hvor lenge skal jeg rope, Herre, uten at du hører?\" Herrens svar er ikke det han ventet: \"Jeg reiser opp kaldéerne — det grusomme og brå folk.\" Med andre ord: dommen kommer gjennom Babel, et enda mer ondt folk.",
+      keyEvent: "\"Hvor lenge skal jeg rope, Herre?\" (Habakkuk 1,2)",
+      books: ["Habakkuk"],
+      prophets: ["Habakkuk"],
+      people: ["Kaldéerne"],
+      locations: ["jerusalem", "babylon"]
+    },
+    {
+      id: "tro", num: "II",
+      title: "Den rettferdige lever ved tro", tagline: "Hvis det drøyer — vent.",
+      start: 1, end: 2, label: "Kap 1 (12) – 2",
+      lede: "Habakkuk klager videre: hvordan kan Herren bruke et mer ondt folk for å straffe et mindre ondt? Han stiller seg på vakttårnet for å vente på Herrens svar. Herren: \"Skriv dette syn ned — så det er klart for de som leser i farten. For synet venter på en bestemt tid ... Hvis det drøyer — vent. Det skal komme.\" Sentralordet: \"Den rettferdige skal leve ved tro.\" Sitert tre ganger i NT (Romerbrevet 1,17; Galaterbrevet 3,11; Hebreerbrevet 10,38) — fundament for protestantisk reformasjon.",
+      keyEvent: "\"Den rettferdige skal leve ved tro\" (Habakkuk 2,4)",
+      books: ["Habakkuk"],
+      prophets: ["Habakkuk"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "salme", num: "III",
+      title: "Habakkuks salme", tagline: "Selv om fikentreet ikke blomstrer.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "Boken slutter med en av Bibelens største salmer. Habakkuk \"hørte og skjelvet hans hjerte.\" Han ber Herren om å gjøre sine gjerninger på ny. Synet av Herren som kriger ut fra Sinai. Til slutt — selv om alt går galt: \"Selv om fikentreet ikke blomstrer, og det ikke er druer på vinrankene; selv om olivenhøsten slår feil, og åkrene ikke gir mat — likevel vil jeg juble i Herren, glede meg i min frelses Gud.\" Trostonen som GT lukkes på.",
+      keyEvent: "\"Likevel vil jeg juble i Herren\" (Habakkuk 3,17–18)",
+      books: ["Habakkuk"],
+      prophets: ["Habakkuk"],
+      locations: ["jerusalem"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

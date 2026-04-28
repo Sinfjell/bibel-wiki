@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obadja — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Obadja — <em>dommen over Edom</em></h1>
+  <p class="subtitle">Bibelens korteste bok — ett kapittel mot Edom for å ha gledet seg over Jerusalems fall.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>På Sion-fjellet skal det være <em>frelse</em>, og det skal være hellig.</blockquote>
+    <div class="ref">Obadja 17</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Obadja — <em>kapittel 1 til 1</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Obadja — <em>Edom og Jerusalem</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Obadja">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="amos-tidslinje.html">← Amos</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="jonas-tidslinje.html">Jonas →</a></p>
+  <p>21 vers — Bibelens korteste bok i GT. Skrevet etter Jerusalems fall 587 f.Kr.</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 3,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 1, isChapters: true, tickStep: 1, majorStep: 1 },
+  defaultId: "edom-fall",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 220 90 90"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "stolthet", num: "I",
+      title: "Edoms stolthet", tagline: "Du som bor i klippekløftene.",
+      start: 1, end: 1, label: "v 1–9",
+      lede: "Edom — Esaus etterkommere, som bor i klipperedet (sannsynligvis Petra) — har trodd seg uangripelige. \"Selv om du flyr som ørnen og bygger ditt rede blant stjernene, skal jeg styrte deg ned derfra.\" Herrens dom kommer mot deres hovmod.",
+      keyEvent: "\"Selv om du flyr som ørnen ...\" (Obadja 4)",
+      books: ["Obadja"],
+      prophets: ["Obadja"],
+      people: ["Edom"],
+      locations: ["edom"]
+    },
+    {
+      id: "edom-fall", num: "II",
+      title: "Hvorfor — du sto med dem som plyndret", tagline: "På din brors dag — den dagen ulykken rammet ham.",
+      start: 1, end: 1, label: "v 10–16",
+      lede: "Konkret anklage: da Babylon plyndret Jerusalem, sto Edom på den andre siden. De gledet seg, plyndret med, gav opp flyktninger. \"Du sto på veikrysset for å felle hans flyktninger.\" Edom hadde glemt at Edom og Israel var tvillingbrødre — Esau og Jakob. \"Som du har gjort, skal det gjøres med deg.\"",
+      keyEvent: "\"Du sto på veikrysset for å felle hans flyktninger\" (Obadja 14)",
+      books: ["Obadja"],
+      prophets: ["Obadja"],
+      people: ["Edom", "Juda"],
+      locations: ["edom", "jerusalem"]
+    },
+    {
+      id: "sion-frelse", num: "III",
+      title: "Frelse på Sion", tagline: "Riket skal være Herrens.",
+      start: 1, end: 1, label: "v 17–21",
+      lede: "Boken slutter med håpets vending: på Sion skal det være frelse, hellighet, eiendom. Jakobs hus skal være ild, Josefs hus flamme — og Esaus hus halm. \"Frelsere skal stige opp på Sion-fjellet for å dømme Esaus fjell — og kongedømmet skal være Herrens.\"",
+      keyEvent: "\"Riket skal være Herrens\" (Obadja 21)",
+      books: ["Obadja"],
+      prophets: ["Obadja"],
+      people: ["Sion"],
+      locations: ["jerusalem", "edom"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

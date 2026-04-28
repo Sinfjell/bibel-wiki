@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amos — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Amos — <em>saueoppdretteren fra Tekoa</em></h1>
+  <p class="subtitle">Ni kapitler av sosial dom over et velstående Israel — fra en jordfast bonde fra Juda som ikke ble bedt om å være profet.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>La rett <em>flyte fram som vann</em>, og rettferdighet som en evig strøm.</blockquote>
+    <div class="ref">Amos 5,24</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Amos — <em>kapittel 1 til 9</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Amos — <em>Israel under Jeroboam II</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Amos">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="joel-tidslinje.html">← Joel</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="obadja-tidslinje.html">Obadja →</a></p>
+  <p>Amos virket under Jeroboam II av Israel og Ussias av Juda, ca 760-755 f.Kr.</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 5,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 9, isChapters: true, tickStep: 1, majorStep: 2 },
+  defaultId: "rett-flyter",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 215 110 100"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "folkene", num: "I",
+      title: "Dom over nabofolkene", tagline: "For tre overtredelser ... ja for fire.",
+      start: 1, end: 2, label: "Kap 1–2",
+      lede: "Amos begynner subtilt: \"For tre overtredelser av Damaskus, ja for fire — vil jeg ikke ta det tilbake.\" Han ramser opp folkene rundt Israel: arameerne, filisterne, Tyrus, Edom, Ammon, Moab. Tilhørerne nikker — selvfølgelig dømmer Herren disse. Så vender Amos seg til Juda. Folket nikker fortsatt. Til slutt: Israel selv. Og Israels liste er den lengste.",
+      keyEvent: "\"For tre overtredelser av Israel — ja for fire\" (Amos 2,6)",
+      books: ["Amos"],
+      prophets: ["Amos"],
+      people: ["Folkene"],
+      locations: ["damascus", "tyre", "moab", "samaria"]
+    },
+    {
+      id: "vitnemal", num: "II",
+      title: "Vitne mot Israel", tagline: "Bare dere har jeg kjent — derfor straffer jeg.",
+      start: 3, end: 4, label: "Kap 3–4",
+      lede: "Samaria er full av urett — palasser bygd på utbytte av fattige. \"Hør dette ord, dere Basans kuer\" — det vil si de rike kvinnene som driver mennene til å undertrykke fattige for å få mer drikke. Herren har sendt hungersnød, tørke, plagene — \"men du har ikke vendt om til meg.\" Refrenget gjentas fem ganger.",
+      keyEvent: "\"Du har ikke vendt om til meg\" (Amos 4,6–11)",
+      books: ["Amos"],
+      prophets: ["Amos"],
+      people: ["Samarias rike"],
+      locations: ["samaria", "bethel"]
+    },
+    {
+      id: "rett-flyter", num: "III",
+      title: "Klagesang og rop om rettferd", tagline: "Hat det onde, elsk det gode.",
+      start: 5, end: 6, label: "Kap 5–6",
+      lede: "Amos sørger over et folk: \"Israels jomfru er falt — hun reiser seg ikke mer.\" Han kaller dem til oppriktig søken: \"Søk Herren, så skal dere leve.\" Det største ordet: \"La rett flyte fram som vann og rettferdighet som en evig strøm.\" Herren hater festene deres når de fjerner rettferd ved porten. Ve over de som ligger på elfenbenssenger og synger med harpe mens nasjonen styrter sammen.",
+      keyEvent: "\"La rett flyte fram som vann\" (Amos 5,24)",
+      books: ["Amos"],
+      prophets: ["Amos"],
+      people: ["De rike"],
+      locations: ["samaria", "bethel"]
+    },
+    {
+      id: "syner", num: "IV",
+      title: "De fem synene", tagline: "Gresshopper, ild, blyloddsnor, frukt-kurv, sønderslått alter.",
+      start: 7, end: 9, label: "Kap 7–9",
+      lede: "Fem syner oppsummerer dommen. Gresshopper og ild — Herren sparer etter Amos' bønn. Blyloddsnor mot Israels mur. En kurv med moden frukt — \"slutten kommer over mitt folk.\" Til slutt: alteret rammes så søyler skjelver. Presten Amasja i Betel jager Amos: \"Profet — ja, for kongen vil ikke høre deg her!\" Amos: \"Jeg var ingen profet eller profetsønn — jeg var en saueoppdretter fra Tekoa, og Herren sa: Gå.\" Boken slutter likevel med en strofe av håp: \"På den dag skal jeg gjenreise Davids falne hytte ... Jeg skal plante dem i deres jord, og de skal aldri mer rykkes opp.\"",
+      keyEvent: "Amasja jager Amos fra Betel (Amos 7,12–17)",
+      books: ["Amos"],
+      prophets: ["Amos"],
+      people: ["Amasja"],
+      locations: ["bethel", "tekoa", "samaria"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

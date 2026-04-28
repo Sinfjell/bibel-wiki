@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haggai — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Haggai — <em>bygg tempelet</em></h1>
+  <p class="subtitle">To kapitler om profeten som vekket de hjemvendte fra apati — for å fullføre tempelet 16 år etter at fundamentet var lagt.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote><em>Tenk over deres veier</em>. Dere har sådd mye, men høstet lite.</blockquote>
+    <div class="ref">Haggai 1,5–6</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Haggai — <em>kapittel 1 til 2</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Haggai — <em>Tempelet bygges</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Haggai">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="sefanja-tidslinje.html">← Sefanja</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="sakarja-tidslinje.html">Sakarja →</a></p>
+  <p>Haggai virket i 520 f.Kr. — sammen med Sakarja vekket de byggingen så templet stod ferdig 516 f.Kr.</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 4,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 2, isChapters: true, tickStep: 1, majorStep: 1 },
+  defaultId: "kallet",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 240 100 80"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "kallet", num: "I",
+      title: "Tenk på deres veier", tagline: "Det er ikke tid?",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "I Darius' andre år, sjette måned: Herrens ord til Haggai. Folket sier: \"Det er ikke tid å bygge Herrens hus.\" Haggai: \"Er det da tid å bo i deres egne paneltak hus, mens dette huset ligger øde?\" \"Tenk på deres veier — dere har sådd mye, men høstet lite.\" Folket skammer seg, frykter Herren, og begynner å arbeide igjen — bare 23 dager etter Haggais første ord. Serubabel og Jesjua leder folket.",
+      keyEvent: "\"Tenk på deres veier\" (Haggai 1,5)",
+      books: ["Haggai"],
+      prophets: ["Haggai"],
+      people: ["Serubabel", "Jesjua"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "tempelets-herlighet", num: "II",
+      title: "Herligheten skal være større", tagline: "Dette siste hus skal overgå det første.",
+      start: 2, end: 2, label: "Kap 2 (1–9)",
+      lede: "Bare en måned senere, sjuende måned, kommer det andre ord. Mange husker Salomos tempel; de gråter ved sammenligning. Haggai oppmuntrer: \"Vær frimodig — for jeg er med dere.\" Og det største løftet: \"Dette siste hus skal være større i herlighet enn det første. På dette sted vil jeg gi fred.\" Profetisk peker det mot at Messias selv skal komme inn i dette tempelet.",
+      keyEvent: "\"Dette siste hus skal være større\" (Haggai 2,9)",
+      books: ["Haggai"],
+      prophets: ["Haggai"],
+      people: ["Serubabel"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "renhet", num: "III",
+      title: "Spør prestene", tagline: "Velsignelsen begynner i dag.",
+      start: 2, end: 2, label: "Kap 2 (10–19)",
+      lede: "Niende måned: spør prestene en spørsmål om kultisk renhet — kan rent kjøtt rense urent? Nei. Kan urent gjøre alt urent? Ja. Slik var folket før: alt de ofret var urent fordi deres hjerter var urent. \"Men i dag — fra denne dagen — vil jeg velsigne.\" Vendingen av seksten års tørke begynner med oppdaget tempelarbeid.",
+      keyEvent: "\"Fra i dag vil jeg velsigne\" (Haggai 2,19)",
+      books: ["Haggai"],
+      prophets: ["Haggai"],
+      people: ["Prestene"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "serubabel", num: "IV",
+      title: "Serubabel — min signetring", tagline: "Den dag skal jeg ta deg.",
+      start: 2, end: 2, label: "Kap 2 (20–23)",
+      lede: "Samme dag, men et nytt ord — direkte til Serubabel. Herren skal ryste himmelen og jorden, kaste konger ned. \"På den dagen skal jeg ta deg, Serubabel — min tjener — og gjøre deg som en signetring; for jeg har utvalgt deg.\" Davidsætts løfter — som tilsynelatende ble brutt med Jojakin (kalt en fugl, kastet bort) — får ny livsgnist gjennom Serubabel. Han er bestefar til Sjealtiel — videre fram til Josef, og dermed Jesus.",
+      keyEvent: "\"Jeg vil gjøre deg som en signetring\" (Haggai 2,23)",
+      books: ["Haggai"],
+      prophets: ["Haggai"],
+      people: ["Serubabel"],
+      locations: ["jerusalem"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malaki — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Malaki — <em>siste profet</em></h1>
+  <p class="subtitle">Fire kapitler om en lunken folk og det siste GT-løftet før 400 års stillhet — Elias skal komme før Herrens dag.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Se, jeg sender min budbærer foran meg ... og <em>solen med rettferdighet</em> skal stå opp, med legedom under vinger.</blockquote>
+    <div class="ref">Malaki 3,1 + 4,2</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Malaki — <em>kapittel 1 til 4</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Malaki — <em>Jerusalem etter eksil</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Malaki">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="sakarja-tidslinje.html">← Sakarja</a> · <a href="bibel-tidslinje.html">Bibelen</a></p>
+  <p>Malaki virket ca 430 f.Kr. — siste profet før 400 års stillhet til Johannes Døperen</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 4,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 4, isChapters: true, tickStep: 1, majorStep: 1 },
+  defaultId: "elias-kommer",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 220 100 90"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "kjaerlighet", num: "I",
+      title: "Jeg har elsket dere", tagline: "Hvordan har du elsket oss?",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "Bokens åpning er en dialog mellom Herren og folket — det blir gjennomgangsstil. \"Jeg har elsket dere, sier Herren.\" Folket: \"Hvordan har du elsket oss?\" Herrens svar: \"Var ikke Esau Jakobs bror? Likevel valgte jeg Jakob.\" Folket bringer halt og syk dyr som offer. \"Vil din landshøvding gladfølge motta det? Jeg vil ikke.\" Det halvhjertete er verst av alt.",
+      keyEvent: "\"Hvordan har du elsket oss?\" (Malaki 1,2)",
+      books: ["Malaki"],
+      prophets: ["Malaki"],
+      people: ["Prestene"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "skilsmisse", num: "II",
+      title: "Tro mot pakten", tagline: "Jeg hater skilsmisse.",
+      start: 2, end: 2, label: "Kap 2",
+      lede: "Prestene har vendt seg fra paktens vei. Folket gifter seg med fremmede kvinner, skiller seg fra konene fra ungdommen. Herren gir to harde ord: \"Jeg hater skilsmisse, sier Herren, Israels Gud — og den som dekker volden med sin kappe.\" Folket spør gjentatte ganger: \"Når har vi gjort det?\" Herren svarer hver gang konkret. Boken nesten knirker av denne defensive holdningen.",
+      keyEvent: "\"Jeg hater skilsmisse\" (Malaki 2,16)",
+      books: ["Malaki"],
+      prophets: ["Malaki"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "tiend", num: "III",
+      title: "Tiendene og budbringeren", tagline: "Sett meg på prøve.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "\"Se, jeg sender min budbærer, og han skal rydde vei for meg.\" Det er Johannes Døperen. \"Plutselig skal han komme til sitt tempel, den Herren dere søker.\" Han skal være som lutreild og vaskemiddel for Levitten. Folket røver fra Gud — i tiende og avgift. \"Bring hele tienden til forrådshuset ... sett meg på prøve, sier Herren — om jeg ikke åpner himmelens sluser og utøser velsignelse i overflod.\"",
+      keyEvent: "\"Sett meg på prøve\" (Malaki 3,10)",
+      books: ["Malaki"],
+      prophets: ["Malaki"],
+      people: ["Budbringeren"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "elias-kommer", num: "IV",
+      title: "Elias skal komme", tagline: "Solen med rettferdighet.",
+      start: 4, end: 4, label: "Kap 4",
+      lede: "\"For dere som frykter mitt navn, skal solen med rettferdighet stå opp — med legedom under vinger.\" Boken slutter — og GT slutter (i kristen rekkefølge) — med løftet om Elias: \"Se, jeg sender Elia profet før Herrens store og fryktelige dag kommer. Han skal vende fedrenes hjerter til barna og barnas hjerter til fedrene.\" Jesus sier om Johannes Døperen: \"Han er Elia som skulle komme.\" Etter dette ordet — 400 års stillhet, til engelen står ved alteret og taler til Sakarja, presten — Johannes Døperens far.",
+      keyEvent: "\"Elia profet skal komme\" (Malaki 4,5)",
+      books: ["Malaki"],
+      prophets: ["Malaki"],
+      people: ["Elia"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sefanja — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Sefanja — <em>Herrens dag</em></h1>
+  <p class="subtitle">Tre kapitler om Herrens dag — så omfattende at den når hele jorden, men ender i en sang av glede over hans folk.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Herren din Gud er midt iblant deg — en helt som frelser. <em>Han skal glede seg over deg med fryd</em>.</blockquote>
+    <div class="ref">Sefanja 3,17</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Sefanja — <em>kapittel 1 til 3</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Sefanja — <em>Jerusalem under Josja</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Sefanja">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="habakkuk-tidslinje.html">← Habakkuk</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="haggai-tidslinje.html">Haggai →</a></p>
+  <p>Sefanja profeterte under kong Josja, ca 640-609 f.Kr. — av kongelig ætt (Hiskias tippoldebarn)</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 3,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 3, isChapters: true, tickStep: 1, majorStep: 1 },
+  defaultId: "rest",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 215 100 90"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "feiende", num: "I",
+      title: "Den feiende dom", tagline: "Jeg vil sope alt bort.",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "Sefanja åpner med kosmisk dom: \"Jeg vil sope helt bort fra jorden — menneske og dyr, fugler og fisk.\" Spesielt mot Juda: Baal-tilbedere, dem som tilber stjernehæren fra hustakene, dem som har vendt seg fra Herren. \"Herrens dag er nær — den store, og hastig kommer den.\" En dag av vrede, av trøstesløshet, av basun og krigsrop.",
+      keyEvent: "\"Herrens dag er nær\" (Sefanja 1,14)",
+      books: ["Sefanja"],
+      prophets: ["Sefanja"],
+      people: ["Juda"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "folkene", num: "II",
+      title: "Dom over folkene", tagline: "Alle nasjonene skjelver.",
+      start: 2, end: 2, label: "Kap 2",
+      lede: "Det er fortsatt tid: \"Søk Herren, dere ydmyke i landet ... kanskje dere kan skjules på Herrens vredes dag.\" Dom kommer over filisterne, Moab og Ammon, etiopierne, Assyria. \"Ninive skal bli en ødemark.\" Folkene som har spottet Herrens folk skal kjenne Herren. Det er starten på en større sirkel: dommen rammer alle, men frelsen åpnes også for alle.",
+      keyEvent: "\"Søk Herren, dere ydmyke\" (Sefanja 2,3)",
+      books: ["Sefanja"],
+      prophets: ["Sefanja"],
+      locations: ["jerusalem", "moab", "nineveh", "memphis"]
+    },
+    {
+      id: "rest", num: "III",
+      title: "Resten — og Herrens sang", tagline: "Han skal glede seg over deg med fryd.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "Først dom over Jerusalem — voldelig, opprørsk. Men: \"På den dagen skal Herren rense folkenes lepper.\" En rest skal være igjen — ydmyke og fattige. Og det utrolige slutten: Herren selv synger over sitt folk. \"Herren din Gud er midt iblant deg, en helt som frelser. Han fryder seg med jubel over deg, han tier i sin kjærlighet, han jubler over deg med fryd.\" En av få steder i Bibelen der Herren synger.",
+      keyEvent: "\"Han skal glede seg over deg med fryd\" (Sefanja 3,17)",
+      books: ["Sefanja"],
+      prophets: ["Sefanja"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

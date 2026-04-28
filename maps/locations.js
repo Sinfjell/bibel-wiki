@@ -13,6 +13,7 @@ window.__BIBEL_LOCATIONS = {
       "1-mos-tidslinje.html",
       "2-mos-tidslinje.html",
       "abraham-tidslinje.html",
+      "hosea-tidslinje.html",
       "moses-tidslinje.html"
     ],
     "altNames": [
@@ -40,7 +41,8 @@ window.__BIBEL_LOCATIONS = {
       "2-kron-tidslinje.html",
       "esekiel-tidslinje.html",
       "jeremia-tidslinje.html",
-      "jesaja-tidslinje.html"
+      "jesaja-tidslinje.html",
+      "sefanja-tidslinje.html"
     ]
   },
   "thebes": {
@@ -55,7 +57,8 @@ window.__BIBEL_LOCATIONS = {
     ],
     "description": "Den øvre Egypts hovedstad, kjent for Karnak-templene.",
     "pages": [
-      "jeremia-tidslinje.html"
+      "jeremia-tidslinje.html",
+      "nahum-tidslinje.html"
     ]
   },
   "alexandria": {
@@ -161,10 +164,18 @@ window.__BIBEL_LOCATIONS = {
       "david-tidslinje.html",
       "esekiel-tidslinje.html",
       "esra-tidslinje.html",
+      "habakkuk-tidslinje.html",
+      "haggai-tidslinje.html",
       "jeremia-tidslinje.html",
       "jesaja-tidslinje.html",
+      "joel-tidslinje.html",
       "klagesangene-tidslinje.html",
-      "nehemja-tidslinje.html"
+      "malaki-tidslinje.html",
+      "mika-tidslinje.html",
+      "nehemja-tidslinje.html",
+      "obadja-tidslinje.html",
+      "sakarja-tidslinje.html",
+      "sefanja-tidslinje.html"
     ],
     "altNames": [
       "Salem",
@@ -212,6 +223,7 @@ window.__BIBEL_LOCATIONS = {
       "1-mos-tidslinje.html",
       "1-samuel-tidslinje.html",
       "david-tidslinje.html",
+      "mika-tidslinje.html",
       "rut-tidslinje.html",
       "saul-tidslinje.html"
     ],
@@ -300,8 +312,11 @@ window.__BIBEL_LOCATIONS = {
       "1-kong-tidslinje.html",
       "2-kong-tidslinje.html",
       "2-kron-tidslinje.html",
+      "amos-tidslinje.html",
       "esra-tidslinje.html",
+      "hosea-tidslinje.html",
       "jesaja-tidslinje.html",
+      "mika-tidslinje.html",
       "nehemja-tidslinje.html"
     ]
   },
@@ -323,7 +338,10 @@ window.__BIBEL_LOCATIONS = {
       "1-kong-tidslinje.html",
       "1-mos-tidslinje.html",
       "2-kong-tidslinje.html",
-      "abraham-tidslinje.html"
+      "abraham-tidslinje.html",
+      "amos-tidslinje.html",
+      "hosea-tidslinje.html",
+      "sakarja-tidslinje.html"
     ],
     "description": "Hvor Jakob så himmelstigen.",
     "scriptures": [
@@ -358,6 +376,7 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": 14,
     "pages": [
       "1-samuel-tidslinje.html",
+      "hosea-tidslinje.html",
       "josva-tidslinje.html",
       "saul-tidslinje.html"
     ],
@@ -550,6 +569,7 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-kong-tidslinje.html",
       "2-kron-tidslinje.html",
+      "amos-tidslinje.html",
       "david-tidslinje.html",
       "esekiel-tidslinje.html",
       "jesaja-tidslinje.html"
@@ -576,13 +596,15 @@ window.__BIBEL_LOCATIONS = {
       "2-kron-tidslinje.html",
       "4-mos-tidslinje.html",
       "5-mos-tidslinje.html",
+      "amos-tidslinje.html",
       "david-tidslinje.html",
       "dommerne-tidslinje.html",
       "jeremia-tidslinje.html",
       "jesaja-tidslinje.html",
       "josva-tidslinje.html",
       "moses-tidslinje.html",
-      "rut-tidslinje.html"
+      "rut-tidslinje.html",
+      "sefanja-tidslinje.html"
     ],
     "description": "Slettelandet øst for Jordan og Dødehavet hvor Moses holdt sine avskjedstaler.",
     "scriptures": [
@@ -635,7 +657,8 @@ window.__BIBEL_LOCATIONS = {
     "region": "moab",
     "labelDy": -10,
     "pages": [
-      "1-mos-tidslinje.html"
+      "1-mos-tidslinje.html",
+      "hosea-tidslinje.html"
     ],
     "altNames": [
       "Pniel",
@@ -655,7 +678,8 @@ window.__BIBEL_LOCATIONS = {
     "description": "Esau's etterkommere; lå sør for Dødehavet.",
     "pages": [
       "2-kron-tidslinje.html",
-      "klagesangene-tidslinje.html"
+      "klagesangene-tidslinje.html",
+      "obadja-tidslinje.html"
     ]
   },
   "damascus": {
@@ -673,6 +697,7 @@ window.__BIBEL_LOCATIONS = {
       "2-kong-tidslinje.html",
       "2-kron-tidslinje.html",
       "abraham-tidslinje.html",
+      "amos-tidslinje.html",
       "jeremia-tidslinje.html",
       "jesaja-tidslinje.html"
     ]
@@ -714,6 +739,7 @@ window.__BIBEL_LOCATIONS = {
       "daniel-tidslinje.html",
       "esekiel-tidslinje.html",
       "esra-tidslinje.html",
+      "habakkuk-tidslinje.html",
       "jeremia-tidslinje.html",
       "jesaja-tidslinje.html"
     ],
@@ -757,7 +783,10 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "2-kong-tidslinje.html",
       "2-kron-tidslinje.html",
-      "jesaja-tidslinje.html"
+      "jesaja-tidslinje.html",
+      "jonas-tidslinje.html",
+      "nahum-tidslinje.html",
+      "sefanja-tidslinje.html"
     ]
   },
   "assur": {
@@ -892,7 +921,8 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-kong-tidslinje.html",
       "2-kong-tidslinje.html",
-      "dommerne-tidslinje.html"
+      "dommerne-tidslinje.html",
+      "hosea-tidslinje.html"
     ]
   },
   "dan": {
@@ -1020,6 +1050,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "Fjerneste vestlige havn (Spania); Jonas seilte hit for aa flykte fra Herren.",
     "scriptures": [
       "Jona 1,3"
+    ],
+    "pages": [
+      "jonas-tidslinje.html"
     ]
   },
   "joppe": {
@@ -1034,6 +1067,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "Havneby; Jonas gikk om bord her.",
     "scriptures": [
       "Jona 1,3"
+    ],
+    "pages": [
+      "jonas-tidslinje.html"
     ]
   },
   "tekoa": {
@@ -1045,6 +1081,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "Hjemby for profeten Amos; en saueoppdretter sør for Betlehem.",
     "scriptures": [
       "Amos 1,1"
+    ],
+    "pages": [
+      "amos-tidslinje.html"
     ]
   }
 };

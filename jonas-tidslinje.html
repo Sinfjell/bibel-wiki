@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonas — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Jonas — <em>profeten som rømte</em></h1>
+  <p class="subtitle">Fire kapitler om en motvillig profet, en stor fisk, og et folk i Ninive som omvendte seg — mens profeten satt og var sur.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Jeg visste jo at du er en <em>nådig og barmhjertig Gud</em>, sen til vrede og rik på miskunnhet — derfor flyktet jeg.</blockquote>
+    <div class="ref">Jonas til Herren · Jonas 4,2</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Jonas — <em>kapittel 1 til 4</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Jonas — <em>Tarsjisj til Ninive</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Jonas">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="obadja-tidslinje.html">← Obadja</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="mika-tidslinje.html">Mika →</a></p>
+  <p>Jonas virket under Jeroboam II av Israel — den eneste profet som blir sendt utenfor Israel for å forkynne</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 4,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 4, isChapters: true, tickStep: 1, majorStep: 1 },
+  defaultId: "fisken",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "0 95 1000 250"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "flukten", num: "I",
+      title: "Flukten til Tarsjisj", tagline: "Bort fra Herrens åsyn.",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "Herren: \"Stå opp, gå til Ninive, og rop ut imot dem.\" Jonas: går til Joppe, betaler for skipsbillett til Tarsjisj — den fjerneste vestlige havn (Spania) — i motsatt retning av Ninive. Storm kommer; sjømennene roper til hver sin gud. Jonas sover under dekk. Loddet faller på ham; han bekjenner: \"Jeg er hebreer, jeg frykter Herren ... Kast meg i sjøen.\" De prøver å ro i land, men kan ikke. Når de kaster ham ut, blir sjøen rolig. Sjømennene ofrer til Herren.",
+      keyEvent: "Jonas kastes i havet (Jonas 1,15)",
+      books: ["Jonas"],
+      prophets: ["Jonas"],
+      people: ["Sjømennene"],
+      locations: ["joppe", "tarsjisj"]
+    },
+    {
+      id: "fisken", num: "II",
+      title: "I fiskens buk — bønnen", tagline: "Tre dager og tre netter.",
+      start: 2, end: 2, label: "Kap 2",
+      lede: "Herren beredes en stor fisk som svelger Jonas. Tre dager og tre netter (sitert av Jesus om sin grav) — Jonas ber en av Bibelens vakreste salmer: \"Av min trengsel ropte jeg til Herren, og han svarte ... Jeg sank ned til fjellenes grunn ... men du førte mitt liv opp av graven. Frelsen tilhører Herren.\" Fisken kaster ham opp på land.",
+      keyEvent: "Jonas' bønn fra fiskens buk (Jonas 2,2–9)",
+      books: ["Jonas"],
+      prophets: ["Jonas"],
+      locations: ["joppe"]
+    },
+    {
+      id: "ninive", num: "III",
+      title: "Ninive omvender seg", tagline: "Førti dager — så er Ninive ødelagt.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "Andre gang ber Herren — denne gangen går Jonas. Ninive er en så stor by at det tar tre dager å gå gjennom den. Han preker bare åtte ord på hebraisk: \"Førti dager til, og Ninive er ødelagt.\" Hele byen tror på Gud. Kongen står opp fra tronen, bytter til sekk, lyser et fast — også for dyrene. \"Hvem vet, kanskje Gud vender om og angrer.\" Gud så det de gjorde — og angret det onde han hadde tenkt mot dem. Han gjorde det ikke.",
+      keyEvent: "Hele Ninive omvender seg (Jonas 3,5–10)",
+      books: ["Jonas"],
+      prophets: ["Jonas"],
+      people: ["Ninives konge", "Folket i Ninive"],
+      locations: ["nineveh"]
+    },
+    {
+      id: "busken", num: "IV",
+      title: "Busken og Jonas' vrede", tagline: "Var det ikke godt grunn å bli sint?",
+      start: 4, end: 4, label: "Kap 4",
+      lede: "Jonas blir rasende — det er nettopp dette han ikke ville: at Gud skulle være barmhjertig mot disse fiendene. Han bygger en hytte øst for byen og setter seg for å se. Gud lar en busk vokse for å gi skygge. Neste dag dreper en orm busken. Jonas vil dø. Gud: \"Du har medynk med busken — som du ikke har strevd med, ikke fått vokst opp. Skal ikke jeg ha medynk med Ninive — den store byen, der det er mer enn 120 000 mennesker som ikke kjenner forskjell på høyre og venstre, og dyr i mengde?\" Slik ender boken — uten svar fra Jonas.",
+      keyEvent: "\"Skal ikke jeg ha medynk med Ninive?\" (Jonas 4,11)",
+      books: ["Jonas"],
+      prophets: ["Jonas"],
+      locations: ["nineveh"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

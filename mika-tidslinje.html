@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mika — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Mika — <em>Betlehems profet</em></h1>
+  <p class="subtitle">Sju kapitler vekslende mellom dom og frelseshåp — bokens vakreste vers er løftet om Messias fra Betlehem.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Han har sagt deg, menneske, hva som er godt: <em>Hva annet krever Herren av deg</em> enn at du skal gjøre rett, vise miskunn, og vandre ydmykt med din Gud?</blockquote>
+    <div class="ref">Mika 6,8</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Mika — <em>kapittel 1 til 7</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Mika — <em>Samaria og Juda</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Mika">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="jonas-tidslinje.html">← Jonas</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="nahum-tidslinje.html">Nahum →</a></p>
+  <p>Mika virket under Jotam, Akas og Hiskia av Juda — samtidig med Jesaja. Sitert av Jeremia og Matteus</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 5,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 7, isChapters: true, tickStep: 1, majorStep: 2 },
+  defaultId: "betlehem",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 215 110 90"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "dom", num: "I",
+      title: "Dom over Samaria og Jerusalem", tagline: "Hør, alle folk.",
+      start: 1, end: 3, label: "Kap 1–3",
+      lede: "Mika ser Herren stige ned og fjell smelte under hans føtter. Samaria — hovedstaden i nord — er målet, men også Jerusalem skal bli en steinhaug. De rike eier hus etter hus; lederne river skinnet av folket. Profetene ler om kveldsmaten. Mika: \"Sion skal pløyes som en åker.\"",
+      keyEvent: "\"Sion skal pløyes som en åker\" (Mika 3,12)",
+      books: ["Mika"],
+      prophets: ["Mika"],
+      people: ["Samarias rike", "Juda-ledere"],
+      locations: ["samaria", "jerusalem"]
+    },
+    {
+      id: "fjellet", num: "II",
+      title: "Fjellet for Herrens hus", tagline: "Pløyer skal smis om til pløyplog.",
+      start: 4, end: 4, label: "Kap 4",
+      lede: "Visjon nesten ord-for-ord lik Jesaja 2 — i de siste dager skal fjellet for Herrens hus stå fast over alle høyder; folkene skal strømme dit. \"Mange folk skal gå og si: Kom, la oss gå opp til Herrens fjell!\" Han skal dømme mellom mange folk. \"De skal smi sine sverd om til hakker og spyd til vingårdsknivere.\"",
+      keyEvent: "\"Sverd til hakker, spyd til vingårdsknivere\" (Mika 4,3)",
+      books: ["Mika"],
+      prophets: ["Mika"],
+      people: ["Folkene"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "betlehem", num: "III",
+      title: "Betlehem-løftet", tagline: "Du, Betlehem Efrata — minst blant Judas slekter.",
+      start: 5, end: 5, label: "Kap 5",
+      lede: "Det berømte verset Matteus siterer ved Jesu fødsel: \"Du, Betlehem Efrata — som er minst blant tusenmenneskeleirer i Juda — fra deg skal det komme en hersker over Israel. Hans utgang er fra fordums tid, fra evighet.\" Han skal stå og være hyrde i Herrens kraft. \"Han skal være vår fred.\" De fjerne folkene skal omvende seg.",
+      keyEvent: "\"Du, Betlehem Efrata\" (Mika 5,2)",
+      books: ["Mika"],
+      prophets: ["Mika"],
+      people: ["Den salvede"],
+      locations: ["bethlehem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "rettssak", num: "IV",
+      title: "Herrens rettssak", tagline: "Stå frem og før din sak — fjellene er vitner.",
+      start: 6, end: 6, label: "Kap 6",
+      lede: "Herren har en sak mot sitt folk. Fjellene og høydene er dommere. \"Mitt folk, hva har jeg gjort deg? Hvorfor har jeg trettet deg?\" Han minner om Egypt, Moses, Aron, Mirjam, Bileam. Folket: \"Hva skal jeg komme fram med — brennoffer? Tusen værer? Mitt førstefødte for min synd?\" Herrens svar er det berømte verset: \"Han har sagt deg, menneske, hva som er godt: gjøre rett, vise miskunn, vandre ydmykt med din Gud.\"",
+      keyEvent: "\"Gjøre rett, vise miskunn, vandre ydmykt\" (Mika 6,8)",
+      books: ["Mika"],
+      prophets: ["Mika"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "tilgivelse", num: "V",
+      title: "Tilgivelsens Gud", tagline: "Hvem er en Gud som du?",
+      start: 7, end: 7, label: "Kap 7",
+      lede: "Mika klager at den fromme er gått tapt fra jorden — alle ligger i bakhold etter hverandres blod. Men: \"Jeg vil se etter Herren, jeg vil vente på frelsens Gud.\" Boken slutter med Bibelens vakreste tilgivelses-rop: \"Hvem er en Gud som du, som tar bort skyld og forbigår synd? ... Du skal kaste alle våre synder i havets dyp.\"",
+      keyEvent: "\"Du skal kaste alle våre synder i havets dyp\" (Mika 7,19)",
+      books: ["Mika"],
+      prophets: ["Mika"],
+      locations: ["jerusalem"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

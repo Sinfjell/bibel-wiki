@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hosea — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Hosea — <em>ekteskap som profeti</em></h1>
+  <p class="subtitle">Fjorten kapitler om profeten som måtte gifte seg med en utro kvinne — for å vise hvordan Israel hadde forrådt Herren.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Jeg vil dra dem med menneskeband, med <em>kjærlighetens lenker</em>; jeg vil være som de som løfter åket fra deres kjeve.</blockquote>
+    <div class="ref">Hosea 11,4</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Hosea — <em>kapittel 1 til 14</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Hosea — <em>Nordriket Israel</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Hosea">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="daniel-tidslinje.html">← Daniel</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="joel-tidslinje.html">Joel →</a></p>
+  <p>Hosea virket i nordriket fra ca 750 til 722 f.Kr. — fram til Samaria falt</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 5,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 14, isChapters: true, tickStep: 1, majorStep: 3 },
+  defaultId: "kjaerligheten",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 195 110 100"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "gomer", num: "I",
+      title: "Gomer og barna", tagline: "Gå og ta deg en horkvinne.",
+      start: 1, end: 3, label: "Kap 1–3",
+      lede: "Herren gir Hosea en sjokkerende oppgave: gift deg med Gomer, en kvinne som vil være utro. De får tre barn med navn-profetier: Jisreel (\"Gud sår\"), Lo-Ruhama (\"ikke barmhjertighet\"), Lo-Ammi (\"ikke mitt folk\"). Gomer rømmer fra ham. Herren befaler: kjøp henne tilbake — selv som slave. Hele bildet er Israels historie i mikro: pakten brutt, kjærligheten forrådet, men Herren kjøper sitt folk tilbake.",
+      keyEvent: "Hosea kjøper Gomer tilbake (Hosea 3,2)",
+      books: ["Hosea"],
+      prophets: ["Hosea"],
+      people: ["Gomer", "Jisreel", "Lo-Ruhama", "Lo-Ammi"],
+      locations: ["samaria", "jisreel"]
+    },
+    {
+      id: "anklage", num: "II",
+      title: "Anklage mot Israel", tagline: "Det er ingen sannhet, ingen kjærlighet, ingen kunnskap om Gud.",
+      start: 4, end: 7, label: "Kap 4–7",
+      lede: "Herren har en sak mot landet: ed-bryting, drap, tyveri, hor. Prestene trives i folkets synd. Efraim er som en kake bare bakt på den ene siden — halvgjort. Han vender seg til Egypt, så til Assyria — som flyger til en duegrop. \"Jeg vil straffe dem på deres veier.\"",
+      keyEvent: "\"Mitt folk går til grunne fordi det mangler kunnskap\" (Hosea 4,6)",
+      books: ["Hosea"],
+      prophets: ["Hosea"],
+      people: ["Israel", "Prestene"],
+      locations: ["samaria"]
+    },
+    {
+      id: "vrede", num: "III",
+      title: "Vredens høst", tagline: "De sår vind, og høster storm.",
+      start: 8, end: 10, label: "Kap 8–10",
+      lede: "Israel har glemt sin Skaper og bygd palasser, men ilden skal komme. Festdagene blir til sorg. \"Pløy ny åker — det er tid til å søke Herren.\" Men det er for sent. Samaria skal øde legges; konge skal bli rasert som en flis på vannet.",
+      keyEvent: "\"De sår vind og høster storm\" (Hosea 8,7)",
+      books: ["Hosea"],
+      prophets: ["Hosea"],
+      people: ["Israel"],
+      locations: ["samaria", "bethel", "gilgal"]
+    },
+    {
+      id: "kjaerligheten", num: "IV",
+      title: "Faderkjærligheten", tagline: "Da Israel var ung, elsket jeg ham.",
+      start: 11, end: 11, label: "Kap 11",
+      lede: "Det mest rørende kapitlet. Herren minnes da han kalte Israel ut av Egypt — \"da han var ung, elsket jeg ham.\" Han lærte Efraim å gå, tok ham på armen. Jo mer Herren kalte, jo lenger gikk de bort. Hjertet til Herren vrir seg: \"Hvordan kan jeg gi deg opp, Efraim? Hvordan kan jeg overgi deg, Israel?\" Han er Gud, ikke menneske — \"jeg kommer ikke i vrede.\" Herrens kjærlighet vinner.",
+      keyEvent: "\"Hvordan kan jeg gi deg opp, Efraim?\" (Hosea 11,8)",
+      books: ["Hosea"],
+      prophets: ["Hosea"],
+      people: ["Israel"],
+      locations: ["samaria", "goshen"]
+    },
+    {
+      id: "vend-om", num: "V",
+      title: "Vend om — løftet om legedom", tagline: "Jeg vil lege deres frafall.",
+      start: 12, end: 14, label: "Kap 12–14",
+      lede: "Mer dom — over Jakob, hans bedrag og kamp ved Penuel. Men også: Herren vil utløse dem fra dødsriket. Boken slutter med en bønn av omvendelse: \"Tilgi all skyld, ta imot vårt gode, så vil vi gi som offer det våre lepper byr.\" Og Herrens svar: \"Jeg vil lege deres frafall, jeg vil elske dem av hjertet ... Jeg vil være som dugg for Israel; han skal blomstre som lilje.\"",
+      keyEvent: "\"Jeg vil lege deres frafall\" (Hosea 14,4)",
+      books: ["Hosea"],
+      prophets: ["Hosea"],
+      people: ["Israel"],
+      locations: ["samaria", "penuel"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

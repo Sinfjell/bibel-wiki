@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sakarja — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Sakarja — <em>messianske syner</em></h1>
+  <p class="subtitle">Fjorten kapitler delt i to — først åtte syner som oppmuntrer til tempelbygging, så apokalyptiske profetier om kongen som rir på et esel og som blir gjennomstunget.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Se, din konge kommer til deg, rettferdig og frelst — <em>ydmyk og ridende på et esel</em>.</blockquote>
+    <div class="ref">Sakarja 9,9 — sitert ved palmesøndag</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Sakarja — <em>kapittel 1 til 14</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Profet-ord</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Sakarja — <em>Etter eksilet</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Sakarja">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="haggai-tidslinje.html">← Haggai</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="malaki-tidslinje.html">Malaki →</a></p>
+  <p>Sakarja virket 520-518 f.Kr. (samtidig med Haggai), kanskje noen år til etter — sitert mer i NT enn nesten noen annen profet</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 5,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 14, isChapters: true, tickStep: 1, majorStep: 3 },
+  defaultId: "esels-konge",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 195 110 100"
+  },
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "syner", num: "I",
+      title: "De åtte synene", tagline: "Hester blant myrtetrærne.",
+      start: 1, end: 6, label: "Kap 1–6",
+      lede: "Sakarja får åtte syner i én natt. Røde, brune og hvite hester blant myrter — Herren overvåker jorden. Fire horn — som har spredt Juda — slås av fire smeder. En måler-mann — Jerusalem skal være mur av ild rundt seg. Den øversteprest Jesjua, klædd i skitne klær, gjøres ren — Anti-syndsbilder. Lampestaken og to oljetrær — Herrens Ånd. Den flyvende bokrullen og kvinnen i en efa — synd fjernes. Fire vogner — Herrens vakt over jorden. Til slutt: Jesjua får en krone og kalles \"Spire\" — kongen som er prest.",
+      keyEvent: "\"Ikke ved makt, men ved min Ånd\" (Sakarja 4,6)",
+      books: ["Sakarja"],
+      prophets: ["Sakarja"],
+      people: ["Serubabel", "Jesjua"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "fast", num: "II",
+      title: "Spørsmål om fast", tagline: "Faster dere virkelig for meg?",
+      start: 7, end: 8, label: "Kap 7–8",
+      lede: "Folk fra Betel kommer for å spørre om de fortsatt skal faste til minne om templets fall. Herrens svar går rett til hjertet: \"Når dere fastet — fastet dere for meg? Når dere spiste — spiste dere for meg?\" Det Herren ønsker: rettferdig dom, kjærlighet, ikke undertrykk enker, foreldreløse, fremmede. Han lover at faste-dagene skal bli til glede. \"Mange folk skal komme og søke Herren ... ti menn skal gripe i kappen til en jødisk mann og si: La oss gå med dere, for vi har hørt at Gud er med dere.\"",
+      keyEvent: "\"Ti menn skal gripe i kappen til en jøde\" (Sakarja 8,23)",
+      books: ["Sakarja"],
+      prophets: ["Sakarja"],
+      locations: ["jerusalem", "bethel"]
+    },
+    {
+      id: "esels-konge", num: "III",
+      title: "Kongen på eselet", tagline: "Rettferdig og frelst, ridende på et esel.",
+      start: 9, end: 9, label: "Kap 9",
+      lede: "\"Fryd deg storligen, datter Sion! Rop av glede, datter Jerusalem! Se, din konge kommer til deg — rettferdig og frelst, ydmyk og ridende på et esel.\" Sitert av alle fire evangeliene ved palmesøndag. Han skal bryte krigsbuen — \"han skal forkynne fred for folkene.\" Hans rike skal nå fra hav til hav.",
+      keyEvent: "\"Din konge kommer ... ridende på et esel\" (Sakarja 9,9)",
+      books: ["Sakarja"],
+      prophets: ["Sakarja"],
+      people: ["Den salvede"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "thirty-shekels", num: "IV",
+      title: "Tretti sølvstykker", tagline: "En staselig pris jeg er verd.",
+      start: 11, end: 11, label: "Kap 11",
+      lede: "Sakarja gestaltes som hyrde for slaktet flokk. Når han ber om sin lønn, gir de ham tretti sølvstykker — \"en staselig pris jeg er verd!\" Herren: \"Kast dem til pottemakeren.\" Sakarja kaster sølvet i Herrens hus, til pottemakeren. Forutsigelsen oppfylles bokstavelig når Judas kaster sine 30 sølvstykker i tempelet, og prestene kjøper pottemakerens åker — Matteus 27,9–10.",
+      keyEvent: "Tretti sølvstykker til pottemakeren (Sakarja 11,12–13)",
+      books: ["Sakarja"],
+      prophets: ["Sakarja"],
+      locations: ["jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "gjennomstunget", num: "V",
+      title: "Den de gjennomstung", tagline: "De skal sørge over ham som over en eneste sønn.",
+      start: 12, end: 14, label: "Kap 12–14",
+      lede: "Apokalyptiske syner om Jerusalems siste tid. \"De skal se på meg, ham som de har gjennomstunget — og de skal sørge over ham som man sørger over en enbåren.\" Sitert av Johannes ved korset. \"En kilde skal åpnes for Davids hus — for synd og urenhet.\" Den siste dag: Herrens føtter står på Oljeberget; det skal kløfter; en levende kilde renne fra Jerusalem; og \"Herren skal bli konge over hele jorden — på den dagen skal Herren være én og hans navn ett.\"",
+      keyEvent: "\"De skal se på ham som de har gjennomstunget\" (Sakarja 12,10)",
+      books: ["Sakarja"],
+      prophets: ["Sakarja"],
+      people: ["Den gjennomstungne"],
+      locations: ["jerusalem"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>
