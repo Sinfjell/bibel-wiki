@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salmene — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Salmene — <em>Israels sang­bok</em></h1>
+  <p class="subtitle">Hundre og femti salmer — bønner, klage, lovsang, visdomsdikt — strukturert i fem bøker. Bibelens lengste bok og kjernen i jødisk og kristen liturgi.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote><em>Lovsyng Herren</em>, alle hans engler, dere veldige helter som utfører hans ord.</blockquote>
+    <div class="ref">Salme 103,20</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Salmene — <em>fem bøker, 150 salmer</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Visdomslitteratur</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="job-tidslinje.html">← Job</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="ordsprakene-tidslinje.html">Ordspråkene →</a></p>
+  <p>Salmene siteres mer i NT enn noen annen GT-bok — Jesu siste ord på korset er fra Salme 22 og 31</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 5,
+  cardLabel: "BOK",
+  axis: { start: 1, end: 150, isChapters: true, tickStep: 10, majorStep: 30 },
+  defaultId: "bok-1",
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "bok-1", num: "I",
+      title: "Bok I — Davids bønner", tagline: "Salig er den mann.",
+      start: 1, end: 41, label: "Sl 1–41",
+      lede: "Førti-en salmer, nesten alle av David. Åpner med Salme 1: \"Salig er den mann som ikke følger ugudeliges råd.\" Salme 2 er messianskt: \"Du er min Sønn — i dag har jeg født deg.\" Salme 8: \"Hva er da et menneske, at du kommer ham i hu?\" Salme 22: \"Min Gud, min Gud, hvorfor har du forlatt meg?\" Sitert av Jesus på korset. Salme 23: \"Herren er min hyrde.\" Salme 32 og 51 er Davids buskapssalmer etter Batseba. Bok I ender med en doxologi: \"Lovet være Herren, Israels Gud.\"",
+      keyEvent: "Salme 23 — \"Herren er min hyrde\"",
+      books: ["Salmene"],
+      people: ["David"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "bok-2", num: "II",
+      title: "Bok II — David + Korahs sønner", tagline: "Som hjorten lengter.",
+      start: 42, end: 72, label: "Sl 42–72",
+      lede: "Tretti-en salmer. Åpner med Korahs sønners berømte: \"Som hjorten lengter etter rennende bekker, lengter min sjel etter deg, Gud.\" Salme 51 (Davids syndsbekjennelse etter Batseba) er bokens hjerte: \"Skap i meg et rent hjerte, Gud.\" Salme 72 — Salomos kongesalme — knekker doxologien: \"Lovet være Herren, Israels Gud, han som alene gjør under.\" \"Davids bønner er endt.\"",
+      keyEvent: "Salme 51 — \"Skap i meg et rent hjerte\"",
+      books: ["Salmene"],
+      people: ["David", "Korahs sønner", "Salomo"]
+    },
+    {
+      id: "bok-3", num: "III",
+      title: "Bok III — Asaf og pakts-tvilen", tagline: "Hvor lenge skal Herren skjule seg?",
+      start: 73, end: 89, label: "Sl 73–89",
+      lede: "Sytten salmer, mange av Asaf. Disse er mørke — etter eksilet føler folket at pakten er brutt. Salme 73 er en visdomssalme: \"Da jeg så de ugudeliges fred ... så jeg gikk inn i Guds helligdom.\" Salme 88 er den mørkeste — slutter uten håpets vending. Salme 89 ender bok III: \"Hvor lenge, Herre? Hvor er din miskunn fra forrigetid? Den du svor til David ved din trofasthet?\"",
+      keyEvent: "Salme 73 — \"Da gikk jeg inn i Guds helligdom\"",
+      books: ["Salmene"],
+      people: ["Asaf"]
+    },
+    {
+      id: "bok-4", num: "IV",
+      title: "Bok IV — Moses og kongesalmene", tagline: "Lær oss å telle våre dager.",
+      start: 90, end: 106, label: "Sl 90–106",
+      lede: "Sytten salmer. Åpner med Salme 90 av Moses — den eneste salmen tilskrevet Moses: \"Du, Herre, har vært vår bolig fra slekt til slekt.\" \"Lær oss å telle våre dager, så vi kan få visdom i hjertet.\" Mange \"Jahve er konge\"-salmer (93, 95–99). Salme 100 er en kort lovsang. Salme 103: \"Lovsyng Herren, min sjel.\" Bok IV svarer på Bok IIIs tvil: Herren er fortsatt konge, selv uten en jordisk Davids konge.",
+      keyEvent: "Salme 90 — \"Lær oss å telle våre dager\"",
+      books: ["Salmene"],
+      people: ["Moses"]
+    },
+    {
+      id: "bok-5", num: "V",
+      title: "Bok V — pilegrimsalmer og Halleluja", tagline: "Halleluja!",
+      start: 107, end: 150, label: "Sl 107–150",
+      lede: "Førtifire salmer. Inkluderer Pilegrimssalmene (120–134) som ble sunget under reisen til Jerusalem til høytidene. Salme 119 er Bibelens lengste kapittel — 176 vers organisert akrostisk om Toraen. Salmene 113–118 er Hallel — sunget ved påsken (Jesus sang dem ved siste nattverd). Boken kulminerer med fem \"Halleluja\"-salmer (146–150): \"Pris Herren! Pris Gud i hans helligdom ... la alt som har ånde, prise Herren. Halleluja!\" Slik slutter Salmene — i ren lovsang.",
+      keyEvent: "Salme 119 — \"Ditt ord er en lykt for min fot\"",
+      books: ["Salmene"],
+      people: ["Pilegrimer"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

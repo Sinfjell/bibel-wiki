@@ -101,6 +101,18 @@ const WIKI_INDEX = [
   { type: "page", icon: "📯", title: "Malaki", subtitle: "Bok · Siste profet — Elia skal komme",
     url: "malaki-tidslinje.html", keywords: ["malaki", "elia", "budbringer", "tiende", "solen med rettferdighet", "siste profet"] },
 
+  // Visdomslitteratur
+  { type: "page", icon: "💔", title: "Job", subtitle: "Bok · Uskyldig lidelse — \"Jeg vet at min gjenløser lever\"",
+    url: "job-tidslinje.html", keywords: ["job", "lidelse", "satan", "elifas", "bildad", "sofar", "elihu", "leviatan", "behemot"] },
+  { type: "page", icon: "🎶", title: "Salmene", subtitle: "Bok · Israels sang­bok — 150 salmer i 5 bøker",
+    url: "salmene-tidslinje.html", keywords: ["salmene", "psalms", "david", "salme 23", "salme 51", "salme 119", "halleluja", "pilegrimssalmer"] },
+  { type: "page", icon: "🦉", title: "Ordspråkene", subtitle: "Bok · Visdom for hverdagen — \"frykt for Herren\"",
+    url: "ordsprakene-tidslinje.html", keywords: ["ordsprakene", "proverbs", "salomo", "frykt for herren", "visdom", "den dyktige hustru", "lemuel", "agur"] },
+  { type: "page", icon: "🌫️", title: "Forkynneren", subtitle: "Bok · Alt er forgjeves — \"frykt Gud og hold hans bud\"",
+    url: "forkynneren-tidslinje.html", keywords: ["forkynneren", "ecclesiastes", "predikeren", "forgjeves", "tid for alt", "salomo"] },
+  { type: "page", icon: "🌹", title: "Høysangen", subtitle: "Bok · Kjærlighetsdiktet — \"sterk som døden er kjærlighet\"",
+    url: "hoysangen-tidslinje.html", keywords: ["hoysangen", "song of solomon", "salomo", "brud", "brudgom", "kjaerlighet"] },
+
   // Bøker — Esra-Nehemja-Ester (etter eksilet)
   { type: "page", icon: "🏗️", title: "Esra", subtitle: "Bok · Hjemkomsten — tempelet bygges (538-458 f.Kr.)",
     url: "esra-tidslinje.html", keywords: ["esra", "ezra", "kyros", "serubabel", "tempelet", "hjemkomst", "eksilet"] },

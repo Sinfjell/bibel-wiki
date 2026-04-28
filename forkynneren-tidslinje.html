@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forkynneren — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Forkynneren — <em>alt er forgjeves</em></h1>
+  <p class="subtitle">Tolv kapitler om en konge ("Predikeren") som har prøvd alt — visdom, glede, arbeid, rikdom — og funnet alt forgjeves under solen.</p>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Forgjeves, alt er forgjeves — sier Predikeren. <em>Frykt Gud og hold hans bud</em> — det er hele mennesket.</blockquote>
+    <div class="ref">Forkynneren 1,2 + 12,13</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Forkynneren — <em>kapittel 1 til 12</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Visdomslitteratur</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="ordsprakene-tidslinje.html">← Ordspråkene</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="hoysangen-tidslinje.html">Høysangen →</a></p>
+  <p>Tradisjonelt tilskrevet Salomo i hans gamle dager — etter alt han hadde sett og prøvd</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 6,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 12, isChapters: true, tickStep: 1, majorStep: 2 },
+  defaultId: "tid-for-alt",
+  pageUrls: {},
+  notionUrls: {},
+  data: [
+    {
+      id: "forgjeves", num: "I",
+      title: "Alt er forgjeves", tagline: "Det som har vært, vil være.",
+      start: 1, end: 2, label: "Kap 1–2",
+      lede: "Predikeren — kongen i Jerusalem, sønn av David — har gransket alt som gjøres under solen. Hans konklusjon: \"Forgjeves, alt er forgjeves.\" Sol står opp, sol går ned. Elver renner i havet, men havet blir ikke fullt. Han har prøvd visdom — det føyer bare smerte. Latter og vin — meningsløst. Store byggprosjekter, slaver, hjorder, gull, harem — alt forgjeves. Visdommen overgår dårligheten — men begge skal dø.",
+      keyEvent: "\"Forgjeves, alt er forgjeves\" (Forkynneren 1,2)",
+      books: ["Forkynneren"],
+      people: ["Predikeren"]
+    },
+    {
+      id: "tid-for-alt", num: "II",
+      title: "Tid for alt", tagline: "Han har gjort alt vakkert i sin tid.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "Det berømte diktet: \"For alt er det fastsatt en tid. Det er en tid for alt under himmelen — en tid til å fødes og en tid til å dø; en tid til å plante og en tid til å rykke opp; en tid til å gråte og en tid til å le.\" Predikeren legger til: \"Han har gjort alt vakkert i sin tid; også evigheten har han lagt i deres hjerter — uten at mennesket kan utgrunne det verk Gud har gjort fra begynnelse til slutt.\"",
+      keyEvent: "\"Tid for alt under himmelen\" (Forkynneren 3,1)",
+      books: ["Forkynneren"],
+      people: ["Predikeren"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "urettferdighet", num: "III",
+      title: "Urett under solen", tagline: "Bedre er det å være ufødt.",
+      start: 4, end: 6, label: "Kap 4–6",
+      lede: "Predikeren ser undertrykkelse uten trøster, misunnelse som driver mennesker. \"Bedre er to enn én — for de har god lønn for sitt arbeid. Hvis de faller, kan den ene reise opp den andre.\" Bedre er en fattig vis ung enn en gammel dåre-konge. Vær varsom med ord ved Guds hus. Rikdom er forgangenhet — den fyller ikke sjelen. \"Som han kom fra mors liv, naken skal han gå tilbake.\"",
+      keyEvent: "\"Bedre to enn én\" (Forkynneren 4,9)",
+      books: ["Forkynneren"],
+      people: ["Predikeren"]
+    },
+    {
+      id: "visdom-praktisk", num: "IV",
+      title: "Praktisk visdom", tagline: "Ord fra de vise er som pisk.",
+      start: 7, end: 9, label: "Kap 7–9",
+      lede: "\"Bedre er sorg enn latter — for med ansiktets sorg blir hjertet bedre.\" \"Bedre er enden på en ting enn dens begynnelse.\" \"En kvinne fant jeg blant tusen, men en kvinne blant alle dem fant jeg ikke\" — provoserende ord som har skapt diskusjon. Konklusjonen: \"Det er ingen som har makt over ånden, så han kan holde den tilbake. Det er ingen som har makt over dødens dag.\" Likevel: \"Et levende hund er bedre enn en død løve.\" Lev mens du har dagen.",
+      keyEvent: "\"Et levende hund er bedre enn en død løve\" (Forkynneren 9,4)",
+      books: ["Forkynneren"],
+      people: ["Predikeren"]
+    },
+    {
+      id: "ung-rad", num: "V",
+      title: "Ung mann — gled deg, men husk", tagline: "Husk din skaper i ungdommens dager.",
+      start: 10, end: 11, label: "Kap 10–11",
+      lede: "Diverse visdomsord. \"Døde fluer gjør salveolje stinkende — slik gjør litt dårskap visdommens æresverdighet.\" Send ditt brød ut over vannet — så skal du finne det igjen mange dager etter. Bekymre deg ikke om vinden eller skyene — så høster du. Til den unge: gled deg i ungdommen, men husk at Gud skal bringe alt for retten. \"Husk din skaper i ungdommens dager — før de onde dager kommer.\"",
+      keyEvent: "\"Husk din skaper i ungdommens dager\" (Forkynneren 12,1)",
+      books: ["Forkynneren"],
+      people: ["Predikeren"]
+    },
+    {
+      id: "konklusjonen", num: "VI",
+      title: "Konklusjonen — frykt Gud", tagline: "Dette er hele mennesket.",
+      start: 12, end: 12, label: "Kap 12",
+      lede: "Bokens slutt er et vakkert dikt om alderdom. Lemmer skjelver, tenner blir få, mølleren stopper. Slutten på saken: \"Frykt Gud og hold hans bud — det er hele mennesket. For Gud skal føre alle gjerninger fram for dom — alt som er skjult, enten godt eller ondt.\" Etter alle utforskelsene — etter alt det forgjeves — kommer den enkle bunnlinjen.",
+      keyEvent: "\"Frykt Gud og hold hans bud\" (Forkynneren 12,13)",
+      books: ["Forkynneren"],
+      people: ["Predikeren"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>
