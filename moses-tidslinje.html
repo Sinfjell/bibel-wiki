@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moses — profeten og lovgiveren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · person-portrett</div>
+  <h1>Moses — <em>profeten og lovgiveren</em></h1>
+  <p class="subtitle">Et hundre og tjue år i tre kapitler — førti år som prins, førti år som hyrde, førti år som leder for et folk på vei.</p>
+  <a class="notion-pill" href="https://www.notion.so/3506b6f60b12810c8ccccabf06e9449e" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Moses i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Moses var en meget <em>ydmyk mann</em>, mer enn noe annet menneske på jorden.</blockquote>
+    <div class="ref">4. Mosebok 12,3</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Moses' liv — <em>~1525 til 1405 f.Kr.</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Egypt &amp; Midjan</span>
+      <span><i class="swatch sw-chron"></i>Leder for folket</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Reisen — <em>fra Goshen til Nebo</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Moses' reise — Egypt, Sinai, Midjan, Kanaan, Moab">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="bibel-tidslinje.html">Tilbake til Bibelen</a> · <a href="2-mos-tidslinje.html">2. Mosebok →</a></p>
+  <p>Tradisjonell tidlig kronologi (1. Kongebok 6,1) · alle årstall omtrentlige</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "FASE",
+  birthYear: -1525,
+  axis: { start: -1525, end: -1405, isChapters: false, tickStep: 10, majorStep: 20, tickStart: -1520, tickEnd: -1410 },
+  defaultId: "sinai",
+  pageUrls: {
+    "2. Mosebok": "2-mos-tidslinje.html",
+    "3. Mosebok": "3-mos-tidslinje.html",
+    "4. Mosebok": "4-mos-tidslinje.html",
+    "5. Mosebok": "5-mos-tidslinje.html"
+  },
+  notionUrls: {
+    "2. Mosebok": "https://www.notion.so/996faf76505b40d880c808b76770b79d",
+    "3. Mosebok": "https://www.notion.so/315100349f4f417daf837486b42131eb",
+    "4. Mosebok": "https://www.notion.so/650e3ed1f0044d139a4dfd12ca30bc71",
+    "5. Mosebok": "https://www.notion.so/dddab4fb518d4a5fba660e9608256437",
+    "Salmene":    "https://www.notion.so/08deb0ed35b04dcfb5b312f59fec6261"
+  },
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "265 245 285 215"
+  },
+  data: [
+    {
+      id: "egypt", num: "I",
+      title: "Prinsen i Egypt", tagline: "Født under et drapsdekret.",
+      start: -1525, end: -1485, label: "~1525–1485 f.Kr.",
+      lede: "Farao frykter at hebreerne blir for mange og befaler at alle guttebarn skal kastes i Nilen. Jokebed legger Moses i en kurv blant sivene; Faraos datter finner ham og oppdrar ham som prins. I førti år lever Moses som egypter — utdannet i all Egypts visdom, men med Israels blod.",
+      keyEvent: "Reddet i en kurv blant sivene (2. Mosebok 2)",
+      books: ["2. Mosebok"],
+      people: ["Amram", "Jokebed", "Mirjam", "Aron", "Faraos datter", "Farao"],
+      locations: ["goshen"]
+    },
+    {
+      id: "midjan", num: "II",
+      title: "Hyrden i Midjan", tagline: "Førti år langt borte fra Egypt.",
+      start: -1485, end: -1445, label: "~1485–1445 f.Kr.",
+      lede: "Moses ser en egypter slå en hebreer, og dreper egypteren. Når mordet blir kjent, flykter han øst til Midjan. Han gifter seg med Sippora, datter av presten Jetro, og gjeter sauer i førti år. Den egyptiske prinsen blir til en stille hyrde i ørkenen — uten å vite at Gud bygger den lederen Israel skal trenge.",
+      keyEvent: "Møter Sippora ved brønnen i Midjan (2. Mosebok 2)",
+      books: ["2. Mosebok"],
+      people: ["Jetro", "Sippora", "Gersom", "Elieser"],
+      locations: ["goshen", "midjan"]
+    },
+    {
+      id: "kallet", num: "III",
+      title: "Kallet og plagene", tagline: "Den brennende busken — og ti slag mot Egypts guder.",
+      start: -1445, end: -1444, label: "~1445 f.Kr.",
+      lede: "Ved Horeb-fjellet viser Herren seg i en busk som brenner uten å fortæres. \"Jeg er den jeg er.\" Moses motsier kallet fem ganger, men tar til slutt staven. Sammen med Aron møter han Farao og bringer ti plager over Egypt — vannet blir blod, mørke i tre dager, og til slutt påsken: dødsengelen går forbi de hjemmene som er merket med blodet av et lam.",
+      keyEvent: "Den brennende busken og navnet JHVH (2. Mosebok 3)",
+      books: ["2. Mosebok"],
+      people: ["Aron", "Farao", "Faraos hoff"],
+      locations: ["midjan", "horeb", "goshen"],
+      bottomTag: { text: "Leder for folket", class: "leader" },
+      variant: "leader"
+    },
+    {
+      id: "utgangen", num: "IV",
+      title: "Utgangen og Sivsjøen", tagline: "Et folk går ut av slaveri.",
+      start: -1444, end: -1444, label: "~1445 f.Kr.",
+      lede: "Israel går ut av Egypt med høye armer — seks hundre tusen menn pluss kvinner og barn. Når Faraos vogner forfølger dem, deler Moses Sivsjøen med staven. Folket går tørrskodd over, og vannet vender tilbake over egypterne. På den andre siden synger Moses og Mirjam: \"Herren er en stridsmann; Herren er hans navn.\" Manna faller om morgenen, vaktler om kvelden.",
+      keyEvent: "Sivsjøen deles (2. Mosebok 14)",
+      books: ["2. Mosebok"],
+      people: ["Mirjam", "Aron", "Josva (først nevnt)"],
+      locations: ["goshen", "sivsjoen"],
+      bottomTag: { text: "Leder for folket", class: "leader" },
+      variant: "leader"
+    },
+    {
+      id: "sinai", num: "V",
+      title: "Sinai og loven", tagline: "Pakten på fjellet.",
+      start: -1444, end: -1443, label: "~1445–1444 f.Kr.",
+      lede: "Ved Sinai-fjellet stiger Moses opp i mørket og mottar Ti bud, og senere hele lovens detalj. Mens han er borte i førti dager, lager folket en gullkalv — og Moses knuser steintavlene i sinne. Etter forbønn fornyes pakten. Hele tabernaklet bygges etter det himmelske mønsteret, og Herrens herlighet fyller teltet.",
+      keyEvent: "Ti bud gis på Sinai (2. Mosebok 20)",
+      books: ["2. Mosebok", "3. Mosebok"],
+      people: ["Aron", "Bezalel", "Oholiab", "Josva"],
+      locations: ["horeb"],
+      bottomTag: { text: "Leder for folket", class: "leader" },
+      variant: "leader"
+    },
+    {
+      id: "speidere", num: "VI",
+      title: "Speidernes opprør", tagline: "Vendepunktet ved Kadesj.",
+      start: -1443, end: -1442, label: "~1444 f.Kr.",
+      lede: "Tolv speidere sendes inn i Kanaan. Ti vender tilbake med skrekkrapporter; bare Josva og Kaleb tror Herren kan gi landet. Folket vil steine Moses og snu tilbake til Egypt. Herrens dom: hele den voksne generasjonen skal dø i ørkenen — bare Josva og Kaleb skal komme inn. Førti dager med speiding blir til førti år med vandring.",
+      keyEvent: "Dommen om førti år i ørkenen (4. Mosebok 14)",
+      books: ["4. Mosebok"],
+      people: ["Josva", "Kaleb", "Aron"],
+      locations: ["horeb", "kadesj"],
+      bottomTag: { text: "Leder for folket", class: "leader" },
+      variant: "leader"
+    },
+    {
+      id: "vandring", num: "VII",
+      title: "Ørkenvandringen", tagline: "Tro mot et folk som ikke trodde.",
+      start: -1442, end: -1406, label: "~1444–1405 f.Kr.",
+      lede: "I førti år leder Moses et folk som klager, gjør opprør og lengter tilbake til Egypt. Korah reiser opprør og slukes av jorden. Vannet velles ut av klippen — men Moses slår to ganger og mister selv adgangen til løftelandet. Den brennende slangen løftes opp i ørkenen som tegn på frelse. Bileam velsigner Israel mot kong Balaks ønske.",
+      keyEvent: "Moses slår klippen to ganger (4. Mosebok 20)",
+      books: ["4. Mosebok"],
+      people: ["Korah", "Bileam", "Balak", "Josva", "Mirjam (dør)", "Aron (dør)"],
+      locations: ["kadesj", "moab"],
+      bottomTag: { text: "Leder for folket", class: "leader" },
+      variant: "leader"
+    },
+    {
+      id: "nebo", num: "VIII",
+      title: "Avskjeden på Nebo", tagline: "Lover landet — uten å gå inn.",
+      start: -1406, end: -1405, label: "~1405 f.Kr.",
+      lede: "På sletten ved Moab samler Moses hele folket og holder de store talene som blir 5. Mosebok — en gjenfortelling av loven og en rørende avskjed. Han velsigner stammene, salver Josva til etterfølger, og stiger opp på Nebo-fjellet. Derfra ser han hele løftelandet, men går ikke inn. Han dør, og Herren begraver ham. Ingen vet hvor.",
+      keyEvent: "Moses ser landet fra Nebo og dør, 120 år gammel (5. Mosebok 34)",
+      books: ["5. Mosebok"],
+      people: ["Josva (etterfølger)"],
+      locations: ["moab", "nebo"],
+      bottomTag: { text: "Leder for folket", class: "leader" },
+      variant: "leader"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

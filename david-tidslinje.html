@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David — kongens liv</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · person-portrett</div>
+  <h1>David — <em>kongens liv</em></h1>
+  <p class="subtitle">Åtte kapitler fra Betlehems beitemark til tronen i Jerusalem — sytti år som formet Israel og Bibelens forventning om en Messias.</p>
+  <a class="notion-pill" href="https://www.notion.so/3506b6f60b12815385a6e2aff6ec9d4e" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne David i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme">
+    <div class="label">Krønikene fortier</div>
+    <div class="head">Det <em>Krønikene utelater</em></div>
+    <p class="body">Krønikeren skriver til de hjemvendte fra eksilet og maler David som idealkongen. Sauls forfølgelse, Batseba og Absalom er klippet ut av historien — Davids reise begynner først med tronen i Hebron.</p>
+    <div class="omitted-list">
+      <div class="omitted-item">Davids år som flyktning <span class="ref">1. Sam 18–31</span></div>
+      <div class="omitted-item">Batseba og Uria <span class="ref">2. Sam 11–12</span></div>
+      <div class="omitted-item">Absaloms opprør <span class="ref">2. Sam 13–20</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Davids liv — <em>~1040 til 970 f.Kr.</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Kun i Samuel</span>
+      <span><i class="swatch sw-chron"></i>Parallell i Krønikene</span>
+      <span><i class="swatch sw-omitted"></i>Utelatt fra Krønikene</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="bibel-tidslinje.html">Tilbake til Bibelen</a> · <a href="1-samuel-tidslinje.html">1. Samuel →</a> · <a href="2-samuel-tidslinje.html">2. Samuel →</a></p>
+  <p>Tradisjonell konservativ kronologi · alle årstall omtrentlige</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "FASE",
+  birthYear: -1040,
+  axis: { start: -1040, end: -970, isChapters: false, tickStep: 5, majorStep: 10, tickStart: -1040, tickEnd: -970 },
+  defaultId: "jerusalem",
+  pageUrls: {
+    "Saul":      "saul-tidslinje.html",
+    "Moses":     "moses-tidslinje.html",
+    "1. Samuel": "1-samuel-tidslinje.html",
+    "2. Samuel": "2-samuel-tidslinje.html"
+  },
+  notionUrls: {
+    "1. Samuel":    "https://www.notion.so/920ecebc5a884c818d4d7eedeeb0c67c",
+    "2. Samuel":    "https://www.notion.so/70dcb524c02d4935ae631e4b0c94980d",
+    "1. Kongebok":  "https://www.notion.so/0d5ff552e2f14d7f8e6807eec11efc19",
+    "1. Krønikebok":"https://www.notion.so/c11a015cad0a44c0b6c06a0b883cd940",
+    "Salmene":      "https://www.notion.so/08deb0ed35b04dcfb5b312f59fec6261"
+  },
+  data: [
+    {
+      id: "gjeter", num: "I",
+      title: "Gjetergutten i Betlehem", tagline: "Den minste blir valgt.",
+      start: -1040, end: -1025, label: "~1040–1025 f.Kr.",
+      lede: "David vokser opp som yngste av Isais åtte sønner og gjeter familiens flokk på markene utenfor Betlehem. Profeten Samuel kommer i hemmelighet, sendt av Herren etter at Saul er forkastet, og salver gutten til konge mens hans brødre står hjelpeløse rundt offerbordet. Fra den dagen kommer Herrens Ånd over David. Tilbake på markene møter han løver og bjørner — øvelser for det som senere skal komme.",
+      keyEvent: "Samuel salver David i Isais hus (1. Samuel 16,13)",
+      books: ["1. Samuel 16"],
+      people: ["Isai", "Eliab", "Samuel"],
+      bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
+      variant: "omitted-by-chronicles"
+    },
+    {
+      id: "hoff", num: "II",
+      title: "Ved Sauls hoff", tagline: "Harpe, slynge og en bror i sjelen.",
+      start: -1025, end: -1018, label: "~1025–1018 f.Kr.",
+      lede: "David spiller harpe for den plagede Saul, og når Goliat utfordrer Israel ved Elah-dalen, er det den unge gjetergutten som tar opp slyngen. Kvinnenes sang — \"Saul har slått sine tusener, men David sine titusener\" — vekker en misunnelse som aldri slipper. David gifter seg med Sauls datter Mikal og finner i Jonatan en bror i pakt. Saul slynger spydet sitt, og flukten begynner.",
+      keyEvent: "Goliat felles i Elah-dalen (1. Samuel 17)",
+      books: ["1. Samuel 17–20"],
+      people: ["Saul", "Jonatan", "Mikal", "Goliat"],
+      bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
+      variant: "omitted-by-chronicles"
+    },
+    {
+      id: "flukt", num: "III",
+      title: "På flukt — utleggets år", tagline: "En konge uten trone.",
+      start: -1018, end: -1010, label: "~1018–1010 f.Kr.",
+      lede: "Åtte år gjennom Judas ødemark — Nob, Adullam, Kei'la, Sif, En-Gedi, Maon. David samler seks hundre menn rundt seg, sparer Sauls liv to ganger og søker til slutt tilflukt hos filisterkongen Akisj i Siklag. I disse årene formes mange av salmene. Til slutt faller Saul og Jonatan på Gilboa-fjellet, og David synger sin klagesang.",
+      keyEvent: "Saul og Jonatan dør på Gilboa (1. Samuel 31)",
+      books: ["1. Samuel 21–31", "Salmene"],
+      people: ["Akisj", "Abjatar", "Abigajil", "Joab", "Saul (død)", "Jonatan (død)"],
+      bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
+      variant: "omitted-by-chronicles"
+    },
+    {
+      id: "hebron", num: "IV",
+      title: "Konge i Hebron", tagline: "Sju og et halvt år over Juda alene.",
+      start: -1010, end: -1003, label: "1010–1003 f.Kr.",
+      lede: "Davids egen stamme — Juda — salver ham til konge i Hebron. I nord regjerer Sauls sønn Isjbosjet, støttet av hærføreren Abner. Det blir lang borgerkrig. Når Abner går over til David og deretter blir myrdet av Joab, og når Isjbosjet blir drept av sine egne, samles til slutt alle stammene om David.",
+      keyEvent: "Salvet konge over Juda (2. Samuel 2,4)",
+      books: ["2. Samuel 1–4", "1. Krønikebok"],
+      people: ["Isjbosjet", "Abner", "Joab", "Abisjai"],
+      bottomTag: { text: "I Krønikene", class: "in-chronicles" },
+      variant: "in-chronicles",
+      metaExtra: { text: "I Krønikene", class: "chron" }
+    },
+    {
+      id: "jerusalem", num: "V",
+      title: "Konge over hele Israel", tagline: "Jerusalem, arken, og en evig pakt.",
+      start: -1003, end: -990, label: "1003–990 f.Kr.",
+      lede: "David erobrer den jebusittiske festningen og gjør den til Davidsbyen — Jerusalem. Han fører arken inn i byen med dans og glede, og forteller profeten Natan at han vil bygge et hus for Herren. Svaret blir snudd: Herren skal bygge David et hus. Davidpakten lover en evig ætt — løftet kristen tro forstår oppfylt i Messias. Riket utvides gjennom seire over filisterne, moabittene, arameerne og edomittene.",
+      keyEvent: "Davidpakten — løftet om en evig ætt (2. Samuel 7)",
+      books: ["2. Samuel 5–10", "1. Krønikebok"],
+      prophets: ["Natan", "Gad"],
+      people: ["Hiram av Tyrus", "Mefiboset", "Joab", "Sadok", "Abjatar"],
+      bottomTag: { text: "I Krønikene", class: "in-chronicles" },
+      variant: "in-chronicles",
+      metaExtra: { text: "I Krønikene", class: "chron" }
+    },
+    {
+      id: "fallet", num: "VI",
+      title: "Fallet — Batseba og Natan", tagline: "Du er mannen.",
+      start: -990, end: -985, label: "~990–985 f.Kr.",
+      lede: "Mens hæren beleirer Rabba, ser David fra taket sitt Batseba bade. Han tar henne, og lar mannen Uria — en av hans tro krigere — falle i strid for å skjule sviket. Profeten Natan kommer med lignelsen om det lille lammet og treffer David midt i hjertet: \"Du er mannen.\" David angrer og skriver Salme 51. Det første barnet dør; Salomo blir født.",
+      keyEvent: "Natans dom — \"Du er mannen\" (2. Samuel 12,7)",
+      books: ["2. Samuel 11–12", "Salmene"],
+      prophets: ["Natan"],
+      people: ["Batseba", "Uria", "Salomo (fødsel)"],
+      bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
+      variant: "omitted-by-chronicles",
+      metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
+    },
+    {
+      id: "uro", num: "VII",
+      title: "Indre uro — sønnenes opprør", tagline: "Sverdet skal aldri vike fra ditt hus.",
+      start: -985, end: -975, label: "~985–975 f.Kr.",
+      lede: "Natans dom blir til kjøtt og blod. Amnon voldtar sin halvsøster Tamar; Absalom hevner det med mord og må flykte. År senere reiser Absalom opprør mot sin far, jager David ut av Jerusalem og dør til slutt hengende i et eiketre — mot Davids befaling. \"Min sønn Absalom, min sønn, min sønn.\" Sjebas opprør slås ned, og David vender tilbake til en svekket trone.",
+      keyEvent: "Absaloms opprør og død (2. Samuel 18)",
+      books: ["2. Samuel 13–20"],
+      people: ["Amnon", "Tamar", "Absalom", "Akitofel", "Husai", "Joab", "Sjeba"],
+      bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
+      variant: "omitted-by-chronicles",
+      metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
+    },
+    {
+      id: "slutten", num: "VIII",
+      title: "Avslutning — Salomo og avskjeden", tagline: "Tempelet — overgitt til en annen.",
+      start: -975, end: -970, label: "~975–970 f.Kr.",
+      lede: "Adonja prøver å gripe tronen mens David ligger gammel og kald. Profeten Natan og Batseba sikrer at Salomo blir salvet ved Gihon-kilden. David overgir tegningene til tempelet — som han selv ikke fikk bygge fordi han hadde utgytt så mye blod — og pålegger Salomo å holde Herrens lov. Etter førti års kongstid dør han, og blir gravlagt i Davidsbyen.",
+      keyEvent: "Salomo salves ved Gihon (1. Kongebok 1)",
+      books: ["1. Kongebok", "1. Krønikebok"],
+      prophets: ["Natan", "Sadok (prest)"],
+      people: ["Adonja", "Salomo", "Batseba", "Joab (henrettes)", "Benaja"],
+      bottomTag: { text: "I Krønikene", class: "in-chronicles" },
+      variant: "in-chronicles",
+      metaExtra: { text: "I Krønikene", class: "chron" }
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

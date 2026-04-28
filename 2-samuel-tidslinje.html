@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. Samuel — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>2. Samuel — <em>Davids glans og fall</em></h1>
+  <p class="subtitle">24 kapitler om én konge. Første halvdel reiser David opp; andre halvdel river ham ned. Vendepunktet er Batseba i kapittel 11.</p>
+  <a class="notion-pill" href="https://www.notion.so/70dcb524c02d4935ae631e4b0c94980d" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne 2. Samuel i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Sverdet skal aldri vike fra ditt hus, fordi du <em>foraktet meg</em>.</blockquote>
+    <div class="ref">Natans dom etter Batseba · 2. Samuel 12,10</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>2. Samuel — <em>kapittel 1 til 24</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-rise"></i>Oppgang (kap 1–10)</span>
+      <span><i class="swatch sw-fall"></i>Fall (kap 11–24)</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+        <div class="turning-point">
+          <div class="turning-marker" id="turningMarker"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="1-samuel-tidslinje.html">← 1. Samuel</a> · <a href="bibel-tidslinje.html">Tilbake til Bibelen</a></p>
+  <p>Boken slutter med Davids salme og siste folketelling · 1. Kongebok 1–2 dekker hans død</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 7,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 24, isChapters: true, tickStep: 1, majorStep: 5 },
+  defaultId: "jerusalem",
+  turningPoint: { value: 11, label: "Kap 11 — vendepunkt" },
+  pageUrls: {
+    "David": "david-tidslinje.html",
+    "Saul":  "saul-tidslinje.html",
+    "1. Samuel": "1-samuel-tidslinje.html"
+  },
+  notionUrls: {
+    "1. Samuel":    "https://www.notion.so/920ecebc5a884c818d4d7eedeeb0c67c",
+    "2. Samuel":    "https://www.notion.so/70dcb524c02d4935ae631e4b0c94980d",
+    "1. Krønikebok":"https://www.notion.so/c11a015cad0a44c0b6c06a0b883cd940",
+    "Salmene":      "https://www.notion.so/08deb0ed35b04dcfb5b312f59fec6261"
+  },
+  data: [
+    {
+      id: "hebron", num: "I",
+      title: "Konge i Hebron", tagline: "Sju og et halvt år over Juda alene.",
+      start: 1, end: 4, label: "Kap 1–4",
+      lede: "David hører om Saul og Jonatans død og synger den vakreste klagesangen i Det gamle testamente — \"Hvor heltene har falt!\" Han salves konge over Juda i Hebron. I nord regjerer Sauls sønn Isjbosjet med hærføreren Abner. Lang borgerkrig. Når Abner går over til David og deretter myrdes av Joab, og Isjbosjet drepes av sine egne, er veien klar.",
+      keyEvent: "Davids klagesang over Saul og Jonatan (2. Samuel 1)",
+      people: ["Isjbosjet", "Abner", "Joab", "Abisjai"],
+      bottomArc: "Oppgang",
+      variant: "arc-rise"
+    },
+    {
+      id: "jerusalem", num: "II",
+      title: "Jerusalem og Davidpakten", tagline: "Toppen — og det største løftet.",
+      start: 5, end: 7, label: "Kap 5–7",
+      lede: "David erobrer den jebusittiske festningen og gjør den til Davidsbyen. Han fører arken inn i byen med dans og glede — men Ussa berører arken og dør. Når David vil bygge et hus for Herren, kommer profeten Natan tilbake samme natt med en omsnudd melding: \"Herren vil bygge deg et hus.\" Davidpakten — løftet om en evig ætt — blir kjernen i Bibelens messianske forventning.",
+      keyEvent: "Davidpakten — \"din trone skal stå støtt til evig tid\" (2. Samuel 7)",
+      people: ["Natan", "Ussa", "Mikal"],
+      bottomArc: "Oppgang",
+      variant: "arc-rise"
+    },
+    {
+      id: "kriger", num: "III",
+      title: "Krigsårene", tagline: "Riket utvides på alle fronter.",
+      start: 8, end: 10, label: "Kap 8–10",
+      lede: "David slår filisterne, moabittene, arameerne og edomittene. Riket strekker seg fra Eufrat til Egypts elv. Han viser miskunn mot Mefiboset, Jonatans halte sønn, og henter ham til kongens bord. Når ammonittenes konge fornedrer Davids sendebud, kommer den krigen som danner kulissen for det neste fallet.",
+      keyEvent: "Mefiboset hentes til kongens bord (2. Samuel 9)",
+      people: ["Mefiboset", "Joab", "Hadadezer", "Hanun"],
+      bottomArc: "Oppgang",
+      variant: "arc-rise"
+    },
+    {
+      id: "batseba", num: "IV",
+      title: "Batseba og Natans dom", tagline: "Du er mannen.",
+      start: 11, end: 12, label: "Kap 11–12",
+      lede: "Mens hæren beleirer Rabba, blir David hjemme. Han ser Batseba bade, tar henne, og lar mannen Uria — en av hans tro krigere — falle i strid for å skjule sviket. Profeten Natan kommer med lignelsen om det lille lammet og treffer David rett i hjertet: \"Du er mannen.\" David angrer — Salme 51 — men dommen er talt: sverdet skal aldri vike fra hans hus. Det første barnet dør; Salomo blir født.",
+      keyEvent: "\"Du er mannen\" (2. Samuel 12,7)",
+      people: ["Batseba", "Uria", "Natan", "Salomo (fødsel)"],
+      bottomArc: "Etter fallet",
+      variant: "arc-fall"
+    },
+    {
+      id: "amnon", num: "V",
+      title: "Amnon og Tamar — Absaloms hevn", tagline: "Sverdet inn i familien.",
+      start: 13, end: 14, label: "Kap 13–14",
+      lede: "Davids førstefødte Amnon voldtar sin halvsøster Tamar. David blir vred, men gjør ingenting. Absalom — Tamars helbror — venter to år, og lar så Amnon drepes ved en sauesankningsfest. Han flykter til Gesjur i tre år. Joab orkestrerer at Absalom får komme tilbake til Jerusalem, men David vil ikke se ham. Til slutt — etter to års isolasjon — får han sønnen tilbake. Splittelsen er sådd.",
+      keyEvent: "Tamar voldtas, Amnon drepes (2. Samuel 13)",
+      people: ["Amnon", "Tamar", "Absalom", "Joab"],
+      bottomArc: "Etter fallet",
+      variant: "arc-fall"
+    },
+    {
+      id: "absalom", num: "VI",
+      title: "Absaloms opprør", tagline: "En far flykter fra sin egen sønn.",
+      start: 15, end: 19, label: "Kap 15–19",
+      lede: "I fire år stjeler Absalom folkets hjerter ved porten. Når opprøret bryter ut, må David flykte fra Jerusalem barfot, gråtende. Akitofel går over til Absalom; Husai blir Davids spion i fienden leir. Akitofels gode råd avvises, han henger seg selv. I skogen ved Mahanaim møtes hærene. Absaloms hår fanger seg i en eik; mot Davids befaling støter Joab tre spyd i hans hjerte. \"Min sønn Absalom, min sønn, min sønn — gid jeg var død i ditt sted.\"",
+      keyEvent: "Absaloms død — Davids klage (2. Samuel 18)",
+      people: ["Absalom", "Akitofel", "Husai", "Joab", "Sjimi", "Mefiboset"],
+      bottomArc: "Etter fallet",
+      variant: "arc-fall"
+    },
+    {
+      id: "avslutning", num: "VII",
+      title: "Sjebas opprør og avslutning", tagline: "En epilog i fragmenter.",
+      start: 20, end: 24, label: "Kap 20–24",
+      lede: "Sjeba reiser et nytt opprør i nord, men hans hode kastes over muren av en klok kvinne. Boken slutter med en samling fragmenter: hungersnød på grunn av Sauls gamle blodskyld, kjempene som Davids menn felte, en stor lovsang (Salme 18), Davids siste ord, listen over de tretti, og folketellingen som bringer pest over landet. David bygger et alter på Ornans treskeplass — stedet hvor Salomo siden bygger tempelet.",
+      keyEvent: "David bygger alter på Ornans treskeplass (2. Samuel 24,25)",
+      people: ["Sjeba", "Joab", "Davids tretti helter", "Ornan jebusitten", "Gad"],
+      bottomArc: "Etter fallet",
+      variant: "arc-fall"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

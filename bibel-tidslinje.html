@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bibelen — kronologi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #f0e8d6;
+    --bg-deep:   #e8dec7;
+    --paper:     #fbf5e6;
+    --paper-edge:#ede1c4;
+    --ink:       #1d1814;
+    --ink-soft:  #4a3f30;
+    --muted:     #8a7a62;
+    --rule:      #c5b48b;
+    --rule-soft: #d8c9a3;
+    --gold:      #9c7836;
+    --gold-soft: #d9bf85;
+    --olive:     #5e6c2f;
+    --olive-soft:#c0c89a;
+    --claret:    #8b2635;
+    --claret-soft:#d8a8a8;
+    --shadow-sm: 0 1px 2px rgba(60,40,15,.06);
+    --shadow-md: 0 2px 6px rgba(60,40,15,.08), 0 12px 28px rgba(60,40,15,.06);
+    --shadow-lg: 0 4px 14px rgba(60,40,15,.10), 0 24px 48px rgba(60,40,15,.08);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+    font-variation-settings: "opsz" 14, "SOFT" 30;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(155,120,55,.06), transparent 40%),
+      radial-gradient(circle at 88% 92%, rgba(139,38,53,.04), transparent 40%);
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0.06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 56px 28px 64px;
+  }
+
+  /* ============ Header ============ */
+  header { text-align: center; margin-bottom: 36px; }
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: .35em;
+    font-size: .68rem;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: "";
+    display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--rule);
+    vertical-align: middle;
+    margin: 0 14px 4px;
+  }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    margin: 0 0 8px;
+  }
+  h1 em {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+    color: var(--claret);
+  }
+  .subtitle {
+    color: var(--ink-soft);
+    font-style: italic;
+    font-size: 1.05rem;
+    margin: 0 auto;
+    max-width: 540px;
+    font-variation-settings: "opsz" 14, "SOFT" 60;
+  }
+
+  /* ============ Reading-now banner ============ */
+  .reading-now {
+    margin: 28px auto 0;
+    max-width: 880px;
+    background: linear-gradient(180deg, #fbf2e0 0%, #f5e8c8 100%);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 28px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .reading-now:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+  }
+  .reading-now::before, .reading-now::after {
+    content: "";
+    position: absolute;
+    top: -1px; bottom: -1px;
+    width: 4px;
+    background: var(--claret);
+  }
+  .reading-now::before { left: -1px; }
+  .reading-now::after  { right: -1px; }
+  .reading-now .glyph {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--claret);
+    color: #f5e8c8;
+    display: grid;
+    place-items: center;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.4rem;
+    box-shadow: 0 2px 6px rgba(139,38,53,.3);
+  }
+  .reading-now .text .label {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: var(--claret);
+    margin-bottom: 2px;
+  }
+  .reading-now .text .title {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 36, "SOFT" 50;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+  .reading-now .text .title em { font-style: italic; color: var(--claret); }
+  .reading-now .meta {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .72rem;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.5;
+  }
+  .reading-now .meta strong { color: var(--ink-soft); font-weight: 500; }
+
+  /* ============ Timeline ============ */
+  .timeline-section { margin-top: 40px; }
+
+  .timeline-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
+    padding: 0 4px 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .timeline-heading h2 {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 36, "SOFT" 30;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: -.005em;
+  }
+  .timeline-heading h2 em { font-style: italic; color: var(--claret); }
+  .legend {
+    display: flex;
+    gap: 18px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .68rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .sw-book { background: var(--gold); }
+  .sw-prophet { background: var(--olive); }
+  .sw-chron { background: var(--claret); }
+
+  .timeline-wrap {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 32px 28px 24px;
+    box-shadow: var(--shadow-md);
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+  .timeline-wrap::before, .timeline-wrap::after {
+    content: "";
+    position: absolute;
+    width: 18px; height: 18px;
+    border: 1px solid var(--gold);
+    pointer-events: none;
+  }
+  .timeline-wrap::before {
+    top: 8px; left: 8px;
+    border-right: none; border-bottom: none;
+  }
+  .timeline-wrap::after {
+    bottom: 8px; right: 8px;
+    border-left: none; border-top: none;
+  }
+
+  .timeline {
+    position: relative;
+    min-width: 1500px;
+  }
+
+  /* Cards row — equal-width, readable */
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .card {
+    background: var(--paper-edge);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 14px 14px 12px;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    min-height: 158px;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px 2px 0 0;
+    transition: background .18s ease, height .18s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    background: #fbf2e0;
+    border-color: var(--gold);
+    box-shadow: var(--shadow-md);
+  }
+  .card.active {
+    background: #fff;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 1px var(--ink), 0 8px 20px rgba(60,40,15,.12);
+    transform: translateY(-3px);
+  }
+  .card.active::before {
+    background: var(--claret);
+    height: 5px;
+  }
+  .card.covered {
+    background: linear-gradient(180deg, #faedce 0%, #f5e0ad 100%);
+  }
+  .card.covered::before { background: var(--claret); }
+
+  .card-num {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .65rem;
+    color: var(--muted);
+    letter-spacing: .2em;
+    font-weight: 500;
+  }
+  .card-title {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 24, "SOFT" 40;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.18;
+    color: var(--ink);
+    letter-spacing: -.005em;
+    margin: 0;
+  }
+  .card-years {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .65rem;
+    color: var(--gold);
+    letter-spacing: .03em;
+  }
+  .card.covered .card-years { color: var(--claret); }
+
+  .card-duration {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 6px;
+  }
+  .card-duration-track {
+    flex: 1;
+    height: 3px;
+    background: var(--rule-soft);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .card-duration-fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: background .18s ease;
+  }
+  .card.covered .card-duration-fill { background: var(--claret); }
+  .card.active .card-duration-fill { background: var(--ink); }
+  .card-duration-label {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .58rem;
+    color: var(--muted);
+    letter-spacing: .04em;
+    white-space: nowrap;
+    min-width: 38px;
+    text-align: right;
+  }
+  .card-chron {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .55rem;
+    color: var(--claret);
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding-top: 4px;
+    border-top: 1px dashed var(--claret-soft);
+    margin-top: 4px;
+  }
+
+  /* ============ Axis with brackets ============ */
+  .axis-area {
+    position: relative;
+    height: 64px;
+    margin-top: 4px;
+  }
+
+  .axis-line {
+    position: absolute;
+    left: 0; right: 0;
+    top: 24px;
+    height: 1px;
+    background: var(--ink-soft);
+  }
+  .axis-line::before, .axis-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--ink-soft);
+    transform: translateY(-50%);
+  }
+  .axis-line::before { left: -3px; }
+  .axis-line::after  { right: -3px; }
+
+  /* Tick marks */
+  .ticks {
+    position: absolute;
+    left: 0; right: 0;
+    top: 24px;
+    bottom: 0;
+    pointer-events: none;
+  }
+  .tick {
+    position: absolute;
+    top: -4px;
+    width: 1px; height: 8px;
+    background: var(--ink-soft);
+    transform: translateX(-50%);
+  }
+  .tick.major { height: 12px; top: -6px; }
+  .tick-label {
+    position: absolute;
+    top: 14px;
+    transform: translateX(-50%);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .7rem;
+    color: var(--muted);
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+
+  /* Brackets on axis showing era spans */
+  .bracket {
+    position: absolute;
+    top: 8px;
+    height: 20px;
+    pointer-events: none;
+  }
+  .bracket-bar {
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 2px;
+    transform: translateY(-50%);
+    transition: background .18s ease, height .18s ease;
+  }
+  .bracket-cap {
+    position: absolute;
+    top: 50%;
+    width: 1.5px;
+    height: 14px;
+    background: var(--gold);
+    transform: translateY(-50%);
+    transition: background .18s ease;
+  }
+  .bracket-cap.left { left: 0; }
+  .bracket-cap.right { right: 0; }
+  .bracket-num {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .6rem;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: .12em;
+    background: var(--paper);
+    padding: 0 4px;
+    transition: color .18s ease;
+  }
+  .bracket.covered .bracket-bar { background: var(--claret); }
+  .bracket.covered .bracket-cap { background: var(--claret); }
+  .bracket.covered .bracket-num { color: var(--claret); }
+  .bracket.active .bracket-bar { background: var(--ink); height: 6px; }
+  .bracket.active .bracket-cap { background: var(--ink); }
+  .bracket.active .bracket-num { color: var(--ink); }
+
+  .scroll-hint {
+    margin-top: 14px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .65rem;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+  }
+
+  /* ============ Detail panel ============ */
+  .detail {
+    margin-top: 32px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 36px 44px 40px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    animation: detailIn .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .detail.current {
+    background: linear-gradient(180deg, #fbf2e0 0%, var(--paper) 70%);
+  }
+  .detail.current::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--claret);
+  }
+  @keyframes detailIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .detail-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .detail-meta .num { color: var(--ink); font-weight: 500; }
+  .detail-meta .sep { color: var(--rule); }
+  .detail-meta .years { color: var(--gold); font-weight: 500; }
+  .detail-meta .now { color: var(--claret); font-weight: 500; }
+  .detail.current .detail-meta .years { color: var(--claret); }
+
+  .detail h2 {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 96, "SOFT" 60;
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -.02em;
+    margin: 0 0 4px;
+    line-height: 1.05;
+  }
+  .detail.current h2 { color: var(--claret); }
+  .detail-tagline {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0 0 24px;
+    font-variation-settings: "opsz" 14, "SOFT" 80;
+  }
+  .detail-lede {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 64ch;
+    margin: 0 0 32px;
+    font-variation-settings: "opsz" 14, "SOFT" 50;
+  }
+  .detail-lede::first-letter {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+    font-style: italic;
+    font-size: 3.6rem;
+    line-height: .9;
+    float: left;
+    margin: 6px 8px 0 0;
+    color: var(--claret);
+  }
+
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .section h3 {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 14, "SOFT" 40;
+    font-size: .9rem;
+    padding: 4px 11px;
+    border-radius: 2px;
+    background: var(--paper-edge);
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+  }
+  .tag.book {
+    background: #f4e8c4;
+    color: #6b4f1c;
+    border-color: var(--gold-soft);
+  }
+  .tag.prophet {
+    background: #e7ecd1;
+    color: #3f4a1c;
+    border-color: var(--olive-soft);
+    font-style: italic;
+  }
+
+  /* Linked tags — open in Notion (↗) or local page (→) */
+  a.tag {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  a.tag::after {
+    content: "↗";
+    margin-left: 5px;
+    font-size: .72em;
+    opacity: .5;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: opacity .15s ease, transform .15s ease;
+    display: inline-block;
+  }
+  a.tag.local {
+    background: #fff;
+    border-color: var(--claret);
+    color: var(--claret);
+    font-weight: 500;
+  }
+  a.tag.local::after {
+    content: "→";
+    color: var(--claret);
+    opacity: .8;
+  }
+  a.tag:hover {
+    background: #fff;
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+  a.tag:hover::after { opacity: 1; transform: translate(1px, -1px); }
+  a.tag.book:hover { border-color: var(--gold); color: var(--gold); }
+  a.tag.prophet:hover { border-color: var(--olive); color: var(--olive); }
+  a.tag.local:hover {
+    background: var(--claret);
+    border-color: var(--claret);
+    color: #fbf5e6;
+  }
+  a.tag.local:hover::after { color: #fbf5e6; }
+
+  /* ============ Footer ============ */
+  footer {
+    margin-top: 56px;
+    text-align: center;
+    color: var(--muted);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .68rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  footer hr {
+    border: none;
+    height: 1px;
+    background: var(--rule);
+    max-width: 80px;
+    margin: 0 auto 18px;
+  }
+  footer p { margin: 4px 0; }
+
+  /* ============ Mobile ============ */
+  @media (max-width: 720px) {
+    .wrap { padding: 32px 16px 48px; }
+    .reading-now {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto auto;
+      padding: 16px 18px;
+    }
+    .reading-now .meta { grid-column: 1 / -1; text-align: left; }
+    .timeline-heading { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .detail { padding: 28px 24px; }
+    .detail-lede::first-letter { font-size: 3rem; }
+  }
+
+  .timeline-wrap::-webkit-scrollbar { height: 8px; }
+  .timeline-wrap::-webkit-scrollbar-track { background: var(--bg-deep); border-radius: 4px; }
+  .timeline-wrap::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+  .timeline-wrap::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Bibel-leseplan · ett år · <a href="bibel-atlas.html" style="color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;">Bibel-atlas →</a></div>
+  <h1><em>Bibelen</em></h1>
+  <p class="subtitle">Personlig wiki for hele bibelen — med kronologisk tidslinje, person-portretter, bok-portretter og <a href="bibel-atlas.html" style="color:var(--claret);font-style:italic;border-bottom:1px solid var(--claret-soft);text-decoration:none;">interaktivt atlas</a>. Det gamle testamente er kartlagt under; Det nye testamente kommer senere.</p>
+
+  <div class="reading-now" id="readingNow" role="button" tabindex="0" aria-label="Vis detaljer for Krønikene">
+    <div class="glyph">𝔎</div>
+    <div class="text">
+      <div class="label">Du leser nå</div>
+      <div class="title"><em>Krønikene</em></div>
+    </div>
+    <div class="meta">
+      <strong>Skrevet ~460–400 f.Kr.</strong><br>
+      Dekker Adam → Kyros
+    </div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Det gamle testamente — <em>2100 til 400 f.Kr.</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Bok</span>
+      <span><i class="swatch sw-prophet"></i>Profet</span>
+      <span><i class="swatch sw-chron"></i>Dekkes av Krønikene</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p>Tradisjonell konservativ kronologi · alle årstall omtrentlige</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script>
+  const T_START = -2100;
+  const T_END   = -400;
+
+  const eras = [
+    {
+      id: "patriarkene",
+      num: "I",
+      title: "Patriarkene",
+      tagline: "Et folk blir til av et løfte.",
+      start: -2100, end: -1800,
+      yearsLabel: "~2100–1800 f.Kr.",
+      lede: "Gud kaller Abraham ut fra Ur. Løftet om land, ætt og velsignelse går videre gjennom Isak og Jakob. Josef ender i Egypt, og familien følger etter under hungersnøden.",
+      books: ["1. Mosebok 12–50"],
+      prophets: [],
+      people: ["Abraham", "Sara", "Isak", "Rebekka", "Jakob", "Rakel", "Josef"],
+      coveredByChronicles: true
+    },
+    {
+      id: "egypt",
+      num: "II",
+      title: "Egypt & utvandringen",
+      tagline: "Slaver som blir folk.",
+      start: -1800, end: -1400,
+      yearsLabel: "~1800–1400 f.Kr.",
+      lede: "Israel vokser i Egypt og blir slaver. Moses leder folket ut, mottar loven på Sinai, og førti års ørkenvandring fører dem til grensen av løftelandet.",
+      books: ["2. Mosebok", "3. Mosebok", "4. Mosebok", "5. Mosebok"],
+      prophets: [],
+      people: ["Moses", "Aron", "Mirjam", "Josva", "Kaleb"]
+    },
+    {
+      id: "dommere",
+      num: "III",
+      title: "Erobring & dommere",
+      tagline: "En sirkel av frafall og frelse.",
+      start: -1400, end: -1050,
+      yearsLabel: "~1400–1050 f.Kr.",
+      lede: "Josva leder folket inn i Kanaan. Stammene faller fra og dommere reises opp som befriere — Debora, Gideon, Samson — frem til Samuel, den siste dommer og første profet i en ny tid.",
+      books: ["Josva", "Dommerne", "Rut"],
+      prophets: [],
+      people: ["Josva", "Debora", "Gideon", "Simson", "Rut", "Samuel"]
+    },
+    {
+      id: "forent",
+      num: "IV",
+      title: "Det forente kongerike",
+      tagline: "Israels høydepunkt.",
+      start: -1050, end: -930,
+      yearsLabel: "~1050–930 f.Kr.",
+      lede: "Saul salves som første konge. David tar tronen, erobrer Jerusalem og får løftet om en evig ætt. Salomo bygger tempelet, og kongeriket når sitt høydepunkt før det splittes.",
+      books: ["1. Samuel", "2. Samuel", "1. Kongebok 1–11", "1. Krønikebok", "2. Krønikebok 1–9", "Salmene", "Ordspråkene", "Forkynneren", "Høysangen", "Job"],
+      prophets: ["Natan", "Gad"],
+      people: ["Saul", "Jonatan", "David", "Batseba", "Salomo"],
+      coveredByChronicles: true
+    },
+    {
+      id: "delt",
+      num: "V",
+      title: "Det delte rike",
+      tagline: "To troner, samme arv.",
+      start: -930, end: -722,
+      yearsLabel: "930–722 f.Kr.",
+      lede: "Etter Salomos død splittes riket. Nordriket Israel får stadig onde konger og blir erobret av Assyria i 722. Sørriket Juda består videre, med blandede konger og store profeter.",
+      books: ["1. Kongebok 12–22", "2. Kongebok 1–17", "2. Krønikebok 10–28"],
+      prophets: ["Elia", "Elisha", "Jona", "Amos", "Hosea", "Mika", "Jesaja"],
+      people: ["Jeroboam", "Akab", "Jesabel", "Hiskia"],
+      coveredByChronicles: true
+    },
+    {
+      id: "juda",
+      num: "VI",
+      title: "Juda alene",
+      tagline: "Det siste lyset slukner.",
+      start: -722, end: -586,
+      yearsLabel: "722–586 f.Kr.",
+      lede: "Etter at nordriket er borte, står Juda alene. Reformer under Hiskia og Josjia, men avgudsdyrkelse vinner. Babylon erobrer Jerusalem i 586, ødelegger tempelet og fører folket i eksil.",
+      books: ["2. Kongebok 18–25", "2. Krønikebok 29–36", "Klagesangene"],
+      prophets: ["Jesaja (slutt)", "Jeremia", "Sefanja", "Nahum", "Habakkuk", "Joel", "Obadja"],
+      people: ["Josjia", "Sidkia", "Nebukadnesar"],
+      coveredByChronicles: true
+    },
+    {
+      id: "eksil",
+      num: "VII",
+      title: "Babylonsk eksil",
+      tagline: "Tro uten tempel.",
+      start: -586, end: -538,
+      yearsLabel: "586–538 f.Kr.",
+      lede: "Folket lever i fangenskap, uten land og tempel. Profetene minner om Guds trofasthet og åpenbarer syner om verdensriker og endetid. Persia tar Babylon i 539, og Kyros gir tillatelse til å vende hjem.",
+      books: [],
+      prophets: ["Esekiel", "Daniel"],
+      people: ["Daniel", "Sjadrak", "Mesjak", "Abed-Nego", "Kyros"]
+    },
+    {
+      id: "tilbake",
+      num: "VIII",
+      title: "Tilbakekomst",
+      tagline: "Hjem til ruiner — som blir nytt.",
+      start: -538, end: -400,
+      yearsLabel: "538–400 f.Kr.",
+      lede: "Tre bølger med hjemvendte: Serubabel bygger tempelet på nytt, Esra fornyer loven, og Nehemja gjenreiser muren. Ester redder folket i Persia. Malaki er den siste profetstemmen før fire hundre års stillhet frem til Jesus.",
+      books: ["Esra", "Nehemja", "Ester"],
+      prophets: ["Haggai", "Sakarja", "Malaki"],
+      people: ["Serubabel", "Esra", "Nehemja", "Ester", "Mordekai"],
+      coveredByChronicles: true
+    }
+  ];
+
+  const chronicles = {
+    id: "kroniker",
+    num: "✦",
+    title: "Krønikene",
+    tagline: "Hele historien — fortalt på nytt for de som kom hjem.",
+    yearsLabel: "Skrevet ~460–400 f.Kr.",
+    isCurrent: true,
+    lede: "Krønikene er skrevet etter eksilet for å minne det hjemvendte folket om hvem de er. 1. Krønikebok går fra Adam til Davids død; 2. Krønikebok dekker Salomo og Juda-kongene frem til eksilet og perserkongen Kyros' dekret om hjemreise. Plasseringen i lesningen er her, men innholdet repeterer hele historien — fra patriarkene til Persia. Bruk det som en repetisjon før profetene.",
+    books: ["1. Krønikebok", "2. Krønikebok"],
+    prophets: [],
+    people: ["Adam (slektslister)", "David", "Salomo", "Juda-kongene", "Kyros"]
+  };
+
+  const totalSpan = T_END - T_START;
+  const pct = (year) => ((year - T_START) / totalSpan) * 100;
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  // Notion entity URLs for OT books — fetched from
+  // https://www.notion.so/fjellestad/Bibelen-b8a45277f4cc4c459b7f2e696bccf51c
+  const NOTION_URLS = {
+    "1. Mosebok":   "https://www.notion.so/475338a6ac6a46c5b5ee6dd2a84cb8ca",
+    "2. Mosebok":   "https://www.notion.so/996faf76505b40d880c808b76770b79d",
+    "3. Mosebok":   "https://www.notion.so/315100349f4f417daf837486b42131eb",
+    "4. Mosebok":   "https://www.notion.so/650e3ed1f0044d139a4dfd12ca30bc71",
+    "5. Mosebok":   "https://www.notion.so/dddab4fb518d4a5fba660e9608256437",
+    "Josva":        "https://www.notion.so/1dc58fdfaa274cc9a8e81ec2b2e0f587",
+    "Dommerne":     "https://www.notion.so/8d442be680054f5a9cc4fd1722fb1c73",
+    "Rut":          "https://www.notion.so/82bde5554ff840a9b0409dc891d0c6f5",
+    "1. Samuel":    "https://www.notion.so/920ecebc5a884c818d4d7eedeeb0c67c",
+    "2. Samuel":    "https://www.notion.so/70dcb524c02d4935ae631e4b0c94980d",
+    "1. Kongebok":  "https://www.notion.so/0d5ff552e2f14d7f8e6807eec11efc19",
+    "2. Kongebok":  "https://www.notion.so/1ba5092b6723461cadcce96a207c12c0",
+    "1. Krønikebok":"https://www.notion.so/c11a015cad0a44c0b6c06a0b883cd940",
+    "2. Krønikebok":"https://www.notion.so/15e1ab2e26424bbaa070e69f502a5cfc",
+    "Esra":         "https://www.notion.so/e894b480f25148d390df25785abe08b2",
+    "Nehemja":      "https://www.notion.so/0f8b872d4dd14e0e888071e52bce2c52",
+    "Ester":        "https://www.notion.so/ab11937e9fae4c759d21507633fffdf1",
+    "Job":          "https://www.notion.so/2173055c29144fd6a5362ae4da99f987",
+    "Salmene":      "https://www.notion.so/08deb0ed35b04dcfb5b312f59fec6261",
+    "Ordspråkene":  "https://www.notion.so/1a10cb3af5f64b8e958c9cdfcf404cb4",
+    "Forkynneren":  "https://www.notion.so/4839458745aa4928b578271797ecb394",
+    "Høysangen":    "https://www.notion.so/ba5bc093f9d94b92a987fb0b992ef9cd",
+    "Jesaja":       "https://www.notion.so/c2b231616b474ba793323346a6957f99",
+    "Jeremia":      "https://www.notion.so/f4495ebdb7c8423ba626aaabd3f7455a",
+    "Klagesangene": "https://www.notion.so/4bb71cae16c24df29c1313aa274a59c1",
+    "Esekiel":      "https://www.notion.so/cbdf14a366e0483d866715df9b196928",
+    "Daniel":       "https://www.notion.so/e68e5db2c0344dab9d494215f296d989",
+    "Hosea":        "https://www.notion.so/0d92616185304078a2422867704c0dcf",
+    "Joel":         "https://www.notion.so/30f2a910e162488c8d24a80773d9588f",
+    "Amos":         "https://www.notion.so/445c2e9052b74550a6984145781d4168",
+    "Obadja":       "https://www.notion.so/3cfb58d7a8344a3598382903ebcf2ce4",
+    "Jona":         "https://www.notion.so/e759d19910c2453aacade235c1afd45c",
+    "Mika":         "https://www.notion.so/2a755b3f9d9b46d68e6a3dcc350cd55f",
+    "Nahum":        "https://www.notion.so/009e560d218a40c2a0874d5fb323f207",
+    "Habakkuk":     "https://www.notion.so/3d6496b647f64024875ee5d2675cc3c2",
+    "Sefanja":      "https://www.notion.so/9a053ce2f84c4876b6e54d2227277b49",
+    "Haggai":       "https://www.notion.so/b4bb89613bfa4e84bf04dba324bcec78",
+    "Sakarja":      "https://www.notion.so/2c69685a37d6482597c6d047f0c18751",
+    "Malaki":       "https://www.notion.so/83273129e61d4a74a32bf5eb056c8d95"
+  };
+
+  // Local HTML pages — take priority over Notion when both exist.
+  // These open the dedicated person-portrait page; the Notion entity is then
+  // surfaced from that page's header.
+  const PAGE_URLS = {
+    "Abraham":   "abraham-tidslinje.html",
+    "Moses":     "moses-tidslinje.html",
+    "Saul":      "saul-tidslinje.html",
+    "David":     "david-tidslinje.html",
+    "1. Mosebok": "1-mos-tidslinje.html",
+    "2. Mosebok": "2-mos-tidslinje.html",
+    "3. Mosebok": "3-mos-tidslinje.html",
+    "4. Mosebok": "4-mos-tidslinje.html",
+    "5. Mosebok": "5-mos-tidslinje.html",
+    "1. Samuel": "1-samuel-tidslinje.html",
+    "2. Samuel": "2-samuel-tidslinje.html"
+  };
+
+  // Strip chapter ranges ("12–50", "1–11") and parenthetical notes ("(slutt)") from a label.
+  function notionKey(label) {
+    return label
+      .replace(/\s+\d+[–-]\d+.*$/, "")
+      .replace(/\s*\(.*\)\s*$/, "")
+      .trim();
+  }
+
+  function lookupUrl(label) {
+    const key = notionKey(label);
+    if (PAGE_URLS[key]) return { url: PAGE_URLS[key], local: true };
+    if (NOTION_URLS[key]) return { url: NOTION_URLS[key], local: false };
+    return null;
+  }
+
+  // Render cards row
+  const cardsRow = document.getElementById("cardsRow");
+  const cardNodes = {};
+  const bracketNodes = {};
+  const maxDuration = Math.max(...eras.map(e => e.end - e.start));
+
+  eras.forEach((era) => {
+    const card = el("div", "card" + (era.coveredByChronicles ? " covered" : ""));
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("aria-label", era.title + ", " + era.yearsLabel);
+
+    const duration = era.end - era.start;
+    const durationPct = (duration / maxDuration) * 100;
+
+    card.appendChild(el("div", "card-num", "EPOKE " + era.num));
+    card.appendChild(el("h3", "card-title", era.title));
+    card.appendChild(el("div", "card-years", era.yearsLabel));
+
+    const durRow = el("div", "card-duration");
+    const track = el("div", "card-duration-track");
+    const fill = el("div", "card-duration-fill");
+    fill.style.width = durationPct + "%";
+    track.appendChild(fill);
+    durRow.appendChild(track);
+    durRow.appendChild(el("span", "card-duration-label", duration + " år"));
+    card.appendChild(durRow);
+
+    if (era.coveredByChronicles) {
+      card.appendChild(el("div", "card-chron", "Dekkes av Krønikene"));
+    }
+
+    card.addEventListener("click", () => selectEra(era.id));
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        selectEra(era.id);
+      }
+    });
+    cardsRow.appendChild(card);
+    cardNodes[era.id] = card;
+  });
+
+  // Render brackets on axis
+  const bracketsContainer = document.getElementById("brackets");
+  eras.forEach((era) => {
+    const left = pct(era.start);
+    const width = pct(era.end) - pct(era.start);
+
+    const bracket = el("div", "bracket" + (era.coveredByChronicles ? " covered" : ""));
+    bracket.style.left = left + "%";
+    bracket.style.width = width + "%";
+
+    bracket.appendChild(el("div", "bracket-bar"));
+    bracket.appendChild(el("div", "bracket-cap left"));
+    bracket.appendChild(el("div", "bracket-cap right"));
+    bracket.appendChild(el("div", "bracket-num", era.num));
+
+    bracketsContainer.appendChild(bracket);
+    bracketNodes[era.id] = bracket;
+  });
+
+  // Tick marks every 100 years (major every 200)
+  const ticksContainer = document.getElementById("ticks");
+  for (let y = -2000; y <= -400; y += 100) {
+    const isMajor = (y % 200 === 0);
+    const tick = el("div", "tick" + (isMajor ? " major" : ""));
+    tick.style.left = pct(y) + "%";
+    ticksContainer.appendChild(tick);
+
+    if (isMajor) {
+      const label = el("div", "tick-label", Math.abs(y) + " f.Kr.");
+      label.style.left = pct(y) + "%";
+      ticksContainer.appendChild(label);
+    }
+  }
+
+  // Detail rendering
+  const detailEl = document.getElementById("detail");
+
+  function renderTagGroup(parent, label, items, tagClass) {
+    if (!items || !items.length) return;
+    const sec = el("div", "section");
+    sec.appendChild(el("h3", null, label));
+    const tags = el("div", "tags");
+    items.forEach(item => {
+      const link = lookupUrl(item);
+      const cls = "tag"
+        + (tagClass ? " " + tagClass : "")
+        + (link ? " linked" : "")
+        + (link && link.local ? " local" : "");
+      if (link) {
+        const a = el("a", cls, item);
+        a.href = link.url;
+        if (!link.local) {
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.title = "Åpne " + notionKey(item) + " i Notion";
+        } else {
+          a.title = "Åpne tidslinje for " + notionKey(item);
+        }
+        tags.appendChild(a);
+      } else {
+        tags.appendChild(el("span", cls, item));
+      }
+    });
+    sec.appendChild(tags);
+    parent.appendChild(sec);
+  }
+
+  function selectEra(id) {
+    const era = id === "kroniker" ? chronicles : eras.find(e => e.id === id);
+    if (!era) return;
+
+    Object.values(cardNodes).forEach(n => n.classList.remove("active"));
+    Object.values(bracketNodes).forEach(n => n.classList.remove("active"));
+    if (cardNodes[id]) cardNodes[id].classList.add("active");
+    if (bracketNodes[id]) bracketNodes[id].classList.add("active");
+
+    detailEl.className = "detail" + (era.isCurrent ? " current" : "");
+    while (detailEl.firstChild) detailEl.removeChild(detailEl.firstChild);
+
+    const meta = el("div", "detail-meta");
+    meta.appendChild(el("span", "num", "Epoke " + era.num));
+    meta.appendChild(el("span", "sep", "·"));
+    meta.appendChild(el("span", "years", era.yearsLabel));
+    if (era.isCurrent) {
+      meta.appendChild(el("span", "sep", "·"));
+      meta.appendChild(el("span", "now", "Du leser nå"));
+    }
+    detailEl.appendChild(meta);
+
+    detailEl.appendChild(el("h2", null, era.title));
+
+    if (era.tagline) {
+      detailEl.appendChild(el("p", "detail-tagline", era.tagline));
+    }
+
+    detailEl.appendChild(el("p", "detail-lede", era.lede));
+
+    const sections = el("div", "sections");
+    renderTagGroup(sections, "Bøker", era.books, "book");
+    renderTagGroup(sections, "Profeter", era.prophets, "prophet");
+    renderTagGroup(sections, "Personer", era.people, null);
+
+    if (sections.children.length > 0) {
+      detailEl.appendChild(sections);
+    }
+  }
+
+  const readingNowEl = document.getElementById("readingNow");
+  readingNowEl.addEventListener("click", () => selectEra("kroniker"));
+  readingNowEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      selectEra("kroniker");
+    }
+  });
+
+  function selectFromHash() {
+    const hash = window.location.hash.slice(1);
+    const valid = hash === "kroniker" || eras.find(e => e.id === hash);
+    selectEra(valid ? hash : "kroniker");
+  }
+  selectFromHash();
+  window.addEventListener("hashchange", selectFromHash);
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

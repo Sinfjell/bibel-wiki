@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sted — Bibel-wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+<style>
+  .sted-wrap {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    margin-top: 28px;
+  }
+  .sted-main {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 36px 44px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+  .sted-main::before, .sted-main::after {
+    content: ""; position: absolute;
+    width: 18px; height: 18px;
+    border: 1px solid var(--gold);
+    pointer-events: none;
+  }
+  .sted-main::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+  .sted-main::after  { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+  .sted-region {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .68rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    margin-bottom: 8px;
+  }
+  .sted-name {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 60;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .sted-altnames {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--muted);
+    margin: 0 0 24px;
+  }
+  .sted-description {
+    font-family: "Fraunces", serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 28px;
+    font-variation-settings: "opsz" 14, "SOFT" 50;
+  }
+  .sted-description::first-letter {
+    font-family: "Fraunces", serif;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+    font-style: italic;
+    font-size: 3.6rem;
+    line-height: .9;
+    float: left;
+    margin: 6px 8px 0 0;
+    color: var(--claret);
+  }
+  .sted-section {
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 18px;
+    margin-top: 22px;
+  }
+  .sted-section h3 {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0 0 12px;
+  }
+  .sted-scriptures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .sted-scriptures .ref {
+    font-family: "Fraunces", serif;
+    font-size: .9rem;
+    padding: 4px 11px;
+    background: #f4e8c4;
+    color: #6b4f1c;
+    border: 1px solid var(--gold-soft);
+    border-radius: 2px;
+  }
+  .sted-pages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sted-pages li { margin: 0 0 8px; }
+  .sted-pages a {
+    display: block;
+    padding: 12px 16px;
+    background: var(--paper-edge);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-family: "Fraunces", serif;
+    font-size: 1rem;
+    transition: background .15s, border-color .15s, color .15s, transform .15s;
+  }
+  .sted-pages a:hover {
+    background: #fff;
+    border-color: var(--claret);
+    color: var(--claret);
+    transform: translateY(-1px);
+  }
+  .sted-pages a::after { content: " →"; color: var(--gold); }
+
+  /* Side: minimap + nearby places */
+  .sted-side {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: sticky;
+    top: 16px;
+    height: fit-content;
+  }
+  .sted-minimap {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: var(--shadow-md);
+  }
+  .sted-minimap h4 {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .sted-minimap-svg {
+    width: 100%;
+    aspect-ratio: 1.2 / 1;
+    --map-scale: 0.35;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .sted-minimap-svg .place-marker {
+    fill: var(--rule);
+    r: calc(2 * var(--map-scale, 1) * 1px);
+  }
+  .sted-minimap-svg .place-marker.active {
+    fill: var(--claret);
+    r: calc(5 * var(--map-scale, 1) * 1px);
+    stroke: #fbf5e6;
+    stroke-width: calc(1 * var(--map-scale, 1) * 1px);
+    vector-effect: non-scaling-stroke;
+  }
+  .sted-minimap a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .62rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    text-decoration: none;
+  }
+  .sted-minimap a:hover { color: var(--claret); }
+
+  .sted-nearby {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px;
+    box-shadow: var(--shadow-md);
+  }
+  .sted-nearby h4 {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .65rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .sted-nearby ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sted-nearby li { margin: 0 0 6px; }
+  .sted-nearby a {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-family: "Fraunces", serif;
+    font-size: .9rem;
+    border-radius: 2px;
+    transition: background .12s, color .12s;
+  }
+  .sted-nearby a:hover {
+    background: var(--paper-edge);
+    color: var(--ink);
+  }
+  .sted-nearby .dist {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .58rem;
+    color: var(--gold);
+    letter-spacing: .1em;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 880px) {
+    .sted-wrap { grid-template-columns: 1fr; }
+    .sted-side { position: static; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-atlas.html">← Bibel-atlas</a> · sted</div>
+</header>
+
+<div id="stedRoot"></div>
+
+<footer>
+  <hr>
+  <p><a href="bibel-atlas.html">Tilbake til atlas</a> · <a href="bibel-tidslinje.html">Bibelen</a></p>
+  <p>Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/bibel-atlas.js"></script>
+<script>
+(function () {
+  const root = document.getElementById("stedRoot");
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  if (!id || !BibelAtlas.locations[id]) {
+    const div = document.createElement("div");
+    div.className = "empty-state";
+    div.textContent = "Ingen sted med ID \"" + (id || "(mangler)") + "\". Gå tilbake til atlaset.";
+    root.appendChild(div);
+    return;
+  }
+
+  const loc = BibelAtlas.locations[id];
+  document.title = loc.name + " — Bibel-wiki";
+
+  // ===== Layout =====
+  const wrap = document.createElement("div");
+  wrap.className = "sted-wrap";
+  root.appendChild(wrap);
+
+  // === Main column ===
+  const main = document.createElement("article");
+  main.className = "sted-main";
+  wrap.appendChild(main);
+
+  if (loc.region) {
+    const r = document.createElement("div");
+    r.className = "sted-region";
+    r.textContent = loc.region;
+    main.appendChild(r);
+  }
+
+  const h1 = document.createElement("h1");
+  h1.className = "sted-name";
+  h1.textContent = loc.name;
+  main.appendChild(h1);
+
+  if (loc.altNames && loc.altNames.length) {
+    const alt = document.createElement("p");
+    alt.className = "sted-altnames";
+    alt.textContent = "Også kjent som " + loc.altNames.join(" · ");
+    main.appendChild(alt);
+  }
+
+  if (loc.description) {
+    const desc = document.createElement("p");
+    desc.className = "sted-description";
+    desc.textContent = loc.description;
+    main.appendChild(desc);
+  }
+
+  // Scripture references
+  if (loc.scriptures && loc.scriptures.length) {
+    const sec = document.createElement("section");
+    sec.className = "sted-section";
+    const h = document.createElement("h3");
+    h.textContent = "Skriftsteder";
+    sec.appendChild(h);
+    const refs = document.createElement("div");
+    refs.className = "sted-scriptures";
+    loc.scriptures.forEach(s => {
+      const span = document.createElement("span");
+      span.className = "ref";
+      span.textContent = s;
+      refs.appendChild(span);
+    });
+    sec.appendChild(refs);
+    main.appendChild(sec);
+  }
+
+  // Linked pages
+  const sec = document.createElement("section");
+  sec.className = "sted-section sted-pages";
+  const h = document.createElement("h3");
+  h.textContent = "Sider som inkluderer dette stedet";
+  sec.appendChild(h);
+  if (!loc.pages || loc.pages.length === 0) {
+    const empty = document.createElement("p");
+    empty.style.fontStyle = "italic";
+    empty.style.color = "var(--muted)";
+    empty.textContent = "Ingen sider er koblet til dette stedet ennå.";
+    sec.appendChild(empty);
+  } else {
+    const ul = document.createElement("ul");
+    loc.pages.forEach(href => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = href;
+      const title = href
+        .replace(/\.html$/, "")
+        .replace(/-tidslinje$/, "")
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, c => c.toUpperCase());
+      a.textContent = title;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    sec.appendChild(ul);
+  }
+  main.appendChild(sec);
+
+  // === Side column ===
+  const side = document.createElement("aside");
+  side.className = "sted-side";
+  wrap.appendChild(side);
+
+  // --- Minimap ---
+  const mini = document.createElement("div");
+  mini.className = "sted-minimap";
+  side.appendChild(mini);
+  const miniH = document.createElement("h4");
+  miniH.textContent = "Plassering";
+  mini.appendChild(miniH);
+
+  const NS = "http://www.w3.org/2000/svg";
+  const miniSvg = document.createElementNS(NS, "svg");
+  miniSvg.setAttribute("class", "map-svg sted-minimap-svg");
+  miniSvg.setAttribute("xmlns", NS);
+  miniSvg.setAttribute("role", "img");
+  miniSvg.setAttribute("aria-label", "Plasseringskart for " + loc.name);
+  // Crop tightly around the location
+  const cropW = 220, cropH = cropW * (540 / 1000);
+  miniSvg.setAttribute("viewBox",
+    (loc.x - cropW / 2) + " " + (loc.y - cropH / 2) + " " + cropW + " " + cropH);
+  miniSvg.style.aspectRatio = "1.85 / 1";
+  mini.appendChild(miniSvg);
+
+  // Render geography
+  miniSvg.insertAdjacentHTML("afterbegin", BibelAtlas.geoSvg);
+  // Add all place markers (small)
+  const placesG = document.createElementNS(NS, "g");
+  Object.entries(BibelAtlas.locations).forEach(([pid, ploc]) => {
+    const c = document.createElementNS(NS, "circle");
+    c.setAttribute("cx", String(ploc.x));
+    c.setAttribute("cy", String(ploc.y));
+    c.setAttribute("class", "place-marker" + (pid === id ? " active" : ""));
+    placesG.appendChild(c);
+  });
+  miniSvg.appendChild(placesG);
+
+  // Set scale via CSS var (recalculate after render to get correct rect)
+  function updateMiniScale() {
+    const s = BibelAtlas.computeScale(miniSvg);
+    miniSvg.style.setProperty("--map-scale", String(s));
+    miniSvg.style.setProperty("--region-fade", "0");
+  }
+  requestAnimationFrame(updateMiniScale);
+  window.addEventListener("resize", updateMiniScale);
+
+  // Click minimap → go to atlas zoomed at this location
+  miniSvg.addEventListener("click", () => {
+    window.location.href = "bibel-atlas.html#" + id;
+  });
+
+  const miniLink = document.createElement("a");
+  miniLink.href = "bibel-atlas.html";
+  miniLink.textContent = "Se i fullt atlas →";
+  mini.appendChild(miniLink);
+
+  // --- Nearby places (within ~80 SVG units of this location) ---
+  const nearby = document.createElement("div");
+  nearby.className = "sted-nearby";
+  side.appendChild(nearby);
+  const nearbyH = document.createElement("h4");
+  nearbyH.textContent = "I nærheten";
+  nearby.appendChild(nearbyH);
+
+  const candidates = Object.entries(BibelAtlas.locations)
+    .filter(([pid]) => pid !== id)
+    .map(([pid, ploc]) => {
+      const dx = ploc.x - loc.x, dy = ploc.y - loc.y;
+      return { id: pid, loc: ploc, dist: Math.hypot(dx, dy) };
+    })
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, 8);
+
+  if (candidates.length === 0) {
+    const p = document.createElement("p");
+    p.style.fontStyle = "italic";
+    p.style.color = "var(--muted)";
+    p.textContent = "Ingen nærliggende steder.";
+    nearby.appendChild(p);
+  } else {
+    const ul = document.createElement("ul");
+    candidates.forEach(c => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "sted.html?id=" + encodeURIComponent(c.id);
+      const name = document.createElement("span");
+      name.textContent = c.loc.name;
+      a.appendChild(name);
+      const dist = document.createElement("span");
+      dist.className = "dist";
+      // Convert SVG units back to ~km. 1 SVG unit ≈ 1/35.71 lon-deg ≈ 3.1 km at lat ~32°
+      const km = Math.round(c.dist * 3.1);
+      dist.textContent = "~" + km + " km";
+      a.appendChild(dist);
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    nearby.appendChild(ul);
+  }
+})();
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

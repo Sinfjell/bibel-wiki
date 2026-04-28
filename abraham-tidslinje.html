@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abraham — patriarken</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · person-portrett</div>
+  <h1>Abraham — <em>troens far</em></h1>
+  <p class="subtitle">Hundre år av aktivt kall — fra 75 til 175. Kalt fra Ur, gitt et land og en ætt han knapt kunne se. Far til Israel, til alle troende.</p>
+  <a class="notion-pill" href="https://www.notion.so/3506b6f60b1281cb83e5d0ae57f7a278" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Abraham i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Han trodde Herren, og Han <em>regnet det som rettferdighet</em> for ham.</blockquote>
+    <div class="ref">1. Mosebok 15,6 · sitert av Paulus i Romerne 4</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Abrahams aktive år — <em>~2091 til 1991 f.Kr.</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Vandring &amp; løfte</span>
+      <span><i class="swatch sw-chron"></i>Pakten og prøvelsen</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="bibel-tidslinje.html">Tilbake til Bibelen</a> · <a href="1-mos-tidslinje.html">1. Mosebok →</a></p>
+  <p>Tradisjonell tidlig kronologi · alle årstall omtrentlige</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="wiki-page.js"></script>
+<script>
+// Tradisjonell tidlig kronologi: Abraham f. ~2166, kallet ved 75 (~2091), død ved 175 (~1991).
+WikiPage.init({
+  cols: 8,
+  cardLabel: "FASE",
+  birthYear: -2166,
+  axis: {
+    start: -2091, end: -1991,
+    isChapters: false,
+    tickStep: 10, majorStep: 25,
+    tickStart: -2090, tickEnd: -1990
+  },
+  defaultId: "moria",
+  pageUrls: {
+    "1. Mosebok": "1-mos-tidslinje.html"
+  },
+  notionUrls: {
+    "1. Mosebok": "https://www.notion.so/475338a6ac6a46c5b5ee6dd2a84cb8ca"
+  },
+  data: [
+    {
+      id: "kallet",
+      num: "I",
+      title: "Kallet i Ur og Haran",
+      tagline: "Gå ut fra ditt land, fra din slekt, fra din fars hus.",
+      start: -2091, end: -2087,
+      label: "~2091–2087 f.Kr.",
+      lede: "Tarah tar med seg sønnen Abram, kona Sarai og barnebarnet Lot fra Ur i Kaldea. De stopper i Haran, og Tarah dør der. Når Abram er 75, kommer Herrens kall: Gå ut. Et land jeg vil vise deg. Jeg vil gjøre deg til et stort folk. I deg skal alle slekter på jorden velsignes. Abram drar — uten å vite hvor han er på vei.",
+      keyEvent: "Kallet til Abram, 75 år gammel (1. Mosebok 12,1–4)",
+      books: ["1. Mosebok"],
+      people: ["Tarah", "Abram", "Sarai", "Lot"]
+    },
+    {
+      id: "kanaan",
+      num: "II",
+      title: "Til Kanaan og Egypt",
+      tagline: "Et fremmed land, en hungersnød, en løgn.",
+      start: -2087, end: -2082,
+      label: "~2087–2082 f.Kr.",
+      lede: "Abram bygger alter i Sikem og ved Betel — første tegn på Herrens nærvær i landet. Når hungersnøden kommer, drar han ned til Egypt og lyver om Sarai (\"hun er min søster\"). Farao tar henne, plagene rammer huset, og Abram sendes ut igjen — rikere, men avslørt. Tilbake i Kanaan vender han tilbake til alteret ved Betel og påkaller Herren.",
+      keyEvent: "Sarai i Faraos hus; Herrens inngrep (1. Mosebok 12,17)",
+      books: ["1. Mosebok"],
+      people: ["Sarai", "Farao", "Lot"]
+    },
+    {
+      id: "lot-melkisedek",
+      num: "III",
+      title: "Lot skilles av; Melkisedek velsigner; pakten ved stjernene",
+      tagline: "Velg du, sier Abram. Tell stjernene, sier Herren.",
+      start: -2082, end: -2080,
+      label: "~2082–2080 f.Kr.",
+      lede: "Buskapen er for stor til at Abram og Lot kan bo sammen. Lot velger Jordan-dalen og slår seg ned mot Sodoma. Fire konger fra øst tar Lot til fange; Abram samler 318 menn og slår dem nord for Damaskus. Melkisedek, prest-kongen i Salem, velsigner ham med brød og vin — Abram gir tienden. Senere tar Herren Abram ut og peker på stjernehimmelen: \"Slik skal din ætt bli.\" Abram tror — og det regnes til rettferdighet. Pakten stadfestes med dyr som flammer går mellom.",
+      keyEvent: "\"Han trodde Herren, og Han regnet det som rettferdighet\" (1. Mosebok 15,6)",
+      books: ["1. Mosebok"],
+      people: ["Lot", "Melkisedek", "Sarai"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "hagar",
+      num: "IV",
+      title: "Hagar og Ismael",
+      tagline: "Et menneskelig forsøk på å oppfylle løftet.",
+      start: -2080, end: -2067,
+      label: "~2080–2067 f.Kr.",
+      lede: "Sara er fortsatt barnløs etter ti år i Kanaan. Hun gir Abram sin egyptiske slavinne Hagar. Hagar blir gravid og forakter sin frue. Sara plager henne; Hagar flykter. Herrens engel finner henne i ørkenen og gir henne et løfte for sønnen — Ismael, \"Gud hører.\" Hagar vender tilbake. Når Abram er 86, fødes Ismael. Tretten år går.",
+      keyEvent: "Ismael fødes — Abram er 86 (1. Mosebok 16,16)",
+      books: ["1. Mosebok"],
+      people: ["Sara", "Hagar", "Ismael"]
+    },
+    {
+      id: "omskjaerelsen",
+      num: "V",
+      title: "Omskjærelsens pakt; Sodoma og det hellige besøket",
+      tagline: "Et nytt navn, en pakt i kjøtt og blod.",
+      start: -2067, end: -2066,
+      label: "~2067 f.Kr.",
+      lede: "Når Abram er 99, viser Herren seg igjen. Pakten fornyes med omskjærelsen som tegn; navnene endres — Abraham (\"far til mange folk\") og Sara. Tre menn besøker ved Mamre-eikene; en skal komme tilbake i kommende år, og Sara skal få en sønn. Hun ler i teltet. Abraham forhandler om Sodoma — 50, 45, 40, 30, 20, 10. Engelene redder Lot, svovel og ild faller, Lots kone ser tilbake og blir til en saltstøtte.",
+      keyEvent: "Omskjærelsens pakt — Abram blir Abraham (1. Mosebok 17)",
+      books: ["1. Mosebok"],
+      people: ["Sara", "De tre mennene", "Lot", "Lots kone"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "isak-fodes",
+      num: "VI",
+      title: "Isaks fødsel; Hagar bortvises",
+      tagline: "Latteren — Isak — endelig født.",
+      start: -2066, end: -2061,
+      label: "~2066–2061 f.Kr.",
+      lede: "Når Abraham er 100 år og Sara 90, fødes Isak — \"latter.\" Sara ler nå av glede. Ved avvenningsfesten ser hun Ismael spotte. Hun krever at Abraham sender Hagar og Ismael bort. Det smerter Abraham, men Herren bekrefter: \"Gjennom Isak skal din ætt regnes.\" Hagar sendes ut i ørkenen med litt brød og vann; Herrens engel redder dem og lover at også Ismael skal bli et stort folk.",
+      keyEvent: "Isak fødes — Abraham 100, Sara 90 (1. Mosebok 21,1–7)",
+      books: ["1. Mosebok"],
+      people: ["Isak", "Sara", "Hagar", "Ismael", "Abimelek"]
+    },
+    {
+      id: "moria",
+      num: "VII",
+      title: "Moriafjellet — den store prøvelsen",
+      tagline: "Ta din sønn, din eneste, som du har så kjær.",
+      start: -2061, end: -2055,
+      label: "~2055 f.Kr.",
+      lede: "Den største prøvelsen kommer noen år etter at Isak er avvent — eldre tradisjon sier Isak var et ungdom, kanskje 25–37. Herren ber Abraham om å ofre ham på Moria-fjellet — det samme høydedraget som senere blir Jerusalem. Tre dagers tunge reise. Isak bærer veden selv, akkurat som en annen Sønn skulle bære sitt kors på samme fjell. I siste øyeblikk roper engelen, og en vær er fanget i busken. \"Herren ser.\"",
+      keyEvent: "Isak på Moria — \"Herren ser\" (1. Mosebok 22,14)",
+      books: ["1. Mosebok"],
+      people: ["Isak"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "avskjedsaarene",
+      num: "VIII",
+      title: "Saras død; Isaks bryllup; Abrahams død",
+      tagline: "Mett av dage.",
+      start: -2029, end: -1991,
+      label: "~2029–1991 f.Kr.",
+      lede: "Sara dør i Hebron, 127 år gammel; Abraham kjøper Makpela-hulen som familiegrav for 400 sekel sølv — første eiendom han eier i løftelandet. Han sender tjeneren Eliesar tilbake til Mesopotamia; Eliesar finner Rebekka ved brønnen. Abraham gifter seg med Keturah, får seks nye sønner som blir stamfedre for arabiske folkeslag. Han dør 175 år gammel, \"mett av dage,\" og blir gravlagt av Isak og Ismael i Makpela-hulen ved siden av Sara.",
+      keyEvent: "Abraham dør 175 år gammel (1. Mosebok 25,7–10)",
+      books: ["1. Mosebok"],
+      people: ["Sara (dør)", "Eliesar", "Rebekka", "Keturah", "Isak", "Ismael"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

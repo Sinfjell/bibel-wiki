@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bibel-atlas — alle steder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+<style>
+  .atlas-wrap {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .atlas-map-wrap {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+  .atlas-map-wrap::before, .atlas-map-wrap::after {
+    content: ""; position: absolute;
+    width: 18px; height: 18px;
+    border: 1px solid var(--gold);
+    pointer-events: none;
+  }
+  .atlas-map-wrap::before { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+  .atlas-map-wrap::after  { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+
+  .atlas-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    --map-scale: 1;
+    cursor: grab;
+    touch-action: none;
+  }
+  .atlas-svg.dragging { cursor: grabbing; }
+
+  .atlas-controls {
+    position: absolute;
+    top: 24px; right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 2;
+  }
+  .atlas-controls button {
+    width: 34px; height: 34px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    box-shadow: var(--shadow-sm);
+    transition: background .15s, border-color .15s, color .15s;
+    display: grid;
+    place-items: center;
+  }
+  .atlas-controls button:hover {
+    background: #fff;
+    border-color: var(--claret);
+    color: var(--claret);
+  }
+  .atlas-controls button.reset {
+    font-family: "Fraunces", serif;
+    font-size: .82rem;
+    font-style: italic;
+    width: auto;
+    padding: 0 12px;
+  }
+  .atlas-hint {
+    position: absolute;
+    bottom: 16px; left: 24px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .6rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    background: rgba(251, 245, 230, .8);
+    padding: 4px 8px;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: .8;
+  }
+  .atlas-svg .place-marker {
+    fill: var(--claret);
+    stroke: #fbf5e6;
+    stroke-width: 1px;
+    cursor: pointer;
+    transition: fill .15s ease, r .15s ease;
+  }
+  .atlas-svg .place-marker.has-pages {
+    fill: var(--gold);
+  }
+  .atlas-svg .place-marker:hover {
+    fill: var(--ink);
+    r: 6;
+  }
+  .atlas-svg .place-marker.active {
+    fill: var(--ink);
+    stroke-width: 2px;
+  }
+  .atlas-svg .place-name {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: calc(9 * var(--map-scale) * 1px);
+    fill: var(--ink-soft);
+    pointer-events: none;
+    paint-order: stroke;
+    stroke: var(--paper);
+    stroke-width: calc(2 * var(--map-scale) * 1px);
+    stroke-linejoin: round;
+  }
+
+  .atlas-side {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    height: fit-content;
+    position: sticky;
+    top: 16px;
+  }
+  .atlas-side h3 {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .68rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .atlas-side .empty {
+    font-style: italic;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  .atlas-side .place-name {
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    color: var(--ink);
+    font-variation-settings: "opsz" 36, "SOFT" 60;
+    margin: 0 0 4px;
+    line-height: 1.1;
+  }
+  .atlas-side .place-region {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .65rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin-bottom: 14px;
+  }
+  .atlas-side .zoom-to {
+    width: 100%;
+    background: var(--paper-edge);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 8px 12px;
+    font-family: "Fraunces", serif;
+    font-size: .85rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    cursor: pointer;
+    margin-bottom: 18px;
+    transition: background .15s, border-color .15s, color .15s;
+  }
+  .atlas-side .zoom-to:hover {
+    background: #fff;
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .atlas-side .zoom-to::before {
+    content: "⌖ ";
+    font-style: normal;
+    color: var(--gold);
+    margin-right: 4px;
+  }
+  .atlas-side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .atlas-side li {
+    margin: 0 0 8px;
+  }
+  .atlas-side a {
+    display: block;
+    padding: 10px 12px;
+    background: var(--paper-edge);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-family: "Fraunces", serif;
+    font-size: .95rem;
+    transition: background .15s, border-color .15s, color .15s, transform .15s;
+  }
+  .atlas-side a:hover {
+    background: #fff;
+    border-color: var(--claret);
+    color: var(--claret);
+    transform: translateY(-1px);
+  }
+  .atlas-side a::after {
+    content: " →";
+    color: var(--gold);
+    margin-left: 4px;
+  }
+
+  /* Search */
+  .atlas-search {
+    position: relative;
+    margin-top: 18px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .atlas-search input {
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    font-family: "Fraunces", serif;
+    font-size: .95rem;
+    color: var(--ink);
+    box-shadow: var(--shadow-sm);
+  }
+  .atlas-search input:focus {
+    outline: none;
+    border-color: var(--claret);
+  }
+  .atlas-search input::placeholder { color: var(--muted); font-style: italic; }
+  .atlas-search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    margin-top: 4px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    box-shadow: var(--shadow-md);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10;
+  }
+  .atlas-search-results .search-result {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 14px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--rule-soft);
+    text-align: left;
+    cursor: pointer;
+    transition: background .12s;
+  }
+  .atlas-search-results .search-result:last-child { border-bottom: none; }
+  .atlas-search-results .search-result:hover {
+    background: var(--paper-edge);
+  }
+  .atlas-search-results .search-result strong {
+    font-family: "Fraunces", serif;
+    font-size: 1rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .atlas-search-results .search-result .region {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .6rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin-top: 2px;
+  }
+
+  /* Tooltip */
+  .atlas-tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 8px 12px;
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity .12s;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 240px;
+  }
+  .atlas-tooltip.visible { opacity: 1; }
+  .atlas-tooltip strong {
+    font-family: "Fraunces", serif;
+    font-size: 1rem;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .atlas-tooltip .region {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .6rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .2em;
+  }
+  .atlas-tooltip .pages {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .58rem;
+    color: var(--claret);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+  }
+
+  /* Side panel additions */
+  .atlas-side .place-description {
+    font-family: "Fraunces", serif;
+    font-size: .9rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
+  .atlas-side .alt-names,
+  .atlas-side .scriptures {
+    font-family: "Fraunces", serif;
+    font-size: .8rem;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+    font-style: italic;
+  }
+  .atlas-side .alt-label,
+  .atlas-side .ref-label {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .58rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-style: normal;
+    margin-right: 4px;
+  }
+  .atlas-side .sted-link {
+    display: block;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: var(--ink);
+    color: #fbf5e6;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    font-family: "Fraunces", serif;
+    font-size: .85rem;
+    font-style: italic;
+    transition: background .15s;
+  }
+  .atlas-side .sted-link:hover { background: var(--claret); }
+
+  /* Marker visual states */
+  .atlas-svg .place-marker {
+    r: calc(4 * var(--map-scale, 1) * 1px);
+    fill: var(--claret);
+    stroke: #fbf5e6;
+    stroke-width: 1px;
+    vector-effect: non-scaling-stroke;
+    cursor: pointer;
+    transition: fill .15s, opacity .15s;
+    outline: none;
+  }
+  .atlas-svg .place-marker.has-pages { fill: var(--gold); }
+  .atlas-svg .place-marker:hover {
+    fill: var(--ink);
+    stroke-width: 2px;
+  }
+  .atlas-svg .place-marker:focus { outline: none; }
+  .atlas-svg .place-marker:focus-visible {
+    outline: none;
+    stroke: var(--ink);
+    stroke-width: 2.5px;
+  }
+  .atlas-svg .place-marker.active {
+    fill: var(--ink);
+    stroke: #fbf5e6;
+    stroke-width: 2px;
+  }
+  .atlas-svg .place-name {
+    transform: translateY(calc(var(--label-dy, 0) * var(--map-scale, 1) * 1px));
+    font-size: calc(9 * var(--map-scale, 1) * 1px);
+  }
+  .atlas-svg .place-name.collide-hidden { display: none; }
+
+  @media (max-width: 880px) {
+    .atlas-wrap { grid-template-columns: 1fr; }
+    .atlas-side { position: static; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · atlas</div>
+  <h1>Bibel-atlas — <em>alle steder</em></h1>
+  <p class="subtitle">Klikk på et sted for å se hvilke personer og bøker som tilhører der. Steder med <span style="color: var(--gold); font-weight: 500;">gylden</span> markør har koblede sider.</p>
+  <div class="atlas-search">
+    <input type="search" id="atlasSearch" placeholder="Søk etter sted (f.eks. Jerusalem)…" autocomplete="off">
+    <div id="atlasSearchResults" class="atlas-search-results"></div>
+  </div>
+</header>
+
+<div class="atlas-wrap">
+  <div class="atlas-map-wrap">
+    <div class="atlas-controls">
+      <button id="zoomIn" title="Zoom inn (+)">+</button>
+      <button id="zoomOut" title="Zoom ut (−)">−</button>
+      <button id="zoomReset" class="reset" title="Tilbakestill">reset</button>
+    </div>
+    <svg class="map-svg atlas-svg" id="atlasSvg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bibel-atlas — fullt utsnitt">
+      <g id="atlas-places"></g>
+    </svg>
+    <div class="atlas-hint">Scroll for å zoome · dra for å panorere · klikk markør for detaljer</div>
+  </div>
+
+  <aside class="atlas-side" id="atlasSide">
+    <h3>Velg et sted</h3>
+    <p class="empty">Klikk en markør på kartet for å se relaterte sider og personer.</p>
+  </aside>
+</div>
+
+<footer>
+  <hr>
+  <p><a href="bibel-tidslinje.html">Tilbake til Bibelen</a></p>
+  <p>Atlas-koordinater · alle steder approksimert via lat/lon</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/bibel-atlas.js"></script>
+<script>
+(function () {
+  const svg = document.getElementById("atlasSvg");
+  const placesG = document.getElementById("atlas-places");
+  const sideEl = document.getElementById("atlasSide");
+  const searchInput = document.getElementById("atlasSearch");
+  const searchResults = document.getElementById("atlasSearchResults");
+
+  // Render full atlas geography
+  BibelAtlas.render(svg, { viewBox: BibelAtlas.fullViewBox });
+
+  // Lock aspect ratio so no letterboxing
+  const fullVB = BibelAtlas.fullViewBox.split(/\s+/).map(Number);
+  svg.style.aspectRatio = fullVB[2] + " / " + fullVB[3];
+
+  // Shared scale + region-fade vars
+  function updateVars() {
+    const s = BibelAtlas.computeScale(svg);
+    svg.style.setProperty("--map-scale", String(s));
+    const vb = svg.viewBox.baseVal;
+    if (vb && vb.width) {
+      svg.style.setProperty("--region-fade",
+        String(BibelAtlas.computeRegionFade(vb.width, fullVB[2])));
+    }
+  }
+  updateVars();
+  window.addEventListener("resize", () => {
+    updateVars();
+    BibelAtlas.applyLabelCollision(svg);
+  });
+
+  // ===== Tooltip =====
+  const tooltip = document.createElement("div");
+  tooltip.className = "atlas-tooltip";
+  document.body.appendChild(tooltip);
+
+  function showTooltip(loc, x, y) {
+    while (tooltip.firstChild) tooltip.removeChild(tooltip.firstChild);
+    const name = document.createElement("strong");
+    name.textContent = loc.name;
+    tooltip.appendChild(name);
+    if (loc.region) {
+      const region = document.createElement("span");
+      region.className = "region";
+      region.textContent = loc.region;
+      tooltip.appendChild(region);
+    }
+    if (loc.pages && loc.pages.length) {
+      const pages = document.createElement("span");
+      pages.className = "pages";
+      pages.textContent = loc.pages.length + " side" + (loc.pages.length > 1 ? "r" : "");
+      tooltip.appendChild(pages);
+    }
+    tooltip.style.left = (x + 12) + "px";
+    tooltip.style.top = (y + 14) + "px";
+    tooltip.classList.add("visible");
+  }
+  function hideTooltip() { tooltip.classList.remove("visible"); }
+
+  // ===== Attach pan/zoom/pinch interaction (shared from atlas module) =====
+  const interaction = BibelAtlas.attachInteraction(svg, {
+    onChange: () => updateVars(),
+    onChangeDebounced: () => BibelAtlas.applyLabelCollision(svg)
+  });
+
+  document.getElementById("zoomIn").addEventListener("click",
+    () => interaction.zoomBy(1 / 1.4));
+  document.getElementById("zoomOut").addEventListener("click",
+    () => interaction.zoomBy(1.4));
+  document.getElementById("zoomReset").addEventListener("click",
+    () => interaction.reset());
+
+  const SVG_NS = "http://www.w3.org/2000/svg";
+  function svgEl(tag, attrs) {
+    const node = document.createElementNS(SVG_NS, tag);
+    if (attrs) Object.keys(attrs).forEach(k => node.setAttribute(k, attrs[k]));
+    return node;
+  }
+
+  // Render all locations as clickable markers + labels (with a11y + hover tooltip)
+  Object.entries(BibelAtlas.locations).forEach(([id, loc]) => {
+    const hasPages = !!(loc.pages && loc.pages.length);
+
+    const dot = svgEl("circle", {
+      cx: loc.x, cy: loc.y,
+      class: "place-marker" + (hasPages ? " has-pages" : ""),
+      "data-loc": id,
+      tabindex: "0",
+      role: "button"
+    });
+    const aria = loc.name + (loc.region ? ", " + loc.region : "")
+      + (hasPages ? " — " + loc.pages.length + " side" + (loc.pages.length > 1 ? "r" : "") : "");
+    dot.setAttribute("aria-label", aria);
+
+    dot.addEventListener("click", () => selectPlace(id));
+    dot.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        selectPlace(id);
+      }
+    });
+    dot.addEventListener("pointerenter", (e) => showTooltip(loc, e.clientX, e.clientY));
+    dot.addEventListener("pointermove",  (e) => showTooltip(loc, e.clientX, e.clientY));
+    dot.addEventListener("pointerleave", hideTooltip);
+    dot.addEventListener("focus",        () => {
+      const r = dot.getBoundingClientRect();
+      showTooltip(loc, r.left + r.width / 2, r.top);
+    });
+    dot.addEventListener("blur", hideTooltip);
+    placesG.appendChild(dot);
+
+    const label = svgEl("text", {
+      x: loc.x, y: loc.y,
+      "text-anchor": "middle",
+      class: "place-name",
+      "data-loc": id
+    });
+    label.style.setProperty("--label-dy", String(loc.labelDy < 0 ? -8 : 12));
+    label.textContent = loc.name;
+    placesG.appendChild(label);
+  });
+
+  // Apply collision detection now that DOM is built
+  requestAnimationFrame(() => BibelAtlas.applyLabelCollision(svg));
+
+  // ===== Search =====
+  function renderSearchResults(query) {
+    while (searchResults.firstChild) searchResults.removeChild(searchResults.firstChild);
+    if (!query || query.length < 2) {
+      searchResults.style.display = "none";
+      return;
+    }
+    const q = query.toLowerCase();
+    const matches = Object.entries(BibelAtlas.locations)
+      .filter(([id, loc]) => {
+        if (loc.name.toLowerCase().includes(q)) return true;
+        if (loc.altNames && loc.altNames.some(n => n.toLowerCase().includes(q))) return true;
+        return false;
+      })
+      .slice(0, 10);
+    if (matches.length === 0) {
+      searchResults.style.display = "none";
+      return;
+    }
+    matches.forEach(([id, loc]) => {
+      const item = document.createElement("button");
+      item.type = "button";
+      item.className = "search-result";
+      const name = document.createElement("strong");
+      name.textContent = loc.name;
+      item.appendChild(name);
+      if (loc.region) {
+        const r = document.createElement("span");
+        r.className = "region";
+        r.textContent = loc.region;
+        item.appendChild(r);
+      }
+      item.addEventListener("click", () => {
+        searchInput.value = "";
+        searchResults.style.display = "none";
+        interaction.zoomToLocation(loc, 200);
+        selectPlace(id);
+      });
+      searchResults.appendChild(item);
+    });
+    searchResults.style.display = "block";
+  }
+  if (searchInput) {
+    searchInput.addEventListener("input", () => renderSearchResults(searchInput.value));
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        searchInput.value = "";
+        searchResults.style.display = "none";
+        searchInput.blur();
+      }
+      if (e.key === "Enter") {
+        const first = searchResults.querySelector(".search-result");
+        if (first) first.click();
+      }
+    });
+    document.addEventListener("click", (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = "none";
+      }
+    });
+  }
+
+  function selectPlace(id) {
+    const loc = BibelAtlas.locations[id];
+    if (!loc) return;
+
+    // Toggle active class on markers
+    svg.querySelectorAll(".place-marker").forEach(m => m.classList.remove("active"));
+    const marker = svg.querySelector('[data-loc="' + id + '"]');
+    if (marker) marker.classList.add("active");
+
+    // Render side panel content
+    while (sideEl.firstChild) sideEl.removeChild(sideEl.firstChild);
+
+    const name = document.createElement("div");
+    name.className = "place-name";
+    name.textContent = loc.name;
+    sideEl.appendChild(name);
+
+    if (loc.region) {
+      const region = document.createElement("div");
+      region.className = "place-region";
+      region.textContent = loc.region;
+      sideEl.appendChild(region);
+    }
+
+    // Zoom-to button
+    const zoomBtn = document.createElement("button");
+    zoomBtn.className = "zoom-to";
+    zoomBtn.textContent = "Zoom til " + loc.name;
+    zoomBtn.addEventListener("click", () => interaction.zoomToLocation(loc, 200));
+    sideEl.appendChild(zoomBtn);
+
+    // Description (if exists)
+    if (loc.description) {
+      const desc = document.createElement("p");
+      desc.className = "place-description";
+      desc.textContent = loc.description;
+      sideEl.appendChild(desc);
+    }
+
+    // Alternate names
+    if (loc.altNames && loc.altNames.length) {
+      const altWrap = document.createElement("div");
+      altWrap.className = "alt-names";
+      const lbl = document.createElement("span");
+      lbl.className = "alt-label";
+      lbl.textContent = "Også kjent som: ";
+      altWrap.appendChild(lbl);
+      altWrap.appendChild(document.createTextNode(loc.altNames.join(" · ")));
+      sideEl.appendChild(altWrap);
+    }
+
+    // Scripture references
+    if (loc.scriptures && loc.scriptures.length) {
+      const refWrap = document.createElement("div");
+      refWrap.className = "scriptures";
+      const lbl = document.createElement("span");
+      lbl.className = "ref-label";
+      lbl.textContent = "Skriftsteder: ";
+      refWrap.appendChild(lbl);
+      refWrap.appendChild(document.createTextNode(loc.scriptures.join(" · ")));
+      sideEl.appendChild(refWrap);
+    }
+
+    // Link to full place page
+    const stedLink = document.createElement("a");
+    stedLink.className = "sted-link";
+    stedLink.href = "sted.html?id=" + encodeURIComponent(id);
+    stedLink.textContent = "Se hele siden →";
+    sideEl.appendChild(stedLink);
+
+    const heading = document.createElement("h3");
+    heading.textContent = "Sider som inkluderer dette stedet";
+    sideEl.appendChild(heading);
+
+    if (!loc.pages || loc.pages.length === 0) {
+      const p = document.createElement("p");
+      p.className = "empty";
+      p.textContent = "Ingen sider er koblet til dette stedet ennå.";
+      sideEl.appendChild(p);
+    } else {
+      const ul = document.createElement("ul");
+      loc.pages.forEach(href => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = href;
+        const title = href
+          .replace(/\.html$/, "")
+          .replace(/-tidslinje$/, "")
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, c => c.toUpperCase());
+        a.textContent = title;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      sideEl.appendChild(ul);
+    }
+  }
+})();
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>
