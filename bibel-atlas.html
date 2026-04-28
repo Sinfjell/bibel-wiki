@@ -718,17 +718,26 @@
       p.textContent = "Ingen sider er koblet til dette stedet ennå.";
       sideEl.appendChild(p);
     } else {
+      // Use prettier titles per book/person
+      const PAGE_META = {
+        "1-mos-tidslinje.html": "1. Mosebok",
+        "2-mos-tidslinje.html": "2. Mosebok",
+        "3-mos-tidslinje.html": "3. Mosebok",
+        "4-mos-tidslinje.html": "4. Mosebok",
+        "5-mos-tidslinje.html": "5. Mosebok",
+        "1-samuel-tidslinje.html": "1. Samuel",
+        "2-samuel-tidslinje.html": "2. Samuel",
+        "abraham-tidslinje.html": "Abraham",
+        "moses-tidslinje.html": "Moses",
+        "saul-tidslinje.html": "Saul",
+        "david-tidslinje.html": "David"
+      };
       const ul = document.createElement("ul");
       loc.pages.forEach(href => {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = href;
-        const title = href
-          .replace(/\.html$/, "")
-          .replace(/-tidslinje$/, "")
-          .replace(/-/g, " ")
-          .replace(/\b\w/g, c => c.toUpperCase());
-        a.textContent = title;
+        a.textContent = PAGE_META[href] || href.replace(/\.html$/, "").replace(/-tidslinje$/, "").replace(/-/g, " ");
         li.appendChild(a);
         ul.appendChild(li);
       });

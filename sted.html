@@ -104,10 +104,20 @@
     border: 1px solid var(--gold-soft);
     border-radius: 2px;
   }
+  .sted-pages .page-kind-header {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: .58rem;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    color: var(--gold);
+    font-weight: 500;
+    margin: 16px 0 8px;
+  }
+  .sted-pages .page-kind-header:first-of-type { margin-top: 4px; }
   .sted-pages ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 4px;
   }
   .sted-pages li { margin: 0 0 8px; }
   .sted-pages a {
@@ -344,23 +354,53 @@
     empty.textContent = "Ingen sider er koblet til dette stedet ennå.";
     sec.appendChild(empty);
   } else {
-    const ul = document.createElement("ul");
+    // Group pages by kind (Person / Bok)
+    const byKind = { "Person": [], "Bok": [], "Atlas": [], "": [] };
     loc.pages.forEach(href => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = href;
-      const title = href
-        .replace(/\.html$/, "")
-        .replace(/-tidslinje$/, "")
-        .replace(/-/g, " ")
-        .replace(/\b\w/g, c => c.toUpperCase());
-      a.textContent = title;
-      li.appendChild(a);
-      ul.appendChild(li);
+      const m = pageMeta(href);
+      (byKind[m.kind] || byKind[""]).push({ href, ...m });
     });
-    sec.appendChild(ul);
+    ["Person", "Bok", "Atlas", ""].forEach(kind => {
+      if (byKind[kind].length === 0) return;
+      if (kind) {
+        const h4 = document.createElement("h4");
+        h4.className = "page-kind-header";
+        h4.textContent = kind === "Person" ? "Personer" : kind === "Bok" ? "Bøker" : kind;
+        sec.appendChild(h4);
+      }
+      const ul = document.createElement("ul");
+      byKind[kind].forEach(p => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = p.href;
+        a.textContent = p.title;
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      sec.appendChild(ul);
+    });
   }
   main.appendChild(sec);
+
+  function pageMeta(href) {
+    const slug = href.replace(/\.html$/, "").replace(/-tidslinje$/, "");
+    const PAGES = {
+      "1-mos":    { title: "1. Mosebok",    kind: "Bok" },
+      "2-mos":    { title: "2. Mosebok",    kind: "Bok" },
+      "3-mos":    { title: "3. Mosebok",    kind: "Bok" },
+      "4-mos":    { title: "4. Mosebok",    kind: "Bok" },
+      "5-mos":    { title: "5. Mosebok",    kind: "Bok" },
+      "1-samuel": { title: "1. Samuel",     kind: "Bok" },
+      "2-samuel": { title: "2. Samuel",     kind: "Bok" },
+      "abraham":  { title: "Abraham",       kind: "Person" },
+      "moses":    { title: "Moses",         kind: "Person" },
+      "saul":     { title: "Saul",          kind: "Person" },
+      "david":    { title: "David",         kind: "Person" },
+      "bibel":    { title: "Bibelen",       kind: "Atlas" },
+      "bibel-atlas": { title: "Bibel-atlas", kind: "Atlas" }
+    };
+    return PAGES[slug] || { title: slug.replace(/-/g, " "), kind: "" };
+  }
 
   // === Side column ===
   const side = document.createElement("aside");
