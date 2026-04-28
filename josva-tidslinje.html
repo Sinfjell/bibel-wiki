@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Josva — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Josva — <em>erobringen</em></h1>
+  <p class="subtitle">Tjuefire kapitler om hvordan Israel går fra Moab-sletten over Jordan og inn i landet — Jeriko, Ai, Gibeon, sør- og nordkampanjen, og fordeling av landet til de tolv stammene.</p>
+  <a class="notion-pill" href="https://www.notion.so/1dc58fdfaa274cc9a8e81ec2b2e0f587" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Josva i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Vær <em>frimodig og sterk!</em> Vær ikke redd og bli ikke motløs. Herren din Gud er med deg overalt hvor du går.</blockquote>
+    <div class="ref">Herrens ord til Josva · Josva 1,9</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Josva — <em>kapittel 1 til 24</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Erobring</span>
+      <span><i class="swatch sw-chron"></i>Pakt og fordeling</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Josva — <em>over Jordan og inn i landet</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Josva">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="5-mos-tidslinje.html">← 5. Mosebok</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="dommerne-tidslinje.html">Dommerne →</a></p>
+  <p>Boken slutter med pakts-fornyelsen i Sikem og Josvas død 110 år gammel</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 24, isChapters: true, tickStep: 1, majorStep: 5 },
+  defaultId: "jeriko",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 215 90 90"
+  },
+  pageUrls: {
+    "Moses":      "moses-tidslinje.html",
+    "5. Mosebok": "5-mos-tidslinje.html",
+    "Dommerne":   "dommerne-tidslinje.html"
+  },
+  notionUrls: {
+    "Josva":      "https://www.notion.so/1dc58fdfaa274cc9a8e81ec2b2e0f587",
+    "Dommerne":   "https://www.notion.so/0cabbcd5b6164b8e835d3d2f3b78ec3a"
+  },
+  data: [
+    {
+      id: "kallet", num: "I",
+      title: "Kallet til Josva", tagline: "Vær frimodig og sterk.",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "Etter Moses' død taler Herren til Josva: \"Stå opp, gå over Jordan, du og hele dette folket, til det landet jeg gir dem.\" Tre ganger gjentar Herren formaningen \"vær frimodig og sterk\". Loven skal Josva grunne på dag og natt. Ruben, Gad og halve Manasse — som har slått seg ned øst for Jordan — får ordre om å krysse over og kjempe sammen med stammene.",
+      keyEvent: "\"Vær frimodig og sterk\" (Josva 1,9)",
+      books: ["Josva"],
+      people: ["Josva", "Ruben", "Gad"],
+      locations: ["moab"]
+    },
+    {
+      id: "rahab", num: "II",
+      title: "Rahab og spionene", tagline: "En skarlagen tråd i vinduet.",
+      start: 2, end: 2, label: "Kap 2",
+      lede: "Josva sender to speidere til Jeriko. Rahab — en kanaaneerkvinne, en skjøge — gjemmer dem på taket sitt under linstilkene. Hun bekjenner at byen er livredd: \"Frykten har grepet alle innbyggerne i landet ... for vi har hørt hvordan Herren tørket ut Sivsjøen for dere.\" Hun ber om frelse for sin familie. Speiderne lover at en skarlagen tråd i vinduet skal redde dem. Rahab blir senere en av Jesu forfedre.",
+      keyEvent: "Rahab gjemmer speiderne (Josva 2)",
+      books: ["Josva"],
+      people: ["Josva", "Rahab", "Spioner"],
+      locations: ["jericho"]
+    },
+    {
+      id: "jordan", num: "III",
+      title: "Over Jordan", tagline: "Et nytt mirakel for en ny generasjon.",
+      start: 3, end: 4, label: "Kap 3–4",
+      lede: "Prestene bærer paktens ark foran folket. Når føttene berører Jordan-vannet, stopper det opp i en haug langt oppe — selv om elven er i flomtid. Israel går tørrskodd over. Tolv steiner tas opp fra elvebunnen og settes som minnesmerke i Gilgal: \"Dette skal være et tegn — så når deres barn spør hva disse steinene betyr, kan dere fortelle.\" En ny utgang — denne gangen inn i landet.",
+      keyEvent: "Jordan deler seg foran arken (Josva 3,15–17)",
+      books: ["Josva"],
+      people: ["Josva", "Prestene"],
+      locations: ["moab", "gilgal"]
+    },
+    {
+      id: "jeriko", num: "IV",
+      title: "Murene faller — Jeriko", tagline: "Sju dager, sju runder, sju basuner.",
+      start: 5, end: 7, label: "Kap 5–7",
+      lede: "Israelittene omskjæres i Gilgal — den nye generasjonen. Påsken feires; manna stopper. Josva møter Herrens hærfører ved Jeriko: \"Tar du av deg skoene — for stedet du står på, er hellig.\" I sju dager går folket rundt Jeriko. På den syvende går de sju ganger; prestene blåser; folket roper. Murene faller. Bare Rahab og hennes familie reddes. Men Akan tar av byttet, og neste slag — Ai — ender i nederlag. Akan steines.",
+      keyEvent: "Jerikos murer faller (Josva 6,20)",
+      books: ["Josva"],
+      people: ["Josva", "Rahab", "Akan"],
+      locations: ["gilgal", "jericho", "ai"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "ai-gibeon", num: "V",
+      title: "Ai og Gibeon", tagline: "Lurt av en lurt pakt.",
+      start: 8, end: 10, label: "Kap 8–10",
+      lede: "Andre angrep mot Ai lykkes etter at synden er ryddet ut. Pakten leses opp på Ebal og Garisim som Moses hadde befalt. Gibeons innbyggere lurer Josva med slitte sko og muggent brød — later som de er fra et fjernt land og inngår en fredspakt. Når Josva oppdager bedraget, holder han eden, men gjør dem til vannbærere og vedhuggere. Fem amorittkonger angriper Gibeon; Josva marsjerer hele natten fra Gilgal og slår dem. Solen står stille på Aijalon — \"og det har ikke vært en dag som den, hverken før eller siden.\"",
+      keyEvent: "Solen står stille for Josva (Josva 10,12–13)",
+      books: ["Josva"],
+      people: ["Josva", "Gibonittene", "Adoni-Sedek"],
+      locations: ["ai", "shechem", "gibeon", "aijalon", "lakish"]
+    },
+    {
+      id: "nord-kampanje", num: "VI",
+      title: "Nordkampanjen og Hasor", tagline: "Den største kanaaneer-byen brenner.",
+      start: 11, end: 12, label: "Kap 11–12",
+      lede: "Jabin, kongen i Hasor — den største og mektigste byen — samler en koalisjon av nordkonger med vogner og hester ved Merom-vannet. Josva angriper plutselig; lemleste hestene, brenne vognene. Hasor brennes. Hele landets sør- og nordkampanje gjengis i en lang liste over de 31 kongene Josva slo. Anakim-kjempene drives ut — bare i Gat, Gaza og Asdod blir noen tilbake (Goliats forfedre).",
+      keyEvent: "Hasor brennes (Josva 11,13)",
+      books: ["Josva"],
+      people: ["Josva", "Jabin"],
+      locations: ["hasor", "gibeon"]
+    },
+    {
+      id: "fordeling", num: "VII",
+      title: "Landet fordeles", tagline: "Lottene kastes for de tolv stammene.",
+      start: 13, end: 21, label: "Kap 13–21",
+      lede: "Josva er nå gammel. Lottene kastes for de ni og en halv stammer som ennå ikke har fått land (Ruben, Gad og halve Manasse fikk på østsiden). Kaleb krever Hebron — det Moses lovet ham 45 år tidligere. Tabernaklet flyttes fra Gilgal til Sjilo. Tilfluktsbyer utpekes — seks byer der drapsmenn uten forsett kan flykte. Levitt-byene fordeles. Boken bruker åtte kapitler på fordelingen — disse listene er Israels grunnlov for landet.",
+      keyEvent: "Tilfluktsbyene utpekes (Josva 20)",
+      books: ["Josva"],
+      people: ["Josva", "Kaleb", "12 stammene", "Levittene"],
+      locations: ["shilo", "hebron", "shechem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "avskjeden", num: "VIII",
+      title: "Pakten fornyes — Josvas avskjed", tagline: "Velg dere i dag.",
+      start: 22, end: 24, label: "Kap 22–24",
+      lede: "Stammene fra østsiden bygger et alter ved Jordan; vest-stammene tror det er frafall og samler seg til krig. Saken oppklares — alteret er bare et minnesmerke om at også de tilhører Israel. Josvas avskjedstale i Sikem oppsummerer hele frelseshistorien fra Tarah og Abraham. Folket bekrefter pakten: \"Herren vår Gud vil vi tjene, og hans røst vil vi lyde.\" En stein settes som vitne. Josva dør 110 år gammel; folkets ben fra Josef begraves i Sikem; presten Eleasar dør. Den første generasjonen som så miraklene, er borte.",
+      keyEvent: "\"Velg dere i dag hvem dere vil tjene\" (Josva 24,15)",
+      books: ["Josva"],
+      people: ["Josva (dør)", "Eleasar (dør)", "Josefs ben"],
+      locations: ["shechem", "shilo"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ester — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Ester — <em>en jødinne i Persia</em></h1>
+  <p class="subtitle">Ti kapitler om en foreldreløs jødinne som blir dronning i Persia og redder sitt folk fra utryddelse — den eneste boken i Bibelen der Guds navn aldri nevnes.</p>
+  <a class="notion-pill" href="https://www.notion.so/eb6d7f3a6c244c70b5b3c1f2e8c3a4d5" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Ester i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>Hvem vet — kanskje du nettopp for slik en tid som denne <em>er kommet til kongelig verdighet?</em></blockquote>
+    <div class="ref">Mordekai til Ester · Ester 4,14</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Ester — <em>kapittel 1 til 10</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Fortelling</span>
+      <span><i class="swatch sw-chron"></i>Frelse og fest</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Ester — <em>i Susa</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Ester">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="nehemja-tidslinje.html">← Nehemja</a> · <a href="bibel-tidslinje.html">Bibelen</a></p>
+  <p>Ester forklarer hvorfor jødene fortsatt feirer Purim — kapittel 9</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 6,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 10, isChapters: true, tickStep: 1, majorStep: 2 },
+  defaultId: "haman-fall",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "850 215 150 130"
+  },
+  pageUrls: {
+    "Esra":         "esra-tidslinje.html",
+    "Nehemja":      "nehemja-tidslinje.html"
+  },
+  notionUrls: {
+    "Ester":        "https://www.notion.so/eb6d7f3a6c244c70b5b3c1f2e8c3a4d5"
+  },
+  data: [
+    {
+      id: "vasti", num: "I",
+      title: "Vastis avsettelse", tagline: "Kongen drikker — dronningen nekter.",
+      start: 1, end: 1, label: "Kap 1",
+      lede: "Kong Ahasverus (Xerxes I) holder en 180 dagers fest for hele riket — fra India til Etiopia. På sjuende dag, full av vin, befaler han dronning Vasti å vise seg foran gjestene i sin krone. Hun nekter. Rådgiverne advarer: hvis dronningen får trumfe kongen, vil alle koner i riket bli ulydige. Vasti avsettes; brev sendes ut: hver mann skal være herre i sitt eget hus.",
+      keyEvent: "Vasti avsettes (Ester 1,19)",
+      books: ["Ester"],
+      people: ["Ahasverus / Xerxes", "Vasti", "Memukan"],
+      locations: ["susa"]
+    },
+    {
+      id: "ester-dronning", num: "II",
+      title: "Ester blir dronning", tagline: "Foreldreløs, vakker, i hemmelighet jødinne.",
+      start: 2, end: 2, label: "Kap 2",
+      lede: "Tjenerne foreslår å samle alle vakre unge jenter til kongens harem; den han liker best, blir dronning. Mordekai, en eksil-jøde fra Benjamins stamme, har oppdratt sin foreldreløse niese Hadassa (Ester) som datter. Hun samles med de andre. Etter ett år med skjønnhetsbehandling kommer hun inn til kongen; han elsker henne over alle. Hun krones. På Mordekais råd holder hun sin jødiske bakgrunn skjult. Mordekai oppdager et mordkomplott mot kongen; rapporterer det gjennom Ester; krønikene noterer det.",
+      keyEvent: "Ester krones som dronning (Ester 2,17)",
+      books: ["Ester"],
+      people: ["Ester / Hadassa", "Mordekai", "Hegai"],
+      locations: ["susa"]
+    },
+    {
+      id: "haman", num: "III",
+      title: "Hamans hat", tagline: "Folkemord-edikt mot jødene.",
+      start: 3, end: 4, label: "Kap 3–4",
+      lede: "Haman fra Agag — en etterkommer av amalekkongen Saul ikke fullt utryddet — opphøyes til kongens nest øverste. Alle skal bøye seg; Mordekai nekter. Rasende oppdager Haman at han er jøde og bestemmer seg for å utslette hele jødefolket i hele riket. Han kaster lott (\"pur\") og lander på den 13. dagen i tolvte måned. Kongen gir sin signetring. Edikt sendes ut. Mordekai river kappen sin og ber Ester gå til kongen — selv om det betyr dødsstraff å komme uten å bli kalt. \"Hvem vet om du ikke nettopp for slik en tid som denne er kommet til kongelig verdighet?\" Ester: \"Faste for meg i tre dager — om jeg går til grunne, så går jeg til grunne.\"",
+      keyEvent: "Mordekai til Ester: \"For slik en tid som denne\" (Ester 4,14)",
+      books: ["Ester"],
+      people: ["Haman", "Mordekai", "Ester"],
+      locations: ["susa"]
+    },
+    {
+      id: "festen-1", num: "IV",
+      title: "Esters første gjestebud", tagline: "Hun går — og inviterer kongen og Haman.",
+      start: 5, end: 5, label: "Kap 5",
+      lede: "Etter tre dagers faste går Ester ukallt inn til tronen. Kongen rekker frem gullsepteret — hun lever. \"Hva vil du, dronning Ester? Inntil halve riket skal være ditt.\" Hun ber om at kongen og Haman skal komme på et gjestebud. Haman går ut hovmodig — men ser Mordekai i porten og blir rasende. Hans kone og venner foreslår: bygg en galge på 25 meter; be kongen om å henge ham i morgen. Galgen reises.",
+      keyEvent: "Ester går til kongen og inviterer til gjestebud (Ester 5,2)",
+      books: ["Ester"],
+      people: ["Ester", "Ahasverus", "Haman", "Sjeresj"],
+      locations: ["susa"]
+    },
+    {
+      id: "haman-fall", num: "V",
+      title: "Hamans fall", tagline: "Galgen han bygde for sin fiende.",
+      start: 6, end: 7, label: "Kap 6–7",
+      lede: "Den natten kan kongen ikke sove. Han ber om krønikene leses — om mordforsøket Mordekai avslørte. Kongen oppdager at Mordekai aldri ble belønnet. Akkurat da kommer Haman for å spørre om å henge Mordekai. Kongen, før Haman får sagt noe: \"Hva skal det gjøres for den mann kongen vil ære?\" Haman, som tror det handler om ham, foreslår: kongelig kappe, kongens hest, lederen skal utrope ham gjennom byen. \"Skynd deg!\" sier kongen, \"gjør det for jøden Mordekai.\" Ved Esters andre gjestebud avslører hun: Haman vil utslette hennes folk. Kongen reiser i raseri. Haman kaster seg over Esters seng for nåde; kongen kommer tilbake og tror han voldfører dronningen. Galgen står klar — Haman henges i den.",
+      keyEvent: "Haman henges på galgen han bygde (Ester 7,10)",
+      books: ["Ester"],
+      people: ["Ahasverus", "Haman", "Ester", "Mordekai"],
+      locations: ["susa"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "purim", num: "VI",
+      title: "Frelsen og purim-festen", tagline: "Sorgen ble glede.",
+      start: 8, end: 10, label: "Kap 8–10",
+      lede: "Hamans edikt kan ikke tilbakekalles, men Mordekai får sende ut et nytt: jødene har lov til å forsvare seg den 13. dagen i tolvte måned. På den dagen — sammen med 14. og 15. — slår jødene over hele riket sine fiender (75 000 mann) men rører ikke byttet. Dagene kalles Purim etter \"pur\" — lottet Haman kastet. Esters og Mordekais brev gjør festen til en evig årlig påminnelse: \"sorgen ble forvandlet til glede, sørgedagen til feststund.\" Mordekai blir kongens nest øverste — \"æret av jødene og elsket av alt sitt folk.\"",
+      keyEvent: "Purim-festen innstiftes (Ester 9,26–28)",
+      books: ["Ester"],
+      people: ["Mordekai", "Ester", "Ahasverus"],
+      locations: ["susa"],
+      variant: "in-chronicles"
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

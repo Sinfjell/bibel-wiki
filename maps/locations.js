@@ -151,7 +151,9 @@ window.__BIBEL_LOCATIONS = {
       "2-kron-tidslinje.html",
       "2-samuel-tidslinje.html",
       "abraham-tidslinje.html",
-      "david-tidslinje.html"
+      "david-tidslinje.html",
+      "esra-tidslinje.html",
+      "nehemja-tidslinje.html"
     ],
     "altNames": [
       "Salem",
@@ -176,7 +178,9 @@ window.__BIBEL_LOCATIONS = {
       "1-mos-tidslinje.html",
       "2-samuel-tidslinje.html",
       "abraham-tidslinje.html",
-      "david-tidslinje.html"
+      "david-tidslinje.html",
+      "dommerne-tidslinje.html",
+      "josva-tidslinje.html"
     ],
     "altNames": [
       "Kirjat-Arba"
@@ -197,6 +201,7 @@ window.__BIBEL_LOCATIONS = {
       "1-mos-tidslinje.html",
       "1-samuel-tidslinje.html",
       "david-tidslinje.html",
+      "rut-tidslinje.html",
       "saul-tidslinje.html"
     ],
     "altNames": [
@@ -220,7 +225,8 @@ window.__BIBEL_LOCATIONS = {
       "Jos 6"
     ],
     "pages": [
-      "2-kong-tidslinje.html"
+      "2-kong-tidslinje.html",
+      "josva-tidslinje.html"
     ]
   },
   "shechem": {
@@ -233,7 +239,9 @@ window.__BIBEL_LOCATIONS = {
       "1-kong-tidslinje.html",
       "1-mos-tidslinje.html",
       "2-kron-tidslinje.html",
-      "abraham-tidslinje.html"
+      "abraham-tidslinje.html",
+      "dommerne-tidslinje.html",
+      "josva-tidslinje.html"
     ],
     "description": "Hvor Abraham bygde sitt første alter i Kanaan; senere et viktig religiøst senter.",
     "scriptures": [
@@ -266,7 +274,8 @@ window.__BIBEL_LOCATIONS = {
     "description": "Strategisk festning ved Jisreel-dalen. Jesus' siste slag (åpenbaringsboken).",
     "pages": [
       "2-kong-tidslinje.html",
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "dommerne-tidslinje.html"
     ]
   },
   "samaria": {
@@ -279,7 +288,9 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-kong-tidslinje.html",
       "2-kong-tidslinje.html",
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "esra-tidslinje.html",
+      "nehemja-tidslinje.html"
     ]
   },
   "nazareth": {
@@ -316,6 +327,8 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": 14,
     "pages": [
       "1-samuel-tidslinje.html",
+      "dommerne-tidslinje.html",
+      "josva-tidslinje.html",
       "saul-tidslinje.html"
     ],
     "description": "Religiøst sentrum før Jerusalem; her sto tabernaklet i flere hundre år.",
@@ -332,6 +345,7 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": 14,
     "pages": [
       "1-samuel-tidslinje.html",
+      "josva-tidslinje.html",
       "saul-tidslinje.html"
     ],
     "description": "Israels første leir vest for Jordan; Saul ble salvet konge her."
@@ -345,6 +359,7 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-samuel-tidslinje.html",
       "david-tidslinje.html",
+      "dommerne-tidslinje.html",
       "saul-tidslinje.html"
     ],
     "description": "Sauls hjemby; Israels første kongsete."
@@ -367,7 +382,10 @@ window.__BIBEL_LOCATIONS = {
     "y": 268,
     "region": "kanaan",
     "labelDy": -10,
-    "description": "Filisterbyenes største; hvor Samson døde."
+    "description": "Filisterbyenes største; hvor Samson døde.",
+    "pages": [
+      "dommerne-tidslinje.html"
+    ]
   },
   "askelon": {
     "name": "Askelon",
@@ -375,7 +393,10 @@ window.__BIBEL_LOCATIONS = {
     "y": 263,
     "region": "kanaan",
     "labelDy": 14,
-    "description": "Filisterby ved kysten."
+    "description": "Filisterby ved kysten.",
+    "pages": [
+      "dommerne-tidslinje.html"
+    ]
   },
   "jaffa": {
     "name": "Jaffa",
@@ -397,6 +418,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "Dalen hvor solen sto stille for Josva.",
     "scriptures": [
       "Jos 10,12"
+    ],
+    "pages": [
+      "josva-tidslinje.html"
     ]
   },
   "lakish": {
@@ -408,7 +432,8 @@ window.__BIBEL_LOCATIONS = {
     "description": "Festningsby i Juda; falt for Sankerib.",
     "pages": [
       "2-kong-tidslinje.html",
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "josva-tidslinje.html"
     ]
   },
   "hasor": {
@@ -420,6 +445,10 @@ window.__BIBEL_LOCATIONS = {
     "description": "Største kanaaneerby; ødelagt av Josva.",
     "scriptures": [
       "Jos 11"
+    ],
+    "pages": [
+      "dommerne-tidslinje.html",
+      "josva-tidslinje.html"
     ]
   },
   "bethshean": {
@@ -492,6 +521,9 @@ window.__BIBEL_LOCATIONS = {
     "description": "Debora og Barak samlet hæren her.",
     "scriptures": [
       "Dom 4"
+    ],
+    "pages": [
+      "dommerne-tidslinje.html"
     ]
   },
   "tyre": {
@@ -526,7 +558,10 @@ window.__BIBEL_LOCATIONS = {
       "4-mos-tidslinje.html",
       "5-mos-tidslinje.html",
       "david-tidslinje.html",
-      "moses-tidslinje.html"
+      "dommerne-tidslinje.html",
+      "josva-tidslinje.html",
+      "moses-tidslinje.html",
+      "rut-tidslinje.html"
     ],
     "description": "Slettelandet øst for Jordan og Dødehavet hvor Moses holdt sine avskjedstaler.",
     "scriptures": [
@@ -651,7 +686,8 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-mos-tidslinje.html",
       "2-kong-tidslinje.html",
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "esra-tidslinje.html"
     ],
     "description": "Den store byen ved Eufrat; senter for det babylonske eksilet (586–538 f.Kr.). Babels tårn, Daniel, Nebukadnesar.",
     "scriptures": [
@@ -720,7 +756,10 @@ window.__BIBEL_LOCATIONS = {
       "Neh 1,1"
     ],
     "pages": [
-      "2-kron-tidslinje.html"
+      "2-kron-tidslinje.html",
+      "esra-tidslinje.html",
+      "ester-tidslinje.html",
+      "nehemja-tidslinje.html"
     ]
   },
   "tarsus": {
@@ -822,7 +861,8 @@ window.__BIBEL_LOCATIONS = {
     ],
     "pages": [
       "1-kong-tidslinje.html",
-      "2-kong-tidslinje.html"
+      "2-kong-tidslinje.html",
+      "dommerne-tidslinje.html"
     ]
   },
   "dan": {
@@ -837,7 +877,8 @@ window.__BIBEL_LOCATIONS = {
     ],
     "pages": [
       "1-kong-tidslinje.html",
-      "2-kong-tidslinje.html"
+      "2-kong-tidslinje.html",
+      "dommerne-tidslinje.html"
     ]
   },
   "ramot": {
@@ -870,6 +911,60 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "1-kong-tidslinje.html",
       "2-kron-tidslinje.html"
+    ]
+  },
+  "ai": {
+    "name": "Ai",
+    "x": 478,
+    "y": 256,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Andre by Israel angrep i Kanaan; først nederlag pga Akans synd, så seier.",
+    "scriptures": [
+      "Jos 7–8"
+    ],
+    "pages": [
+      "josva-tidslinje.html"
+    ]
+  },
+  "gibeon": {
+    "name": "Gibeon",
+    "x": 472,
+    "y": 257,
+    "region": "kanaan",
+    "labelDy": 14,
+    "description": "Hivitterby som lurte Josva med en fredspakt; her sto solen stille for Josva.",
+    "scriptures": [
+      "Jos 9–10"
+    ],
+    "pages": [
+      "josva-tidslinje.html"
+    ]
+  },
+  "mizpa": {
+    "name": "Mispa",
+    "x": 474,
+    "y": 254,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Forsamlingsplass i dommer-tiden; Samuel dømte Israel her.",
+    "scriptures": [
+      "Dom 20",
+      "1. Sam 7"
+    ],
+    "pages": [
+      "dommerne-tidslinje.html"
+    ]
+  },
+  "moresjet": {
+    "name": "Moab (Rut)",
+    "x": 503,
+    "y": 280,
+    "region": "moab",
+    "labelDy": 14,
+    "description": "Hvor Naomis familie søkte tilflukt i hungersnød; Rut møter Boas etter retur til Betlehem.",
+    "scriptures": [
+      "Rut 1"
     ]
   }
 };

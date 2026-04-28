@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dommerne — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Dommerne — <em>kaos uten konge</em></h1>
+  <p class="subtitle">Tjueén kapitler om syklusen som gjentas seks-syv ganger: synd → fiende → rop → dommer → fred → synd. Og jo lenger det går, jo verre blir det.</p>
+  <a class="notion-pill" href="https://www.notion.so/0cabbcd5b6164b8e835d3d2f3b78ec3a" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Dommerne i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>I de dager var det <em>ingen konge i Israel</em>; hver mann gjorde det som var rett i hans egne øyne.</blockquote>
+    <div class="ref">Bokens refrengsetning · Dommerne 17,6 · 21,25</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Dommerne — <em>kapittel 1 til 21</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Syklus av synd</span>
+      <span><i class="swatch sw-chron"></i>Stor dommer</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Dommerne — <em>tolv stammers ujevne kamp</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Dommerne">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="josva-tidslinje.html">← Josva</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="rut-tidslinje.html">Rut →</a></p>
+  <p>Boken slutter med borgerkrig mot Benjamins stamme — det laveste punktet</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 8,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 21, isChapters: true, tickStep: 1, majorStep: 5 },
+  defaultId: "gideon",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 215 100 100"
+  },
+  pageUrls: {
+    "Josva":      "josva-tidslinje.html",
+    "Rut":        "rut-tidslinje.html",
+    "1. Samuel":  "1-samuel-tidslinje.html"
+  },
+  notionUrls: {
+    "Dommerne":   "https://www.notion.so/0cabbcd5b6164b8e835d3d2f3b78ec3a",
+    "Rut":        "https://www.notion.so/15a6d8a05d0e44a292f7f6e82bb5e7a3"
+  },
+  data: [
+    {
+      id: "ufullendt", num: "I",
+      title: "Ufullendt erobring", tagline: "Stammen klarte ikke å drive dem ut.",
+      start: 1, end: 2, label: "Kap 1–2",
+      lede: "Etter Josvas død spør stammene: hvem skal lede oss? Juda går først. Men kapittelet ramser opp by etter by der stammene klarte ikke å drive ut innbyggerne — Manasse, Efraim, Sebulon, Aser, Naftali, Dan. Herrens engel kommer til Bokim: \"Jeg vil ikke drive dem ut for dere — de skal bli en snare.\" Folket gråter. Når den generasjonen som så Herrens gjerninger er borte, vokser det opp et nytt slekt som ikke kjenner Herren. Syklusen begynner.",
+      keyEvent: "\"Det vokste opp en ny generasjon som ikke kjente Herren\" (Dommerne 2,10)",
+      books: ["Dommerne"],
+      people: ["Stammene"],
+      locations: ["shilo", "hebron"]
+    },
+    {
+      id: "tidlige", num: "II",
+      title: "Otniel, Ehud, Sjamgar", tagline: "De første tre dommerne.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "Otniel — Kalebs nevø, første dommer — slår arameerkongen Kusjan og gir landet 40 års fred. Ehud, venstrehent, lager seg et toveggssverd og reiser til Moabs konge Eglon med skatten. Han stikker det inn i magen på den feite kongen i et privat rom og rømmer. Israel slår 10 000 moabitter. Land får 80 års fred. Sjamgar slår 600 filistere med en oksedrivpinne.",
+      keyEvent: "Ehud dreper Eglon (Dommerne 3,21)",
+      books: ["Dommerne"],
+      people: ["Otniel", "Ehud", "Eglon", "Sjamgar"],
+      locations: ["moab"]
+    },
+    {
+      id: "debora", num: "III",
+      title: "Debora og Barak", tagline: "En profetinne, en motvillig general, en spiker.",
+      start: 4, end: 5, label: "Kap 4–5",
+      lede: "Jabin av Hasor undertrykker Israel i 20 år; hans hærfører Sisera har 900 jernvogner. Profetinnen Debora kaller Barak: ta 10 000 menn til Tabor-fjellet. Barak: \"Hvis du går med meg, vil jeg gå.\" Debora: \"Jeg går — men æren skal ikke tilfalle deg, en kvinne skal felle Sisera.\" Vognene synker i sølen ved Kisjon. Sisera flykter til Jaels telt; hun gir ham melk, dekker ham, og slår en teltplugg gjennom hodet hans mens han sover. Deboras og Baraks sang i kapittel 5 er en av Bibelens eldste tekster.",
+      keyEvent: "Jael dreper Sisera (Dommerne 4,21)",
+      books: ["Dommerne"],
+      prophets: ["Debora"],
+      people: ["Barak", "Sisera", "Jael", "Jabin"],
+      locations: ["mttabor", "hasor", "megiddo"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "gideon", num: "IV",
+      title: "Gideon og 300 menn", tagline: "Kanner og fakler.",
+      start: 6, end: 8, label: "Kap 6–8",
+      lede: "Midjanittene plyndrer Israel. Herrens engel finner Gideon i hemmelighet ved å treske hvete i en vinpresse. \"Tapper kriger, Herren er med deg.\" Gideon ber om to tegn med ull. Tjuetre tusen mann samles, men Herren reduserer til 300. Med kanner over fakler og horn omringer de leiren ved Harod-kilden om natten. Midjanittene slakter hverandre i forvirringen. Gideon lager senere en efod som blir til avgudsdyrkelse — \"og det ble en snare for ham og hans hus.\"",
+      keyEvent: "300 mann med kanner og horn (Dommerne 7,16)",
+      books: ["Dommerne"],
+      people: ["Gideon", "Joasj", "Pura"],
+      locations: ["jisreel", "shechem"]
+    },
+    {
+      id: "abimelek-jeftah", num: "V",
+      title: "Abimelek og Jeftah", tagline: "Førstefødt brorderning og et hastig løfte.",
+      start: 9, end: 12, label: "Kap 9–12",
+      lede: "Abimelek, Gideons sønn med en bibanke, dreper alle sine 70 brødre på en stein i Sikem og krones. Han brenner inne 1 000 mennesker i Sikems tårn. Selv dør han når en kvinne dropper en møllestein på hodet hans. Jeftah — utstøtt sønn av en hore, blir hærfører — sverger at hva som først kommer ut av hans hus, skal bli offer hvis han vinner. Hans datter kommer ut med tamburin. Han gjør som han har sagt. \"Det ble en skikk i Israel\" — fire dager hvert år gråter jentene over henne.",
+      keyEvent: "Jeftahs datter (Dommerne 11,30–40)",
+      books: ["Dommerne"],
+      people: ["Abimelek", "Jotam", "Jeftah", "Jeftahs datter"],
+      locations: ["shechem"]
+    },
+    {
+      id: "samson", num: "VI",
+      title: "Samson — den siste dommeren", tagline: "Sterk på utsiden, svak innenfor.",
+      start: 13, end: 16, label: "Kap 13–16",
+      lede: "En engel taler til Manoahs ufruktbare kone: hun skal føde en sønn, en nasareer fra mors liv. Samson vokser opp blant filisterne, river en løve i to, gifter seg med en filisterkvinne, dreper 1 000 mann med eselkjeve, bryter ut byportene fra Gaza. Men kvinnene felles ham. Dalila lurer hemmelig­heten av ham — håret. Han mister kraften, øynene, friheten. I dødsstunden ber han om sin siste kraft: \"La meg dø sammen med filisterne.\" Han river templet ned over Dagons prester — \"de døde han drepte i sin død var flere enn de han drepte i sitt liv.\"",
+      keyEvent: "Samson river Dagons tempel (Dommerne 16,30)",
+      books: ["Dommerne"],
+      people: ["Samson", "Manoah", "Dalila", "Filisterne"],
+      locations: ["gaza", "askelon"]
+    },
+    {
+      id: "mika-dan", num: "VII",
+      title: "Mikas avgud og Dans flytting", tagline: "Hver mann gjør det som er rett i hans egne øyne.",
+      start: 17, end: 18, label: "Kap 17–18",
+      lede: "En mann fra Efraim ved navn Mika lager seg en gude­bilde og en levitt-prest. Dans stamme — som ennå ikke har klart å erobre sitt land — sender speidere; de stjeler Mikas avguder og levitten, og slår byen Lajisj i nord. Byen kalles Dan. De setter opp avgudsdyrkelsen som varer i flere generasjoner — bortgjort fra alteret i Sjilo. Bokens refreng kommer her første gang: \"I de dager var det ingen konge i Israel; hver mann gjorde det som var rett i hans egne øyne.\"",
+      keyEvent: "Dans stamme oppretter avgudsdyrkelse (Dommerne 18,30)",
+      books: ["Dommerne"],
+      people: ["Mika", "Levitten", "Dans stamme"],
+      locations: ["shilo", "dan"]
+    },
+    {
+      id: "borgerkrig", num: "VIII",
+      title: "Levittens medhustru og borgerkrigen", tagline: "Det laveste punktet.",
+      start: 19, end: 21, label: "Kap 19–21",
+      lede: "En levitt og hans medhustru overnatter i Gibea — Sauls fremtidige hjemby. Byens menn omringer huset, krever sex med levitten. Han kaster ut medhustruen; de voldtar henne hele natten; hun dør ved døren om morgenen. Levitten skjærer henne i tolv stykker og sender til alle stammer. Israel samler seg ved Mispa, krever Benjamin å overlate de skyldige. Benjamin nekter — borgerkrig. Benjamin nesten utslettes; bare 600 menn overlever. Folket angrer, lar disse 600 røve seg jenter på en fest. Boken slutter: \"I de dager var det ingen konge i Israel; hver mann gjorde det som var rett i hans egne øyne.\"",
+      keyEvent: "Levittens medhustru og Benjamin-krigen (Dommerne 19–20)",
+      books: ["Dommerne"],
+      people: ["Levitten", "Benjamins stamme", "11 stammene"],
+      locations: ["gibea", "mizpa", "shilo"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

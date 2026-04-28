@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esra — bok-tidslinje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wiki-styles.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow"><a href="bibel-tidslinje.html">← Bibelen</a> · bok-portrett</div>
+  <h1>Esra — <em>hjemkomsten</em></h1>
+  <p class="subtitle">Ti kapitler om hvordan jødene vender hjem fra Babylon i to bølger — først for å bygge tempelet, så 80 år senere for å gjenopprette Toraen.</p>
+  <a class="notion-pill" href="https://www.notion.so/d3c8f1f51b594ef2a76b8a86bb53e99c" target="_blank" rel="noopener noreferrer">
+    <span class="icon">N</span>
+    <span>Åpne Esra i Notion</span>
+    <span class="arrow">↗</span>
+  </a>
+
+  <div class="theme claret">
+    <div class="label">Sentralt tema</div>
+    <blockquote>For Herren <em>vekket åndene</em> i Kyros, kongen av Persia, så han lot kunngjøre i hele sitt rike: \"Hvem av dere som hører til hans folk — han kan dra opp.\"</blockquote>
+    <div class="ref">Kyros' dekret · Esra 1,1–3</div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="timeline-heading">
+    <h2>Esra — <em>kapittel 1 til 10</em></h2>
+    <div class="legend">
+      <span><i class="swatch sw-book"></i>Hjemkomst og bygging</span>
+      <span><i class="swatch sw-chron"></i>Pakt og reform</span>
+      <span style="opacity:.7">↗ Notion · → Egen side</span>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <div class="timeline">
+      <div class="cards-row" id="cardsRow"></div>
+      <div class="axis-area">
+        <div class="axis-line"></div>
+        <div class="ticks" id="ticks"></div>
+        <div id="brackets"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
+</section>
+
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Esra — <em>Babylon til Jerusalem</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Esra">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
+<div id="detail" class="detail"></div>
+
+<footer>
+  <hr>
+  <p><a href="2-kron-tidslinje.html">← 2. Krønikebok</a> · <a href="bibel-tidslinje.html">Bibelen</a> · <a href="nehemja-tidslinje.html">Nehemja →</a></p>
+  <p>Esra og Nehemja var opprinnelig én bok i hebraisk tradisjon</p>
+  <p style="margin-top:8px">Anno Domini · MMXXVI</p>
+</footer>
+
+</div>
+
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
+<script src="wiki-page.js"></script>
+<script>
+WikiPage.init({
+  cols: 6,
+  cardLabel: "DEL",
+  axis: { start: 1, end: 10, isChapters: true, tickStep: 1, majorStep: 2 },
+  defaultId: "tempelet-bygges",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 195 540 130"
+  },
+  pageUrls: {
+    "Nehemja":      "nehemja-tidslinje.html",
+    "Ester":        "ester-tidslinje.html",
+    "2. Krønikebok": "2-kron-tidslinje.html"
+  },
+  notionUrls: {
+    "Esra":         "https://www.notion.so/d3c8f1f51b594ef2a76b8a86bb53e99c",
+    "Nehemja":      "https://www.notion.so/9b3a4ef0c6824b7f8a04b6f5c6fb2c1c"
+  },
+  data: [
+    {
+      id: "kyros", num: "I",
+      title: "Kyros' dekret og første hjemreise", tagline: "538 f.Kr. — Serubabel leder 50 000 hjem.",
+      start: 1, end: 2, label: "Kap 1–2",
+      lede: "Etter sytti år i Babylon — akkurat som Jeremia profeterte — kommer Kyros, kongen av Persia, med et dekret: hvem som vil av Herrens folk, kan dra hjem og bygge tempelet i Jerusalem. Tempelkarene Nebukadnesar tok, gis tilbake. Serubabel — av Davids ætt — leder den første gruppen på rundt 50 000 mennesker tilbake. Listen i kapittel 2 er en bekreftelse på de hjemvendte slekter — viktig for å fastslå hvem som er ekte.",
+      keyEvent: "Kyros' dekret om hjemreise (Esra 1,2–4)",
+      books: ["Esra"],
+      people: ["Kyros", "Serubabel", "Jesjua (yppersteprest)"],
+      locations: ["babylon", "jerusalem"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "alteret-fundament", num: "II",
+      title: "Alteret reises — fundamentet legges", tagline: "Glede blandet med gråt.",
+      start: 3, end: 3, label: "Kap 3",
+      lede: "I sjuende måned reiser Serubabel og Jesjua alteret på dets gamle plass og begynner å bringe brennoffer. De feirer løvhyttefesten. Året etter legges fundamentet til det nye tempelet. Når byggemestrene gjør seg ferdige, samler hele folket seg. Trompeter og cymbal lyder; sangerne synger fra Salme 136: \"For Herren er god, hans miskunn varer evig.\" Men: de eldste, som husker Salomos tempel, gråter høyt — \"og folket kunne ikke skille gledesropet fra gråten.\"",
+      keyEvent: "Fundamentet legges; jubel og gråt blandet (Esra 3,11–13)",
+      books: ["Esra"],
+      people: ["Serubabel", "Jesjua", "De eldste"],
+      locations: ["jerusalem"]
+    },
+    {
+      id: "motstand", num: "III",
+      title: "Motstand stopper arbeidet", tagline: "Sytten år av stillhet.",
+      start: 4, end: 4, label: "Kap 4",
+      lede: "Samaritanerne — etterkommerne av folkene Assyria plantet i nordriket — vil bli med å bygge. Serubabel avviser dem: \"Det er ikke deres sak.\" De begynner å hindre arbeidet, leier folk for å skremme byggerne, sender brev til persiske konger. Til slutt får de Artaxerxes' dekret om å stoppe arbeidet med selve byen. Tempelarbeidet ligger nede i 17 år.",
+      keyEvent: "Tempelarbeidet stoppes ved kongelig dekret (Esra 4,21)",
+      books: ["Esra"],
+      people: ["Samaritanerne", "Persiske konger", "Serubabel"],
+      locations: ["jerusalem", "samaria", "susa"]
+    },
+    {
+      id: "tempelet-bygges", num: "IV",
+      title: "Profetene vekker arbeidet", tagline: "Haggai og Sakarja får dem på beina.",
+      start: 5, end: 6, label: "Kap 5–6",
+      lede: "Profetene Haggai og Sakarja preker: \"Hvor lenge vil dere bo i deres egne paneltak hus mens Herrens hus ligger i ruiner?\" Folket begynner igjen i Darius' andre år (520 f.Kr.). Persiske myndigheter kommer for å spørre med hvilken rett. Serubabel viser til Kyros' opprinnelige dekret. Darius slår opp i de kongelige arkivene, finner originalen, og bekrefter — pluss han befaler at finansiering skal komme fra kongens skatter. Tempelet ferdigstilles i 516 f.Kr. — nøyaktig 70 år etter ødeleggelsen. Påsken feires.",
+      keyEvent: "Det andre tempelet innvies (Esra 6,15–18)",
+      books: ["Esra"],
+      prophets: ["Haggai", "Sakarja"],
+      people: ["Serubabel", "Jesjua", "Darius"],
+      locations: ["jerusalem", "susa"],
+      variant: "in-chronicles"
+    },
+    {
+      id: "esra", num: "V",
+      title: "Esra reiser opp — andre bølge", tagline: "Åtti år senere — en ny generasjon.",
+      start: 7, end: 8, label: "Kap 7–8",
+      lede: "458 f.Kr. — 80 år etter første hjemreise. Esra, prest og lovkjenner av Aron-ætt, reiser fra Babylon med 1 500 menn pluss familier. Artaxerxes I gir ham fullmakt til å lære og håndheve Mose lov, samt store økonomiske ressurser. Esra ber for trygg reise: \"Jeg skammet meg over å be om vakter — for jeg hadde sagt: Vår Guds hånd er over alle som søker ham.\" Reisen tar fire måneder. Alle 1 500 kommer trygt fram.",
+      keyEvent: "Esra ankommer Jerusalem med Mose lov (Esra 7,10)",
+      books: ["Esra"],
+      people: ["Esra", "Artaxerxes I"],
+      locations: ["babylon", "jerusalem"]
+    },
+    {
+      id: "blanding", num: "VI",
+      title: "Reform mot blandingsekteskap", tagline: "Brudd med fremmede koner.",
+      start: 9, end: 10, label: "Kap 9–10",
+      lede: "Ved ankomst får Esra vite at folket — også prester og levitter — har giftet seg med kvinner fra fremmede folkeslag. Esra river kappen sin, plukker hår av skjegget, sitter forferdet til kveldsofferet, og ber: \"Min Gud, jeg skammer meg over å løfte mitt ansikt mot deg.\" Folket samler seg i regnvær på tempelplassen. De fastlår: vi har syndet — vi vil sende bort de fremmede konene. En lang og pinsom prosess følger med navnelister på de skyldige.",
+      keyEvent: "Esras bønn om syndsbekjennelse (Esra 9,6–15)",
+      books: ["Esra"],
+      people: ["Esra", "Folket"],
+      locations: ["jerusalem"]
+    }
+  ]
+});
+</script>
+<script src="wiki-search.js"></script>
+
+</body>
+</html>

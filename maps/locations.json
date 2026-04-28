@@ -771,5 +771,50 @@
     "scriptures": [
       "1. Kong 9,26-28"
     ]
+  },
+  "ai": {
+    "name": "Ai",
+    "x": 478,
+    "y": 256,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Andre by Israel angrep i Kanaan; først nederlag pga Akans synd, så seier.",
+    "scriptures": [
+      "Jos 7–8"
+    ]
+  },
+  "gibeon": {
+    "name": "Gibeon",
+    "x": 472,
+    "y": 257,
+    "region": "kanaan",
+    "labelDy": 14,
+    "description": "Hivitterby som lurte Josva med en fredspakt; her sto solen stille for Josva.",
+    "scriptures": [
+      "Jos 9–10"
+    ]
+  },
+  "mizpa": {
+    "name": "Mispa",
+    "x": 474,
+    "y": 254,
+    "region": "kanaan",
+    "labelDy": -10,
+    "description": "Forsamlingsplass i dommer-tiden; Samuel dømte Israel her.",
+    "scriptures": [
+      "Dom 20",
+      "1. Sam 7"
+    ]
+  },
+  "moresjet": {
+    "name": "Moab (Rut)",
+    "x": 503,
+    "y": 280,
+    "region": "moab",
+    "labelDy": 14,
+    "description": "Hvor Naomis familie søkte tilflukt i hungersnød; Rut møter Boas etter retur til Betlehem.",
+    "scriptures": [
+      "Rut 1"
+    ]
   }
 }

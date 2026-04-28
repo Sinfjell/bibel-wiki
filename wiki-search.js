@@ -55,6 +55,22 @@ const WIKI_INDEX = [
   { type: "page", icon: "📜", title: "2. Krønikebok", subtitle: "Bok · Salomo til Kyros' dekret",
     url: "2-kron-tidslinje.html", keywords: ["2 krønikebok", "2 kron", "chronicles", "krønikene", "salomo", "juda-konger", "tempel", "eksil", "kyros"] },
 
+  // Bøker — Josva til Rut
+  { type: "page", icon: "⚔️", title: "Josva", subtitle: "Bok · Erobringen av Kanaan — Jeriko, Ai, Gibeon",
+    url: "josva-tidslinje.html", keywords: ["josva", "joshua", "jeriko", "ai", "gibeon", "rahab", "erobring", "kanaan", "tilfluktsbyer"] },
+  { type: "page", icon: "⚖️", title: "Dommerne", subtitle: "Bok · Syklusen mellom synd og frelse — Debora, Gideon, Samson",
+    url: "dommerne-tidslinje.html", keywords: ["dommerne", "judges", "debora", "gideon", "samson", "jeftah", "ehud", "rahab"] },
+  { type: "page", icon: "🌾", title: "Rut", subtitle: "Bok · En perle i kaoset — moabittisk oldemor til David",
+    url: "rut-tidslinje.html", keywords: ["rut", "ruth", "naomi", "boas", "obed", "moabitt", "betlehem"] },
+
+  // Bøker — Esra-Nehemja-Ester (etter eksilet)
+  { type: "page", icon: "🏗️", title: "Esra", subtitle: "Bok · Hjemkomsten — tempelet bygges (538-458 f.Kr.)",
+    url: "esra-tidslinje.html", keywords: ["esra", "ezra", "kyros", "serubabel", "tempelet", "hjemkomst", "eksilet"] },
+  { type: "page", icon: "🧱", title: "Nehemja", subtitle: "Bok · Muren bygges på 52 dager",
+    url: "nehemja-tidslinje.html", keywords: ["nehemja", "nehemiah", "muren", "jerusalem", "artaxerxes", "sanballat", "tobia"] },
+  { type: "page", icon: "👑", title: "Ester", subtitle: "Bok · Jødinne i Persia redder sitt folk",
+    url: "ester-tidslinje.html", keywords: ["ester", "esther", "mordekai", "haman", "purim", "ahasverus", "xerxes", "vasti", "susa"] },
+
   // ============ Phases on David's page ============
   { type: "phase", icon: "🌾", title: "Gjetergutten i Betlehem", subtitle: "David · Fase I · ~1040–1025 f.Kr.",
     url: "david-tidslinje.html#gjeter", keywords: ["betlehem", "samuel salver", "gjeter"] },
