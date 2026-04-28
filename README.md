@@ -16,7 +16,25 @@ Personlig kronologisk wiki for hele Bibelen — med interaktivt atlas, person-po
 | `wiki-page.js` | Render-motor for tidslinjesider — kort, akse, detalj-panel, atlas-integrasjon, zoom-kontroller |
 | `wiki-styles.css` | Felles stilark — pergament-estetikk, dynamisk skalering via CSS-variabler |
 | `wiki-search.js` | Globalt søk (⌘K / Ctrl+K) som auto-merger atlas-steder inn i indeksen |
-| `maps/bibel-atlas.js` | Master-atlas: SVG-geografi (kystlinjer, elver, regioner) + global locations-registry + `attachInteraction()` for pan/zoom/pinch |
+| `maps/bibel-atlas.js` | Master-atlas: SVG-geografi (kystlinjer, elver, regioner) + `attachInteraction()` for pan/zoom/pinch |
+| `maps/locations.json` | **Source of truth** — alle steder (manuell redigering) |
+| `maps/locations.js` | **Auto-generert** av `npm run build` — JSON med auto-deriverte `pages` arrays inlinet for browser-bruk |
+| `scripts/build-data.js` | Build-script: leser locations.json + skanner `*-tidslinje.html` for `locations: [...]` → unionerer manual og auto-deriverte pages → skriver locations.js |
+
+### Data-pipeline
+
+```
+maps/locations.json  ─┐
+                      ├──▶  scripts/build-data.js  ──▶  maps/locations.js
+*-tidslinje.html      ─┘                                       │
+   (locations: [...])                                          ▼
+                                                       window.__BIBEL_LOCATIONS
+                                                              │
+                                                              ▼
+                                                       maps/bibel-atlas.js
+```
+
+Etter redigering: `npm run build` (eller `node scripts/build-data.js`) for å regenerere locations.js.
 
 ### Hvordan legge til en ny person/bok-side
 
@@ -29,22 +47,24 @@ Personlig kronologisk wiki for hele Bibelen — med interaktivt atlas, person-po
 
 ### Hvordan legge til et nytt sted
 
-I `maps/bibel-atlas.js`, legg til i `LOCATIONS`-objektet:
+I `maps/locations.json`, legg til en oppføring:
 
-```js
-ny_id: {
-  name: "Visningsnavn",
-  x: 472, y: 260,                  // SVG-koordinater (lat/lon-projisert)
-  region: "kanaan",
-  labelDy: -10,                    // -10 over markør, +14 under
-  altNames: ["Hebraisk navn", "Greek name"],
-  description: "Én setning om stedet.",
-  scriptures: ["1. Mos 12,1", "Apg 17,16"],
-  pages: ["moses-tidslinje.html"]  // sider som referer til dette stedet
+```json
+"ny_id": {
+  "name": "Visningsnavn",
+  "x": 472,
+  "y": 260,
+  "region": "kanaan",
+  "labelDy": -10,
+  "altNames": ["Hebraisk navn", "Greek name"],
+  "description": "Én setning om stedet.",
+  "scriptures": ["1. Mos 12,1", "Apg 17,16"]
 }
 ```
 
-Stedet vises automatisk på atlaset, blir søkbart, og får sin egen sted-side på `sted.html?id=ny_id`.
+Kjør `npm run build`. `pages`-arrayen blir auto-derivert fra hvilke `*-tidslinje.html`-filer som inkluderer stedet i en `locations: [...]`-array. Trenger du å legge til sider som ikke har `locations: []` ennå (f.eks. for cross-ref før migrering), legg til en `pages`-array manuelt — den unioneres med auto-deriverte.
+
+Etter build vises stedet automatisk på atlaset, blir søkbart, og får sin egen sted-side på `sted.html?id=ny_id`.
 
 ### Koordinatsystem
 

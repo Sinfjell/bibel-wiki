@@ -1,0 +1,13 @@
+{
+  "name": "bibel-wiki",
+  "version": "0.2.0",
+  "description": "Personlig kronologisk wiki for Bibelen — interaktivt atlas, person/bok-tidslinjer, sted-CPT.",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-data.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sinfjell/bibel-wiki"
+  }
+}
