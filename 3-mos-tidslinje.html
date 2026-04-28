@@ -53,6 +53,20 @@
   <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
 </section>
 
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Sinai-fjellet — <em>ved Horeb</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i Sinai-fjellet">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
 <div id="detail" class="detail"></div>
 
 <footer>
@@ -64,6 +78,8 @@
 
 </div>
 
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
 <script src="wiki-page.js"></script>
 <script>
 WikiPage.init({
@@ -71,6 +87,10 @@ WikiPage.init({
   cardLabel: "DEL",
   axis: { start: 1, end: 27, isChapters: true, tickStep: 1, majorStep: 5 },
   defaultId: "soningsdagen",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "410 360 50 60"
+  },
   pageUrls: {
     "2. Mosebok": "2-mos-tidslinje.html",
     "4. Mosebok": "4-mos-tidslinje.html"
@@ -90,6 +110,7 @@ WikiPage.init({
       label: "Kap 1–7",
       lede: "Brennoffer (helt for Herren), grødeoffer (uten blod, mel og olje), fredsoffer (festmåltid med Herren), syndoffer (utilsiktet synd), skyldoffer (med oppgjør). Detaljerte instruksjoner for både folkets gaver og prestenes håndtering. Ingenting overlates til improvisasjon — alt forteller noe om hvordan synd skader fellesskapet og hvordan blod kan dekke.",
       keyEvent: "Fem ofringer beskrevet i detalj (3. Mosebok 1–7)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Moses", "Aron", "Prestene"]
     },
@@ -102,6 +123,7 @@ WikiPage.init({
       label: "Kap 8–10",
       lede: "Aron og hans sønner innvies som prester etter Herrens befaling — sju dager med rituell rensing. På åttende dag bringer Aron det første offeret, og ild fra Herren faller på alteret. Folket roper av glede. Men samme dag bringer Nadab og Abihu \"fremmed ild\" — ild Herren ikke hadde befalt — og blir slått i hjel. \"De som nærmer seg meg, skal jeg vise meg hellig.\" En streng påminnelse om at hellighet ikke er en symbolsak.",
       keyEvent: "Nadab og Abihu og den fremmede ilden (3. Mosebok 10)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Aron", "Nadab", "Abihu", "Eleasar", "Itamar", "Moses"]
     },
@@ -114,6 +136,7 @@ WikiPage.init({
       label: "Kap 11–15",
       lede: "Hva man kan og ikke kan spise. Renhet etter fødsel. Hudsykdom (\"spedalskhet\") med detaljerte diagnoseregler — også for klær og hus. Renhet etter utflod og menstruasjon. Disse kapitlene viser at Israels gud bryr seg om kropp og hverdag — alt skal sortes og settes på rett sted. Renhet er ikke moralsk renhet, men kategorisk orden.",
       keyEvent: "Spedalskhet — diagnose, isolasjon, gjenopptakelse (3. Mosebok 13–14)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Prestene"]
     },
@@ -126,6 +149,7 @@ WikiPage.init({
       label: "Kap 16",
       lede: "Yom Kippur. Bare denne ene dagen i året får ypperstepresten gå inn i Det aller helligste — bak forhenget, foran nådestolen. To geitebukker velges: én ofres og blodet stenkes for folkets synd; den andre — syndebukken — sendes ut i ørkenen og bærer Israels misgjerninger bort. Hele kapittelet peker fram mot Hebreerbrevets bilde av Kristus som vår yppersteprest som ofret seg selv én gang for alle.",
       keyEvent: "Soningsdagen — blodet inn bak forhenget (3. Mosebok 16,15)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Aron", "Ypperstepresten"],
       variant: "in-chronicles"
@@ -139,6 +163,7 @@ WikiPage.init({
       label: "Kap 17–22",
       lede: "Den moralske og sosiale loven for et hellig folk: blodet er livet, seksualitet, familie, naboer (\"du skal elske din neste som deg selv\" — 19,18, sitert av Jesus), respekt for de gamle og fremmede, ærlige vekter, dommernes integritet, presteskapets renhet. Disse kapitlene viser at hellighet ikke bare er rituell, men gjennomsyrer samfunn, økonomi og familie.",
       keyEvent: "\"Du skal elske din neste som deg selv\" (3. Mosebok 19,18)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Israelittene", "Prestene"]
     },
@@ -151,6 +176,7 @@ WikiPage.init({
       label: "Kap 23",
       lede: "Sabbaten hver uke. Påsken og de usyrede brøds høytid om våren. Førstegrødens dag og Pinse — femti dager senere. Om høsten: Basunklangens dag, Soningsdagen, og Løvhyttefesten. Disse rytmene strukturerer Israels år rundt frelseshistorien — utgangen av Egypt, høsten i landet, ørkenvandringen. Jødiske kalendere følger fortsatt dette.",
       keyEvent: "Sju festtider for Israel (3. Mosebok 23)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Israelittene"]
     },
@@ -163,6 +189,7 @@ WikiPage.init({
       label: "Kap 24–25",
       lede: "Hvert syvende år skal jorden hvile — ingen såing, ingen høsting. Hvert femtiende år — etter sju ganger sju år — er jubelåret: alle skal vende tilbake til sin opprinnelige eiendom, alle slaver settes fri, all gjeld ettergis. Et radikalt anti-konsentrasjons-prinsipp. Jesus sier i Nasaret-synagogen at han er kommet for å forkynne \"et nådens år fra Herren\" — jubelåret oppfylt.",
       keyEvent: "Jubelåret — alle vender tilbake (3. Mosebok 25,10)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Israelittene"]
     },
@@ -175,6 +202,7 @@ WikiPage.init({
       label: "Kap 26–27",
       lede: "Hvis dere holder mine bud — regn i rett tid, brød til metthet, fred i landet. Hvis ikke — pest, sverd, fangenskap, landet skal ligge brakk. En profetisk gjenfortelling av hva som faktisk vil skje med Israel. Selv i fangenskap er det håp: \"Da skal jeg minnes pakten med Jakob.\" Boken slutter med regler for løfter, tienden og innvidde gaver. Hellighetens etikk er forankret i pakten.",
       keyEvent: "\"Da skal jeg minnes pakten\" (3. Mosebok 26,42)",
+      locations: ["horeb"],
       books: ["3. Mosebok"],
       people: ["Israelittene"]
     }

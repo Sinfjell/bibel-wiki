@@ -53,6 +53,20 @@
   <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
 </section>
 
+<section class="map-section">
+  <div class="map-heading">
+    <h2>5. Mosebok — <em>Moab-sletten ved Jordan</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i 5. Mosebok">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
 <div id="detail" class="detail"></div>
 
 <footer>
@@ -64,6 +78,8 @@
 
 </div>
 
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
 <script src="wiki-page.js"></script>
 <script>
 WikiPage.init({
@@ -71,6 +87,10 @@ WikiPage.init({
   cardLabel: "DEL",
   axis: { start: 1, end: 34, isChapters: true, tickStep: 1, majorStep: 5 },
   defaultId: "sjema",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 220 110 90"
+  },
   pageUrls: {
     "Moses":      "moses-tidslinje.html",
     "4. Mosebok": "4-mos-tidslinje.html"
@@ -90,6 +110,7 @@ WikiPage.init({
       label: "Kap 1–4",
       lede: "Moses gjenforteller veien fra Horeb til Moabs sletter. Speidernes opprør, de førti årene, slagene mot Sihon og Og. Han minner folket om at Herren talte fra ilden, men de så ingen skikkelse — derfor må de aldri lage seg gudebilder. Avslutter med tilfluktsbyer øst for Jordan og en advarsel: \"Pass deg selv og pass deg vel for ikke å glemme.\"",
       keyEvent: "Moses begynner sin avskjedstale på Moabs sletter (5. Mosebok 1,5)",
+      locations: ["moab"],
       books: ["5. Mosebok"],
       people: ["Moses", "Sihon", "Og"]
     },
@@ -102,6 +123,7 @@ WikiPage.init({
       label: "Kap 5",
       lede: "Moses gjenforteller scenen ved Sinai-fjellet — selv om denne generasjonen var barn da det skjedde. Ti bud gjengis nesten ordrett som i 2. Mosebok, med ett tema-skifte: sabbatsbudet begrunnes nå i utgangen fra Egypt (\"husk at du var slave i Egypt\") i stedet for skapelsen. Folket var redde da de hørte Herren tale, og ba Moses være mellommann.",
       keyEvent: "Ti bud gjentas for andre generasjon (5. Mosebok 5,6–21)",
+      locations: ["moab"],
       books: ["5. Mosebok"],
       people: ["Moses", "Israelittene"]
     },
@@ -114,6 +136,7 @@ WikiPage.init({
       label: "Kap 6–11",
       lede: "Sjema (\"Hør\") er Israels trosbekjennelse — bedt morgen og kveld i jødisk tradisjon i tre tusen år. \"Du skal elske Herren din Gud av hele ditt hjerte, av hele din sjel og av all din kraft.\" Disse ord skal du bære på hjertet, lære dine barn, snakke om dem hjemme og borte. Bind dem på hånd og panne; skriv dem på dørstolpene. Jesus kaller dette \"det første og største bud.\" Resten av delen advarer mot å glemme Herren når landet gir overflod.",
       keyEvent: "Sjema (5. Mosebok 6,4–9)",
+      locations: ["moab"],
       books: ["5. Mosebok"],
       people: ["Moses", "Israelittene"],
       variant: "in-chronicles"
@@ -127,6 +150,7 @@ WikiPage.init({
       label: "Kap 12–18",
       lede: "All offerkult skal sentraliseres til ett sted Herren utvelger (senere Jerusalem). Reglene for tienden, sabbatsåret med gjeldsettergivelse, festtider, dommere, konger (en konge skal ikke samle hester, koner eller sølv). Levittene har ingen arvelodd — Herren er deres arv. Profeten Herren skal reise opp \"som meg\" — Stefanus og apostlene leser dette som løftet om Messias.",
       keyEvent: "Løftet om en profet \"som meg\" (5. Mosebok 18,15)",
+      locations: ["moab"],
       books: ["5. Mosebok"],
       people: ["Moses", "Levittene", "Konger", "Profeter"]
     },
@@ -139,6 +163,7 @@ WikiPage.init({
       label: "Kap 19–26",
       lede: "Tilfluktsbyer for drapsmenn uten forsett. Krigsregler — fruktbære trær skal ikke hugges. Gjengivelse av bortløpne dyr og slaver. Vekter og mål skal være rettferdige. Førstegrøde-bekjennelsen: \"En aram ble min far hjemløs\" — kortest mulige sammenfatning av frelseshistorien fra Abraham til Sinai. Mange av disse lovene siteres av Jesus og Paulus.",
       keyEvent: "Førstegrøde-bekjennelsen (5. Mosebok 26,5–10)",
+      locations: ["moab"],
       books: ["5. Mosebok"],
       people: ["Israelittene"]
     },
@@ -151,6 +176,7 @@ WikiPage.init({
       label: "Kap 27–28",
       lede: "Når Israel går inn i landet, skal seks stammer stå på Garisim-fjellet og rope velsignelser; seks på Ebal-fjellet og rope forbannelser. Velsignelsene er korte og brede. Forbannelsene er lange, detaljerte og forferdelige — de profeterer fangenskapet, beleiringene, hungersnøden, kannibalismen. Disse kapitlene er Israels skjebnefortelling: leses i lys av eksilet og fortolkes av profetene.",
       keyEvent: "Forbannelsene profeterer eksilet (5. Mosebok 28,15–68)",
+      locations: ["moab"],
       books: ["5. Mosebok"],
       people: ["Israelittene", "Levittene"]
     },
@@ -163,6 +189,7 @@ WikiPage.init({
       label: "Kap 29–30",
       lede: "Pakten besegles på nytt. \"Det skjulte hører Herren vår Gud til, men det åpenbarte tilhører oss og våre barn.\" Selv etter at folket har spredt seg til jordens ender på grunn av ulydighet, lover Herren å samle dem igjen om de vender om. Han vil omskjære deres hjerter, så de elsker ham. \"Jeg har lagt fram for deg liv og død, velsignelse og forbannelse — så velg da livet.\"",
       keyEvent: "\"Velg livet\" (5. Mosebok 30,19)",
+      locations: ["moab"],
       books: ["5. Mosebok"],
       people: ["Israelittene"]
     },
@@ -175,6 +202,7 @@ WikiPage.init({
       label: "Kap 31–34",
       lede: "Moses utpeker Josva foran hele folket. Han skriver loven og gir den til levittene. Han synger en stor sang som vitne mot folket — Moses-sangen, som Hosea og andre profeter senere ekkoer. Han velsigner stammene én etter én, slik Jakob gjorde. Så stiger han opp på Nebo-fjellet, ser hele landet, dør 120 år gammel, og blir begravet av Herren selv. \"Aldri har det stått fram en profet i Israel som Moses, han som Herren kjente ansikt til ansikt.\"",
       keyEvent: "Moses dør på Nebo (5. Mosebok 34,5–7)",
+      locations: ["moab", "nebo"],
       books: ["5. Mosebok"],
       people: ["Moses (dør)", "Josva"],
       variant: "in-chronicles"

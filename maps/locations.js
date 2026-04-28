@@ -33,7 +33,10 @@ window.__BIBEL_LOCATIONS = {
     "altNames": [
       "Noph"
     ],
-    "description": "Egypts gamle hovedstad og religiøse senter. Profetene varslet dom over Memphis."
+    "description": "Egypts gamle hovedstad og religiøse senter. Profetene varslet dom over Memphis.",
+    "pages": [
+      "1-mos-tidslinje.html"
+    ]
   },
   "thebes": {
     "name": "Thebes",
@@ -83,6 +86,7 @@ window.__BIBEL_LOCATIONS = {
     "pages": [
       "2-mos-tidslinje.html",
       "3-mos-tidslinje.html",
+      "4-mos-tidslinje.html",
       "5-mos-tidslinje.html",
       "moses-tidslinje.html"
     ],
@@ -137,6 +141,7 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": -10,
     "pages": [
+      "1-mos-tidslinje.html",
       "2-samuel-tidslinje.html",
       "abraham-tidslinje.html",
       "david-tidslinje.html"
@@ -181,8 +186,10 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": 16,
     "pages": [
+      "1-mos-tidslinje.html",
       "1-samuel-tidslinje.html",
-      "david-tidslinje.html"
+      "david-tidslinje.html",
+      "saul-tidslinje.html"
     ],
     "altNames": [
       "Efrata"
@@ -284,7 +291,8 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": 14,
     "pages": [
-      "1-samuel-tidslinje.html"
+      "1-samuel-tidslinje.html",
+      "saul-tidslinje.html"
     ],
     "description": "Religiøst sentrum før Jerusalem; her sto tabernaklet i flere hundre år.",
     "scriptures": [
@@ -299,7 +307,8 @@ window.__BIBEL_LOCATIONS = {
     "region": "kanaan",
     "labelDy": 14,
     "pages": [
-      "1-samuel-tidslinje.html"
+      "1-samuel-tidslinje.html",
+      "saul-tidslinje.html"
     ],
     "description": "Israels første leir vest for Jordan; Saul ble salvet konge her."
   },
@@ -324,6 +333,7 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": 12,
     "description": "Sørgrensen av Israel; Abraham og Isak gravde brønner her.",
     "pages": [
+      "1-mos-tidslinje.html",
       "abraham-tidslinje.html"
     ]
   },
@@ -417,7 +427,8 @@ window.__BIBEL_LOCATIONS = {
     "labelDy": -10,
     "pages": [
       "1-samuel-tidslinje.html",
-      "david-tidslinje.html"
+      "david-tidslinje.html",
+      "saul-tidslinje.html"
     ],
     "description": "Hulen der David samlet sine menn på flukt fra Saul."
   },

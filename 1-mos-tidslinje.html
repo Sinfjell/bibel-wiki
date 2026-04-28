@@ -65,6 +65,20 @@
   <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
 </section>
 
+<section class="map-section">
+  <div class="map-heading">
+    <h2>1. Mosebok — <em>fra Babel til Egypt</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i 1. Mosebok">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
 <div id="detail" class="detail"></div>
 
 <footer>
@@ -76,6 +90,8 @@
 
 </div>
 
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
 <script src="wiki-page.js"></script>
 <script>
 WikiPage.init({
@@ -87,6 +103,10 @@ WikiPage.init({
     tickStep: 1, majorStep: 5
   },
   defaultId: "abraham",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "300 60 600 290"
+  },
   pageUrls: {
     "Abraham":   "abraham-tidslinje.html",
     "2. Mosebok": "2-mos-tidslinje.html"
@@ -118,7 +138,8 @@ WikiPage.init({
       lede: "Slangen, treet, syndefallet. Adam og Eva drives ut av hagen. Kain dreper Abel. Slekten vokser, men også volden — \"jorden var full av urett.\" Noah finner nåde for Herrens øyne; arken bygges, vannflommen kommer, åtte mennesker reddes. Etter flommen oppretter Gud en pakt med jorden — regnbuen som tegn — at han aldri mer skal utslette alt liv med vann.",
       keyEvent: "Pakten med Noah og regnbuen (1. Mosebok 9,8–17)",
       books: ["1. Mosebok"],
-      people: ["Adam", "Eva", "Kain", "Abel", "Set", "Noah", "Sem", "Kam", "Jafet"]
+      people: ["Adam", "Eva", "Kain", "Abel", "Set", "Noah", "Sem", "Kam", "Jafet"],
+      locations: ["babylon"]
     },
     {
       id: "babel",
@@ -130,7 +151,8 @@ WikiPage.init({
       lede: "Folketavlen i kapittel 10 viser hvordan jorden befolkes etter flommen — sytti folkeslag stammer fra Noahs sønner. Så Babel-tårnet: menneskene samler seg, vil bygge et tårn opp til himmelen, gjøre seg et navn. Herren forvirrer språket og sprer dem. Slektslisten i siste halvdel fører oss fra Sem til Tarah og Abram — overgangen til neste fortelling.",
       keyEvent: "Språket forvirres ved Babel (1. Mosebok 11,7–9)",
       books: ["1. Mosebok"],
-      people: ["Noahs sønner", "Nimrod", "Sem", "Tarah", "Abram"]
+      people: ["Noahs sønner", "Nimrod", "Sem", "Tarah", "Abram"],
+      locations: ["babylon", "ur"]
     },
     {
       id: "abraham",
@@ -143,6 +165,7 @@ WikiPage.init({
       keyEvent: "Pakten med Abraham — \"din ætt skal arve landet\" (1. Mosebok 15)",
       books: ["1. Mosebok"],
       people: ["Abraham", "Sara", "Lot", "Hagar", "Ismael", "Isak", "Melkisedek", "Rebekka"],
+      locations: ["ur", "haran", "shechem", "hebron", "jerusalem", "goshen"],
       variant: "in-chronicles"
     },
     {
@@ -156,6 +179,7 @@ WikiPage.init({
       keyEvent: "Jakobs stige ved Betel (1. Mosebok 28)",
       books: ["1. Mosebok"],
       people: ["Isak", "Rebekka", "Esau", "Jakob"],
+      locations: ["beersheba", "bethel", "haran"],
       variant: "in-chronicles"
     },
     {
@@ -169,6 +193,7 @@ WikiPage.init({
       keyEvent: "Lea og Rakel — fundamentet for de tolv stammene (1. Mosebok 29–30)",
       books: ["1. Mosebok"],
       people: ["Jakob", "Laban", "Lea", "Rakel", "Bilha", "Silpa", "11 sønner og Dina"],
+      locations: ["haran"],
       variant: "in-chronicles"
     },
     {
@@ -182,6 +207,7 @@ WikiPage.init({
       keyEvent: "Jakob blir Israel ved Jabbok (1. Mosebok 32,28)",
       books: ["1. Mosebok"],
       people: ["Jakob/Israel", "Esau", "Dina", "Simeon", "Levi", "Rakel (dør)", "Benjamin"],
+      locations: ["penuel", "shechem", "bethlehem", "hebron"],
       variant: "in-chronicles"
     },
     {
@@ -195,6 +221,7 @@ WikiPage.init({
       keyEvent: "\"Det dere tenkte ondt mot meg, tenkte Gud godt\" (1. Mosebok 50,20)",
       books: ["1. Mosebok"],
       people: ["Josef", "Jakob/Israel", "11 brødre", "Potifar", "Farao", "Manasse", "Efraim"],
+      locations: ["hebron", "goshen", "memphis"],
       variant: "in-chronicles"
     }
   ]

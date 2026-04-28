@@ -53,6 +53,20 @@
   <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
 </section>
 
+<section class="map-section">
+  <div class="map-heading">
+    <h2>4. Mosebok — <em>fra Sinai til Moab</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i 4. Mosebok">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
 <div id="detail" class="detail"></div>
 
 <footer>
@@ -64,6 +78,8 @@
 
 </div>
 
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
 <script src="wiki-page.js"></script>
 <script>
 WikiPage.init({
@@ -71,6 +87,10 @@ WikiPage.init({
   cardLabel: "DEL",
   axis: { start: 1, end: 36, isChapters: true, tickStep: 1, majorStep: 5 },
   defaultId: "speidere",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "400 240 160 180"
+  },
   pageUrls: {
     "Moses":      "moses-tidslinje.html",
     "3. Mosebok": "3-mos-tidslinje.html",
@@ -91,6 +111,7 @@ WikiPage.init({
       label: "Kap 1–4",
       lede: "Ett år etter utgangen telles alle våpenføre menn fra tjue år og oppover. Stammene plasseres rundt tabernaklet i en bestemt ordning — Juda mot øst, Ruben sør, Efraim vest, Dan nord. Levittene telles særskilt og deles på tre slekter — Gersjons, Kehat og Merari — som hver har ansvar for ulike deler av tabernaklet under flytting.",
       keyEvent: "603 550 våpenføre menn — folket organiseres som en hær (4. Mosebok 1)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Moses", "Aron", "Stammehøvdingene", "Levittene"]
     },
@@ -103,6 +124,7 @@ WikiPage.init({
       label: "Kap 5–6",
       lede: "Urene må bo utenfor leiren. Sjalusi-ritualet ved utroskap. Nasiræer-løftet — den som vier seg særskilt til Herren skal ikke drikke vin, ikke klippe håret, ikke gå nær lik. Boken inneholder også Aron-velsignelsen — \"Herren velsigne deg og bevare deg, Herren la sitt åsyn lyse over deg og være deg nådig\" — som fortsatt brukes i kirker over hele verden.",
       keyEvent: "Aron-velsignelsen (4. Mosebok 6,24–26)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Aron", "Nasirene"]
     },
@@ -115,6 +137,7 @@ WikiPage.init({
       label: "Kap 7–10",
       lede: "Stammehøvdingene gir gaver — tolv identiske fortellinger som markerer at hver stamme bidrar likt. Lampestaken tennes; levittene innvies. Den andre påsken feires. Sølvtrompetene lages som signal-instrument. Når skyen over tabernaklet løfter seg — på den tjuende dag i den andre måned i det andre år — bryter folket opp fra Sinai og marsjerer mot Kanaan.",
       keyEvent: "Folket bryter opp fra Sinai (4. Mosebok 10,11)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Moses", "Aron", "Hobab"]
     },
@@ -127,6 +150,7 @@ WikiPage.init({
       label: "Kap 11–12",
       lede: "Folket klager over manna — \"vi husker fisken vi spiste i Egypt for ingenting.\" Vaktler kommer i overflod, men også pest. Sytti eldste utstyres med Moses' Ånd. Mirjam og Aron snakker mot Moses fordi han har giftet seg med en kusittisk kvinne — Mirjam slås med spedalskhet, og blir helbredet etter Moses' bønn etter sju dager.",
       keyEvent: "Mirjam slås med spedalskhet (4. Mosebok 12,10)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Moses", "Mirjam", "Aron", "70 eldste"]
     },
@@ -139,6 +163,7 @@ WikiPage.init({
       label: "Kap 13–14",
       lede: "Tolv speidere sendes inn i Kanaan — én fra hver stamme — i førti dager. De vender tilbake med druer så store at to menn bærer dem på en stang. Men ti av dem rapporterer skrekk: kjemper, beleirede byer, vi var som gresshopper for dem. Bare Josva og Kaleb tror Herren kan gi landet. Folket vil steine Moses og snu tilbake til Egypt. Herrens dom: hele den voksne generasjonen skal dø i ørkenen — bare Josva og Kaleb skal komme inn.",
       keyEvent: "Dommen om førti år i ørkenen (4. Mosebok 14,29–34)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Josva", "Kaleb", "Moses", "Aron", "De ti speiderne"],
       variant: "in-chronicles"
@@ -152,6 +177,7 @@ WikiPage.init({
       label: "Kap 15–19",
       lede: "Korah, Datan og Abiram setter seg opp mot Moses og Aron — \"vi er alle hellige.\" Herren befaler folket å trekke seg tilbake; jorden åpner seg og sluker opprørerne. Ild fortærer 250 menn med røkelseskar. Pest rammer folket; Aron stanser den med røkelse mellom de levende og de døde. Arons stav blomstrer over natten som tegn på at han er Herrens valgte. Renhetslovene om døde og asken av rødkvigen.",
       keyEvent: "Jorden sluker Korah (4. Mosebok 16,32)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Korah", "Datan", "Abiram", "Aron", "Moses"]
     },
@@ -164,6 +190,7 @@ WikiPage.init({
       label: "Kap 20–25",
       lede: "Mirjam dør i Kadesj. Folket murrer over vann; Moses slår klippen to ganger i sinne — Herren sier at fordi han ikke holdt Herren hellig for folket, skal han ikke føre dem inn i landet. Aron dør på Hor-fjellet. Kobberslangen reises i ørkenen som tegn på frelse fra slangebitt — Jesus refererer til denne i Joh 3,14. Bileam blir leid av Balak til å forbanne Israel, men kan bare velsigne. Senere fører han Israel i fall ved Baal-Peor.",
       keyEvent: "Moses slår klippen to ganger (4. Mosebok 20,11–12)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Mirjam (dør)", "Aron (dør)", "Moses", "Eleasar", "Bileam", "Balak", "Pinhas"]
     },
@@ -176,6 +203,7 @@ WikiPage.init({
       label: "Kap 26–36",
       lede: "En ny telling viser 601 730 menn — nesten samme tall, helt nye navn. Fra den første generasjonen er bare Josva og Kaleb igjen. Selofhads døtre vinner arverett. Josva utpekes som Moses' etterfølger. Tariffene for offer fastsettes. Israel slår midjanittene. Stammene Ruben, Gad og halve Manasse får land øst for Jordan. Tilfluktsbyer og levittiske byer fastsettes. Boken slutter med Israel leiret på Moabs sletter, like før Moses' avskjed.",
       keyEvent: "Andre folketelling — kun Josva og Kaleb fra første generasjon (4. Mosebok 26,64–65)",
+      locations: ["horeb", "kadesj", "moab"],
       books: ["4. Mosebok"],
       people: ["Josva", "Kaleb", "Moses", "Eleasar", "Selofhads døtre", "Ruben", "Gad"]
     }

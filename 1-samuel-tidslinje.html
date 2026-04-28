@@ -66,6 +66,20 @@
   <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
 </section>
 
+<section class="map-section">
+  <div class="map-heading">
+    <h2>1. Samuel — <em>Samuel, Saul, David</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reisen i 1. Samuel">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
 <div id="detail" class="detail"></div>
 
 <footer>
@@ -77,6 +91,8 @@
 
 </div>
 
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
 <script src="wiki-page.js"></script>
 <script>
 WikiPage.init({
@@ -84,6 +100,10 @@ WikiPage.init({
   cardLabel: "DEL",
   axis: { start: 1, end: 31, isChapters: true, tickStep: 1, majorStep: 5 },
   defaultId: "konge",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "440 215 80 80"
+  },
   pageUrls: {
     "David": "david-tidslinje.html",
     "Saul":  "saul-tidslinje.html",
@@ -102,6 +122,7 @@ WikiPage.init({
       start: 1, end: 3, label: "Kap 1–3",
       lede: "Hanna er ufruktbar og ber innstendig om en sønn — Eli, presten ved Sjilo, tror først hun er drukken. Samuel blir født og gitt til Herrens tjeneste. Mens Eli og hans onde sønner svikter sitt embete, vokser Samuel opp i tempelet og hører Herrens røst om natten: \"Samuel, Samuel.\" En profet er reist opp.",
       keyEvent: "\"Tal, Herre, din tjener hører\" (1. Samuel 3,10)",
+      locations: ["shilo", "gibea", "bethlehem"],
       books: ["1. Samuel"],
       people: ["Hanna", "Elkana", "Eli", "Hofni", "Pinhas", "Samuel"],
       bottomProtag: "Hovedperson: Samuel",
@@ -113,6 +134,7 @@ WikiPage.init({
       start: 4, end: 7, label: "Kap 4–7",
       lede: "Filisterne slår Israel ved Eben-Eser, dreper Hofni og Pinhas, og tar paktarken med seg. Eli faller bakover av stolen og dør. Hans svigerdatter føder sønnen Ikabod — \"Æren har gått fra Israel.\" Men arken ødelegger Dagons tempel og bringer pest over filisterbyene; etter sju måneder sender filisterne den hjem på en oksevogn. Samuel kaller folket til omvendelse ved Mispa.",
       keyEvent: "Dagon faller for Herrens ark (1. Samuel 5)",
+      locations: ["shilo", "gibea", "bethlehem"],
       books: ["1. Samuel"],
       people: ["Eli (dør)", "Pinhas (dør)", "Ikabod", "Filisterne", "Samuel"],
       bottomProtag: "Hovedperson: Samuel",
@@ -124,6 +146,7 @@ WikiPage.init({
       start: 8, end: 12, label: "Kap 8–12",
       lede: "Samuel er gammel; sønnene hans dømmer urettferdig. Folket ber om en konge \"som alle de andre folkene.\" Samuel advarer mot kongemaktens byrder, men Herren føyer seg. Saul, sønn av Kisj, leter etter farens bortløpne esler og ender med å bli salvet. Lottet kastes på Mispa; han gjemmer seg blant trossene. Etter seier over Ammon ved Jabesj-Gilead bekreftes han som konge i Gilgal.",
       keyEvent: "Saul salves og kåres til konge (1. Samuel 10–11)",
+      locations: ["shilo", "gibea", "bethlehem"],
       books: ["1. Samuel"],
       people: ["Samuel", "Saul", "Kisj", "Nahasj", "Folket"],
       bottomProtag: "Hovedperson: Saul",
@@ -135,6 +158,7 @@ WikiPage.init({
       start: 13, end: 15, label: "Kap 13–15",
       lede: "Filisterne samler seg ved Mikmas. Saul venter ikke på Samuel og bringer offeret selv — Samuel: \"Ditt rike skal ikke bestå.\" Jonatan og hans våpenbærer slår filisterne i en solo-aksjon. Når Saul senere sparer kong Agag og det beste av amalekittenes buskap mot Herrens befaling, kommer den endelige dommen: \"Å lyde er bedre enn slaktoffer.\" Samuel og Saul ser hverandre aldri mer i live.",
       keyEvent: "Samuel forlater Saul for godt (1. Samuel 15,35)",
+      locations: ["shilo", "gibea", "bethlehem"],
       books: ["1. Samuel"],
       people: ["Saul", "Jonatan", "Samuel", "Agag"],
       bottomProtag: "Hovedperson: Saul",
@@ -146,6 +170,7 @@ WikiPage.init({
       start: 16, end: 18, label: "Kap 16–18",
       lede: "Samuel sendes til Betlehem. Herren ser ikke på det ytre — den minste, gjetergutten David, blir salvet i hemmelighet. Han kommer til Sauls hoff for å spille harpe. Når Goliat utfordrer Israel i Elah-dalen, er det David med slynge og fem stein som tar utfordringen. Kvinnenes sang — \"David sine titusener\" — vekker den misunnelsen som aldri slipper Saul.",
       keyEvent: "David feller Goliat i Elah-dalen (1. Samuel 17)",
+      locations: ["shilo", "gibea", "bethlehem"],
       books: ["1. Samuel"],
       people: ["Samuel", "Isai", "David", "Saul", "Goliat", "Jonatan", "Mikal"],
       bottomProtag: "Hovedperson: David",
@@ -157,6 +182,7 @@ WikiPage.init({
       start: 19, end: 26, label: "Kap 19–26",
       lede: "Saul slynger spydet sitt to ganger. David flykter — først fra Mikals vindu, så til presten Akimelek i Nob (som Saul lar slakte med åttifem prester), så til hulen i Adullam hvor han samler seks hundre menn. Jonatan inngår pakt med ham. To ganger sparer David Sauls liv — i hulen ved En-Gedi og i leiren ved Sif. Samuel dør. Akimelek-arvingen Abjatar slutter seg til David.",
       keyEvent: "Massakren på Nob (1. Samuel 22)",
+      locations: ["shilo", "gibea", "bethlehem"],
       books: ["1. Samuel"],
       people: ["David", "Jonatan", "Mikal", "Akimelek", "Doeg", "Abjatar", "Abigajil", "Samuel (dør)"],
       bottomProtag: "Hovedperson: David",
@@ -168,6 +194,7 @@ WikiPage.init({
       start: 27, end: 31, label: "Kap 27–31",
       lede: "David søker tilflukt hos filisterkongen Akisj og får Siklag. Når filisterne mobiliserer mot Israel, er Davids menn nesten med — men de andre filisterhøvdingene stoler ikke på ham. Saul, forlatt av Herren, oppsøker en åndemaner i En-Dor og hører den endelige dommen fra Samuels skygge: \"I morgen skal du være hos meg.\" På Gilboa-fjellet faller Jonatan og brødrene; Saul kaster seg på sitt eget sverd. Boken slutter.",
       keyEvent: "Saul faller på sitt sverd på Gilboa (1. Samuel 31)",
+      locations: ["shilo", "gibea", "bethlehem"],
       books: ["1. Samuel"],
       people: ["David", "Akisj", "Saul", "Jonatan", "Heksen i En-Dor", "Filisterne"],
       bottomProtag: "Hovedperson: Saul",

@@ -54,6 +54,20 @@
   <p class="scroll-hint">← Bla horisontalt på smale skjermer →</p>
 </section>
 
+<section class="map-section">
+  <div class="map-heading">
+    <h2>Sauls Israel — <em>Gibea til Gilboa</em></h2>
+    <div class="map-current" id="mapCurrent"></div>
+  </div>
+  <div class="map-svg-wrap">
+    <svg class="map-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sauls reise — Gibea, Gilgal, Endor, Bet-Sjean">
+      <g id="map-bg-places"></g>
+      <g id="map-route"></g>
+      <g id="map-markers"></g>
+    </svg>
+  </div>
+</section>
+
 <div id="detail" class="detail"></div>
 
 <footer>
@@ -65,6 +79,8 @@
 
 </div>
 
+<script src="maps/locations.js"></script>
+<script src="maps/bibel-atlas.js"></script>
 <script src="wiki-page.js"></script>
 <script>
 WikiPage.init({
@@ -73,6 +89,10 @@ WikiPage.init({
   birthYear: -1080,
   axis: { start: -1050, end: -1010, isChapters: false, tickStep: 5, majorStep: 10, tickStart: -1050, tickEnd: -1010 },
   defaultId: "amalek",
+  map: {
+    atlas: BibelAtlas,
+    viewBox: "445 215 60 70"
+  },
   pageUrls: {
     "David":     "david-tidslinje.html",
     "1. Samuel": "1-samuel-tidslinje.html",
@@ -92,6 +112,7 @@ WikiPage.init({
       keyEvent: "Salvet i hemmelighet og lott trukket på Mispa (1. Samuel 9–10)",
       books: ["1. Samuel"],
       people: ["Samuel", "Kisj", "Folket"],
+      locations: ["gibea", "shilo"],
       bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
       variant: "omitted-by-chronicles",
       metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
@@ -104,6 +125,7 @@ WikiPage.init({
       keyEvent: "Slag mot Ammon ved Jabesj-Gilead (1. Samuel 11)",
       books: ["1. Samuel"],
       people: ["Jonatan", "Abner", "Nahasj", "Filisterne"],
+      locations: ["gibea", "gilgal"],
       bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
       variant: "omitted-by-chronicles",
       metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
@@ -116,6 +138,7 @@ WikiPage.init({
       keyEvent: "Saul ofrer ulovlig — Samuel: \"Ditt rike skal ikke bestå\" (1. Samuel 13)",
       books: ["1. Samuel"],
       people: ["Samuel", "Filisterne"],
+      locations: ["gilgal"],
       bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
       variant: "omitted-by-chronicles",
       metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
@@ -128,6 +151,7 @@ WikiPage.init({
       keyEvent: "Samuel forlater Saul — \"Å lyde er bedre enn slaktoffer\" (1. Samuel 15)",
       books: ["1. Samuel"],
       people: ["Samuel", "Agag"],
+      locations: ["gilgal"],
       bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
       variant: "omitted-by-chronicles",
       metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
@@ -140,6 +164,7 @@ WikiPage.init({
       keyEvent: "Goliat felles og David trer fram (1. Samuel 17)",
       books: ["1. Samuel"],
       people: ["David", "Samuel", "Jonatan", "Mikal", "Goliat"],
+      locations: ["gibea", "bethlehem"],
       bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
       variant: "omitted-by-chronicles",
       metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
@@ -152,6 +177,7 @@ WikiPage.init({
       keyEvent: "Sauls spyd mot David — David flykter (1. Samuel 19)",
       books: ["1. Samuel"],
       people: ["David", "Jonatan", "Mikal"],
+      locations: ["gibea"],
       bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
       variant: "omitted-by-chronicles",
       metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
@@ -164,6 +190,7 @@ WikiPage.init({
       keyEvent: "Massakren på Nob (1. Samuel 22)",
       books: ["1. Samuel"],
       people: ["David", "Doeg", "Akimelek", "Abjatar", "Jonatan"],
+      locations: ["gibea", "adullam"],
       bottomTag: { text: "Utelatt fra Krønikene", class: "omitted" },
       variant: "omitted-by-chronicles",
       metaExtra: { text: "Utelatt fra Krønikene", class: "chron" }
@@ -176,6 +203,7 @@ WikiPage.init({
       keyEvent: "Saul faller på sitt sverd på Gilboa (1. Samuel 31)",
       books: ["1. Samuel", "1. Krønikebok"],
       people: ["Samuel (i synet)", "Jonatan", "Heksen i En-Dor", "Filisterne"],
+      locations: ["endor", "bethshean"],
       bottomTag: { text: "I Krønikene", class: "in-chronicles" },
       variant: "in-chronicles",
       metaExtra: { text: "I Krønikene", class: "chron" }
